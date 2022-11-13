@@ -6,25 +6,13 @@ namespace SistemaPetShop
 {
     public partial class PetShop : Form
     {
-        private Form activeForm;
+        private Form activeForm = new Form();
         public PetShop()
         {
             InitializeComponent();
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btnRemover_Click(object sender, EventArgs e)
-        {
-
-        }
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            DesativaButton();
-            DesativaCL();
             OpenChildForm(new Forms.FormClientes());
             btnClientes.BackColor = Color.MediumSeaGreen;
             pnlCima.BackColor = Color.MediumSeaGreen;
@@ -33,8 +21,7 @@ namespace SistemaPetShop
         }
         private void btnPets_Click(object sender, EventArgs e)
         {
-            DesativaButton();
-            DesativaCL();
+            OpenChildForm(new Forms.FormPets());
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
             pnlLogo.BackColor = Color.Maroon;
@@ -72,11 +59,11 @@ namespace SistemaPetShop
         }
         private void DesativaButton()
         {
-            btnPets.BackColor = Color.Transparent;
-            btnClientes.BackColor = Color.Transparent;
-            btnFuncionarios.BackColor = Color.Transparent;
-            btnVendas.BackColor = Color.Transparent;
-            btnProdutos.BackColor = Color.Transparent;
+            btnPets.BackColor = Color.FromArgb(51, 51, 76);
+            btnClientes.BackColor = Color.FromArgb(51, 51, 76);
+            btnFuncionarios.BackColor = Color.FromArgb(51, 51, 76);
+            btnVendas.BackColor = Color.FromArgb(51, 51, 76);
+            btnProdutos.BackColor = Color.FromArgb(51, 51, 76);
         }
 
         private void DesativaCL()
@@ -91,7 +78,8 @@ namespace SistemaPetShop
             {
                 activeForm.Close();
             }
-
+            DesativaButton();
+            DesativaCL();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;

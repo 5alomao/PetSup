@@ -19,7 +19,7 @@ namespace SistemaPetShop.Forms
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
-
+            listaCliente();
         }
 
         void listaCliente()
@@ -41,69 +41,6 @@ namespace SistemaPetShop.Forms
             txtNomeCliente.Text = "";
             txtNomeCliente.Focus();
         }
-        private void PetShop_Load(object sender, EventArgs e)
-        {
-            listaCliente();
-        }
-
-        private void pnlEsquerda_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pnlCima_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCpf_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTelefone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEmail_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEndereco_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNomeCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCpfCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtTelefoneCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEmailCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEnderecoCliente_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
@@ -124,20 +61,6 @@ namespace SistemaPetShop.Forms
 
             listaCliente();
             limpaCampo();
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)

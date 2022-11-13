@@ -4,6 +4,9 @@
     <Compile Update="Forms\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Forms\FormPets.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="PetShop.cs">
       <SubType>Form</SubType>
     </Compile>

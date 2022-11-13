@@ -31,10 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
             this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlRedes = new System.Windows.Forms.Panel();
-            this.btnWhats = new System.Windows.Forms.Button();
-            this.btnEmail = new System.Windows.Forms.Button();
-            this.btnGitHub = new System.Windows.Forms.Button();
-            this.btnLinkedin = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
             this.btnProdutos = new System.Windows.Forms.Button();
@@ -48,7 +44,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.pnlEsquerda.SuspendLayout();
-            this.pnlRedes.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.pnlCima.SuspendLayout();
@@ -73,70 +68,11 @@
             // pnlRedes
             // 
             this.pnlRedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.pnlRedes.Controls.Add(this.btnWhats);
-            this.pnlRedes.Controls.Add(this.btnEmail);
-            this.pnlRedes.Controls.Add(this.btnGitHub);
-            this.pnlRedes.Controls.Add(this.btnLinkedin);
             this.pnlRedes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlRedes.Location = new System.Drawing.Point(0, 486);
+            this.pnlRedes.Location = new System.Drawing.Point(0, 496);
             this.pnlRedes.Name = "pnlRedes";
-            this.pnlRedes.Size = new System.Drawing.Size(200, 50);
+            this.pnlRedes.Size = new System.Drawing.Size(200, 40);
             this.pnlRedes.TabIndex = 14;
-            // 
-            // btnWhats
-            // 
-            this.btnWhats.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnWhats.BackColor = System.Drawing.Color.Transparent;
-            this.btnWhats.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnWhats.BackgroundImage")));
-            this.btnWhats.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnWhats.FlatAppearance.BorderSize = 0;
-            this.btnWhats.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWhats.Location = new System.Drawing.Point(138, 10);
-            this.btnWhats.Name = "btnWhats";
-            this.btnWhats.Size = new System.Drawing.Size(32, 32);
-            this.btnWhats.TabIndex = 16;
-            this.btnWhats.UseVisualStyleBackColor = false;
-            // 
-            // btnEmail
-            // 
-            this.btnEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnEmail.BackColor = System.Drawing.Color.Transparent;
-            this.btnEmail.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEmail.BackgroundImage")));
-            this.btnEmail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnEmail.FlatAppearance.BorderSize = 0;
-            this.btnEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEmail.Location = new System.Drawing.Point(100, 10);
-            this.btnEmail.Name = "btnEmail";
-            this.btnEmail.Size = new System.Drawing.Size(32, 32);
-            this.btnEmail.TabIndex = 15;
-            this.btnEmail.UseVisualStyleBackColor = false;
-            // 
-            // btnGitHub
-            // 
-            this.btnGitHub.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGitHub.BackColor = System.Drawing.Color.Transparent;
-            this.btnGitHub.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGitHub.BackgroundImage")));
-            this.btnGitHub.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGitHub.FlatAppearance.BorderSize = 0;
-            this.btnGitHub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGitHub.Location = new System.Drawing.Point(62, 10);
-            this.btnGitHub.Name = "btnGitHub";
-            this.btnGitHub.Size = new System.Drawing.Size(32, 32);
-            this.btnGitHub.TabIndex = 14;
-            this.btnGitHub.UseVisualStyleBackColor = false;
-            // 
-            // btnLinkedin
-            // 
-            this.btnLinkedin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLinkedin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLinkedin.FlatAppearance.BorderSize = 0;
-            this.btnLinkedin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLinkedin.Image = ((System.Drawing.Image)(resources.GetObject("btnLinkedin.Image")));
-            this.btnLinkedin.Location = new System.Drawing.Point(24, 10);
-            this.btnLinkedin.Name = "btnLinkedin";
-            this.btnLinkedin.Size = new System.Drawing.Size(32, 32);
-            this.btnLinkedin.TabIndex = 13;
-            this.btnLinkedin.UseVisualStyleBackColor = false;
             // 
             // btnVendas
             // 
@@ -227,7 +163,6 @@
             this.btnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnClientes.ForeColor = System.Drawing.Color.White;
@@ -337,7 +272,6 @@
             this.Name = "PetShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlEsquerda.ResumeLayout(false);
-            this.pnlRedes.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
             this.pnlLogo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
@@ -360,10 +294,6 @@
         private Button btnPets;
         private Button btnClientes;
         private Panel pnlRedes;
-        private Button btnWhats;
-        private Button btnEmail;
-        private Button btnGitHub;
-        private Button btnLinkedin;
         private PictureBox imgLogo;
         private Label lblLogo;
         private Label lblTitle;
