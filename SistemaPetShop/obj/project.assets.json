@@ -899,11 +899,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Salomão\\Desktop\\Sistema-PetShop\\SistemaPetShop\\SistemaPetShop.csproj",
+      "projectUniqueName": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
       "projectName": "SistemaPetShop",
-      "projectPath": "C:\\Users\\Salomão\\Desktop\\Sistema-PetShop\\SistemaPetShop\\SistemaPetShop.csproj",
+      "projectPath": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
       "packagesPath": "C:\\Users\\Salomão\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Salomão\\Desktop\\Sistema-PetShop\\SistemaPetShop\\obj\\",
+      "outputPath": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

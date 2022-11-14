@@ -36,16 +36,12 @@
             this.btnProdutos = new System.Windows.Forms.Button();
             this.btnPets = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.imgLogo = new System.Windows.Forms.PictureBox();
-            this.lblLogo = new System.Windows.Forms.Label();
+            this.btnLogo = new System.Windows.Forms.Button();
             this.lblMsgError = new System.Windows.Forms.Label();
             this.pnlCima = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.pnlEsquerda.SuspendLayout();
-            this.pnlLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.pnlCima.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +54,7 @@
             this.pnlEsquerda.Controls.Add(this.btnProdutos);
             this.pnlEsquerda.Controls.Add(this.btnPets);
             this.pnlEsquerda.Controls.Add(this.btnClientes);
-            this.pnlEsquerda.Controls.Add(this.pnlLogo);
+            this.pnlEsquerda.Controls.Add(this.btnLogo);
             this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlEsquerda.Location = new System.Drawing.Point(0, 0);
             this.pnlEsquerda.Name = "pnlEsquerda";
@@ -181,40 +177,24 @@
             this.btnClientes.ForeColorChanged += new System.EventHandler(this.btnClientes_Click);
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // pnlLogo
+            // btnLogo
             // 
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
-            this.pnlLogo.Controls.Add(this.imgLogo);
-            this.pnlLogo.Controls.Add(this.lblLogo);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(200, 80);
-            this.pnlLogo.TabIndex = 7;
-            // 
-            // imgLogo
-            // 
-            this.imgLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
-            this.imgLogo.Location = new System.Drawing.Point(106, 8);
-            this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(64, 64);
-            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgLogo.TabIndex = 1;
-            this.imgLogo.TabStop = false;
-            // 
-            // lblLogo
-            // 
-            this.lblLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLogo.AutoSize = true;
-            this.lblLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblLogo.ForeColor = System.Drawing.Color.White;
-            this.lblLogo.Location = new System.Drawing.Point(24, 28);
-            this.lblLogo.Name = "lblLogo";
-            this.lblLogo.Size = new System.Drawing.Size(71, 25);
-            this.lblLogo.TabIndex = 0;
-            this.lblLogo.Text = "PetSup";
+            this.btnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
+            this.btnLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogo.FlatAppearance.BorderSize = 0;
+            this.btnLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLogo.ForeColor = System.Drawing.Color.White;
+            this.btnLogo.Image = ((System.Drawing.Image)(resources.GetObject("btnLogo.Image")));
+            this.btnLogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogo.Location = new System.Drawing.Point(0, 0);
+            this.btnLogo.Name = "btnLogo";
+            this.btnLogo.Size = new System.Drawing.Size(200, 80);
+            this.btnLogo.TabIndex = 15;
+            this.btnLogo.Text = "PetSup";
+            this.btnLogo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnLogo.UseVisualStyleBackColor = false;
+            this.btnLogo.Click += new System.EventHandler(this.btnLogo_Click);
             // 
             // lblMsgError
             // 
@@ -271,10 +251,8 @@
             this.Controls.Add(this.pnlEsquerda);
             this.Name = "PetShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "HOME";
             this.pnlEsquerda.ResumeLayout(false);
-            this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.pnlCima.ResumeLayout(false);
             this.pnlCima.PerformLayout();
             this.ResumeLayout(false);
@@ -285,7 +263,6 @@
         #endregion
 
         private Panel pnlEsquerda;
-        private Panel pnlLogo;
         private Panel pnlCima;
         private Label lblMsgError;
         private Button btnVendas;
@@ -294,9 +271,8 @@
         private Button btnPets;
         private Button btnClientes;
         private Panel pnlRedes;
-        private PictureBox imgLogo;
-        private Label lblLogo;
         private Label lblTitle;
         private Panel pnlConteudo;
+        private Button btnLogo;
     }
 }

@@ -16,21 +16,10 @@ namespace SistemaPetShop.Forms
         {
             InitializeComponent();
         }
-
-        private void FormClientes_Load(object sender, EventArgs e)
-        {
-            listaCliente();
-        }
-
         void listaCliente()
         {
             ConectaBanco con = new ConectaBanco();
             dgClientes.DataSource = con.listaClientes(); ;
-        }
-
-        void listaPet()
-        {
-
         }
         void limpaCampo()
         {
@@ -62,10 +51,14 @@ namespace SistemaPetShop.Forms
             listaCliente();
             limpaCampo();
         }
+        private void FormClientes_Load(object sender, EventArgs e)
+        {
+            listaCliente();
+        }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
-            (dgClientes.DataSource as DataTable).DefaultView.RowFilter = string.Format("nomeCliente like '{0}%'", txtBusca.Text);
+            ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBusca.Text);
         }
     }
 }

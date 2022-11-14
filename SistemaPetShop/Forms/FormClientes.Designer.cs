@@ -38,10 +38,8 @@
             this.txtCpfCliente = new System.Windows.Forms.TextBox();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.lblEmail = new System.Windows.Forms.Label();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblCpf = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
@@ -53,11 +51,16 @@
             this.pnlFundo = new System.Windows.Forms.Panel();
             this.pnlHeaderCli = new System.Windows.Forms.Panel();
             this.pnlViewCli = new System.Windows.Forms.Panel();
+            this.imgBusca = new System.Windows.Forms.PictureBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.imgMarcador = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCadCli)).BeginInit();
             this.pnlFundo.SuspendLayout();
             this.pnlHeaderCli.SuspendLayout();
             this.pnlViewCli.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).BeginInit();
             this.SuspendLayout();
             // 
             // dgClientes
@@ -66,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(14, 106);
             this.dgClientes.Name = "dgClientes";
@@ -162,26 +165,6 @@
             this.lblEndereco.TabIndex = 30;
             this.lblEndereco.Text = "Endereço:";
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(329, 62);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(102, 38);
-            this.btnBuscar.TabIndex = 34;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            // 
             // lblEmail
             // 
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -201,30 +184,20 @@
             this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemover.BackColor = System.Drawing.Color.Firebrick;
             this.btnRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRemover.FlatAppearance.BorderSize = 0;
+            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnRemover.ForeColor = System.Drawing.Color.White;
             this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
             this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(306, 382);
+            this.btnRemover.Location = new System.Drawing.Point(311, 385);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(120, 38);
+            this.btnRemover.Size = new System.Drawing.Size(120, 40);
             this.btnRemover.TabIndex = 33;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRemover.UseVisualStyleBackColor = false;
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBusca.Location = new System.Drawing.Point(14, 64);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.PlaceholderText = "Digite aqui para buscar";
-            this.txtBusca.Size = new System.Drawing.Size(239, 23);
-            this.txtBusca.TabIndex = 36;
-            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // lblTelefone
             // 
@@ -273,15 +246,15 @@
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.BackColor = System.Drawing.Color.Teal;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnAlterar.FlatAppearance.BorderSize = 0;
+            this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
             this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(187, 382);
+            this.btnAlterar.Location = new System.Drawing.Point(203, 385);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(113, 38);
+            this.btnAlterar.Size = new System.Drawing.Size(102, 40);
             this.btnAlterar.TabIndex = 37;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,14 +264,14 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.Tomato;
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.BackColor = System.Drawing.Color.Firebrick;
+            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelar.Location = new System.Drawing.Point(109, 385);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(93, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(93, 40);
             this.btnCancelar.TabIndex = 32;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -307,13 +280,13 @@
             // 
             this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
             this.btnConfirmar.Location = new System.Drawing.Point(209, 385);
             this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(116, 38);
+            this.btnConfirmar.Size = new System.Drawing.Size(116, 40);
             this.btnConfirmar.TabIndex = 31;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
@@ -321,6 +294,7 @@
             // 
             // imgCadCli
             // 
+            this.imgCadCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.imgCadCli.Image = ((System.Drawing.Image)(resources.GetObject("imgCadCli.Image")));
             this.imgCadCli.Location = new System.Drawing.Point(247, 23);
             this.imgCadCli.Name = "imgCadCli";
@@ -344,6 +318,11 @@
             // pnlFundo
             // 
             this.pnlFundo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlFundo.Controls.Add(this.txtEnderecoCliente);
+            this.pnlFundo.Controls.Add(this.txtNomeCliente);
+            this.pnlFundo.Controls.Add(this.txtEmailCliente);
+            this.pnlFundo.Controls.Add(this.txtCpfCliente);
+            this.pnlFundo.Controls.Add(this.txtTelefoneCliente);
             this.pnlFundo.Controls.Add(this.pnlHeaderCli);
             this.pnlFundo.Controls.Add(this.btnConfirmar);
             this.pnlFundo.Controls.Add(this.pnlDivisao);
@@ -351,13 +330,8 @@
             this.pnlFundo.Controls.Add(this.btnCancelar);
             this.pnlFundo.Controls.Add(this.lblEndereco);
             this.pnlFundo.Controls.Add(this.lblEmail);
-            this.pnlFundo.Controls.Add(this.txtEnderecoCliente);
-            this.pnlFundo.Controls.Add(this.txtNomeCliente);
             this.pnlFundo.Controls.Add(this.lblCpf);
-            this.pnlFundo.Controls.Add(this.txtEmailCliente);
-            this.pnlFundo.Controls.Add(this.txtCpfCliente);
             this.pnlFundo.Controls.Add(this.lblTelefone);
-            this.pnlFundo.Controls.Add(this.txtTelefoneCliente);
             this.pnlFundo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlFundo.Location = new System.Drawing.Point(0, 0);
             this.pnlFundo.Name = "pnlFundo";
@@ -377,17 +351,49 @@
             // pnlViewCli
             // 
             this.pnlViewCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlViewCli.Controls.Add(this.imgBusca);
             this.pnlViewCli.Controls.Add(this.txtBusca);
-            this.pnlViewCli.Controls.Add(this.lblMsgError);
+            this.pnlViewCli.Controls.Add(this.imgMarcador);
             this.pnlViewCli.Controls.Add(this.btnRemover);
             this.pnlViewCli.Controls.Add(this.btnAlterar);
             this.pnlViewCli.Controls.Add(this.dgClientes);
-            this.pnlViewCli.Controls.Add(this.btnBuscar);
+            this.pnlViewCli.Controls.Add(this.lblMsgError);
             this.pnlViewCli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlViewCli.Location = new System.Drawing.Point(346, 0);
             this.pnlViewCli.Name = "pnlViewCli";
             this.pnlViewCli.Size = new System.Drawing.Size(454, 450);
             this.pnlViewCli.TabIndex = 43;
+            // 
+            // imgBusca
+            // 
+            this.imgBusca.Image = ((System.Drawing.Image)(resources.GetObject("imgBusca.Image")));
+            this.imgBusca.Location = new System.Drawing.Point(14, 62);
+            this.imgBusca.Name = "imgBusca";
+            this.imgBusca.Size = new System.Drawing.Size(32, 32);
+            this.imgBusca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgBusca.TabIndex = 65;
+            this.imgBusca.TabStop = false;
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBusca.Location = new System.Drawing.Point(52, 71);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.PlaceholderText = "Digite aqui para buscar";
+            this.txtBusca.Size = new System.Drawing.Size(239, 23);
+            this.txtBusca.TabIndex = 64;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            // 
+            // imgMarcador
+            // 
+            this.imgMarcador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMarcador.Image = ((System.Drawing.Image)(resources.GetObject("imgMarcador.Image")));
+            this.imgMarcador.Location = new System.Drawing.Point(399, 23);
+            this.imgMarcador.Name = "imgMarcador";
+            this.imgMarcador.Size = new System.Drawing.Size(32, 32);
+            this.imgMarcador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgMarcador.TabIndex = 63;
+            this.imgMarcador.TabStop = false;
             // 
             // FormClientes
             // 
@@ -398,6 +404,7 @@
             this.Controls.Add(this.pnlFundo);
             this.Name = "FormClientes";
             this.Text = "CLIENTES";
+            this.Load += new System.EventHandler(this.FormClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCadCli)).EndInit();
             this.pnlFundo.ResumeLayout(false);
@@ -406,6 +413,8 @@
             this.pnlHeaderCli.PerformLayout();
             this.pnlViewCli.ResumeLayout(false);
             this.pnlViewCli.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -420,10 +429,8 @@
         private TextBox txtCpfCliente;
         private TextBox txtNomeCliente;
         private Label lblEndereco;
-        private Button btnBuscar;
         private Label lblEmail;
         private Button btnRemover;
-        private TextBox txtBusca;
         private Label lblTelefone;
         private Label lblCpf;
         private Label lblNome;
@@ -435,5 +442,8 @@
         private Panel pnlFundo;
         private Panel pnlHeaderCli;
         private Panel pnlViewCli;
+        private PictureBox imgMarcador;
+        private PictureBox imgBusca;
+        private TextBox txtBusca;
     }
 }
