@@ -23,21 +23,21 @@ namespace SistemaPetShop.Forms
         }
         void limpaCampo()
         {
-            txtTelefoneCliente.Text = "";
-            txtEmailCliente.Text = "";
-            txtEnderecoCliente.Text = "";
-            txtCpfCliente.Text = "";
-            txtNomeCliente.Text = "";
-            txtNomeCliente.Focus();
+            txtTelefoneCli.Text = "";
+            txtEmailCli.Text = "";
+            txtEnderecoCli.Text = "";
+            txtCpfCli.Text = "";
+            txtNomeCli.Text = "";
+            txtNomeCli.Focus();
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
-            c.NomeCliente = txtNomeCliente.Text;
-            c.CpfCliente = txtCpfCliente.Text;
-            c.TelefoneCliente = txtTelefoneCliente.Text;
-            c.EmailCliente = txtEmailCliente.Text;
-            c.EnderecoCliente = txtEnderecoCliente.Text;
+            c.NomeCliente = txtNomeCli.Text;
+            c.CpfCliente = txtCpfCli.Text;
+            c.TelefoneCliente = txtTelefoneCli.Text;
+            c.EmailCliente = txtEmailCli.Text;
+            c.EnderecoCliente = txtEnderecoCli.Text;
 
             ConectaBanco conecta = new ConectaBanco();
             bool retorno = conecta.insereCliente(c);
@@ -51,14 +51,11 @@ namespace SistemaPetShop.Forms
             listaCliente();
             limpaCampo();
         }
-        private void FormClientes_Load(object sender, EventArgs e)
-        {
-            listaCliente();
-        }
 
         private void txtBusca_TextChanged(object sender, EventArgs e)
         {
             ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBusca.Text);
         }
+
     }
 }

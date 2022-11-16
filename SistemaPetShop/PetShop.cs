@@ -16,6 +16,8 @@ namespace SistemaPetShop
             OpenChildForm(new Forms.FormClientes());
             btnClientes.BackColor = Color.MediumSeaGreen;
             pnlCima.BackColor = Color.MediumSeaGreen;
+            pnlBordaEsquerda.BackColor = Color.SeaGreen;
+            pnlBordaCima.BackColor = Color.SeaGreen;
             btnLogo.BackColor = Color.SeaGreen;
             btnClientes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
@@ -24,6 +26,8 @@ namespace SistemaPetShop
             OpenChildForm(new Forms.FormPets());
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
+            pnlBordaEsquerda.BackColor = Color.Maroon;
+            pnlBordaCima.BackColor = Color.Maroon;
             btnLogo.BackColor = Color.Maroon;
             btnPets.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
@@ -32,6 +36,8 @@ namespace SistemaPetShop
             OpenChildForm(new Forms.FormProdutos());
             btnProdutos.BackColor = Color.Goldenrod;
             pnlCima.BackColor = Color.Goldenrod;
+            pnlBordaEsquerda.BackColor = Color.DarkGoldenrod;
+            pnlBordaCima.BackColor = Color.DarkGoldenrod;
             btnLogo.BackColor = Color.DarkGoldenrod;
             btnProdutos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 
@@ -42,6 +48,8 @@ namespace SistemaPetShop
             OpenChildForm(new Forms.FormFuncionarios());
             btnFuncionarios.BackColor = Color.DarkCyan;
             pnlCima.BackColor = Color.DarkCyan;
+            pnlBordaEsquerda.BackColor = Color.FromArgb(0, 64, 64);
+            pnlBordaCima.BackColor = Color.FromArgb(0, 64, 64);
             btnLogo.BackColor = Color.FromArgb(0, 64, 64);
             btnFuncionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
@@ -51,6 +59,8 @@ namespace SistemaPetShop
             OpenChildForm(new Forms.FormVendas());
             btnVendas.BackColor = Color.Crimson;
             pnlCima.BackColor = Color.Crimson;
+            pnlBordaCima.BackColor = Color.DarkRed;
+            pnlBordaEsquerda.BackColor = Color.DarkRed;
             btnLogo.BackColor = Color.DarkRed;
             btnVendas.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
         }
@@ -94,6 +104,16 @@ namespace SistemaPetShop
             DesativaButton();
             DesativaCL();
             lblTitle.Text = "HOME";
+        }
+
+        private void pnlRedes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlConteudo_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

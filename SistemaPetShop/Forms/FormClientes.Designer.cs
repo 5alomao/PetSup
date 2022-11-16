@@ -29,39 +29,141 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormClientes));
+            this.txtNomeCli = new System.Windows.Forms.TextBox();
+            this.txtEnderecoCli = new System.Windows.Forms.TextBox();
+            this.txtTelefoneCli = new System.Windows.Forms.TextBox();
+            this.txtCpfCli = new System.Windows.Forms.TextBox();
+            this.txtEmailCli = new System.Windows.Forms.TextBox();
+            this.lblHeaderCli = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgClientes = new System.Windows.Forms.DataGridView();
-            this.pnlDivisao = new System.Windows.Forms.Panel();
-            this.lblMsgError = new System.Windows.Forms.Label();
-            this.txtEnderecoCliente = new System.Windows.Forms.TextBox();
-            this.txtEmailCliente = new System.Windows.Forms.TextBox();
-            this.txtTelefoneCliente = new System.Windows.Forms.TextBox();
-            this.txtCpfCliente = new System.Windows.Forms.TextBox();
-            this.txtNomeCliente = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.lblTelefone = new System.Windows.Forms.Label();
-            this.lblCpf = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnConfirmar = new System.Windows.Forms.Button();
-            this.imgCadCli = new System.Windows.Forms.PictureBox();
-            this.lblCadCli = new System.Windows.Forms.Label();
-            this.pnlFundo = new System.Windows.Forms.Panel();
-            this.pnlHeaderCli = new System.Windows.Forms.Panel();
-            this.pnlViewCli = new System.Windows.Forms.Panel();
-            this.imgBusca = new System.Windows.Forms.PictureBox();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.pnlMarcador = new System.Windows.Forms.Panel();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.lblMsgError = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
-            this.imgMarcador = new System.Windows.Forms.PictureBox();
+            this.lblViewCli = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlClientes = new System.Windows.Forms.Panel();
+            this.pnlSBuscar = new System.Windows.Forms.Panel();
+            this.pnlSAlterar = new System.Windows.Forms.Panel();
+            this.pnlSRemover = new System.Windows.Forms.Panel();
+            this.pnlSLimpar = new System.Windows.Forms.Panel();
+            this.pnlSConfirmar = new System.Windows.Forms.Panel();
+            this.imgCli = new System.Windows.Forms.PictureBox();
+            this.imgCpf = new System.Windows.Forms.PictureBox();
+            this.imgTelefone = new System.Windows.Forms.PictureBox();
+            this.imgEndereco = new System.Windows.Forms.PictureBox();
+            this.imgBairro = new System.Windows.Forms.PictureBox();
+            this.imgEmail = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadCli)).BeginInit();
-            this.pnlFundo.SuspendLayout();
-            this.pnlHeaderCli.SuspendLayout();
-            this.pnlViewCli.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).BeginInit();
+            this.pnlClientes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txtNomeCli
+            // 
+            this.txtNomeCli.BackColor = System.Drawing.Color.White;
+            this.txtNomeCli.Location = new System.Drawing.Point(85, 96);
+            this.txtNomeCli.Name = "txtNomeCli";
+            this.txtNomeCli.PlaceholderText = "Nome";
+            this.txtNomeCli.Size = new System.Drawing.Size(200, 23);
+            this.txtNomeCli.TabIndex = 0;
+            // 
+            // txtEnderecoCli
+            // 
+            this.txtEnderecoCli.BackColor = System.Drawing.Color.White;
+            this.txtEnderecoCli.Location = new System.Drawing.Point(85, 216);
+            this.txtEnderecoCli.Name = "txtEnderecoCli";
+            this.txtEnderecoCli.PlaceholderText = "Endereço";
+            this.txtEnderecoCli.Size = new System.Drawing.Size(200, 23);
+            this.txtEnderecoCli.TabIndex = 7;
+            // 
+            // txtTelefoneCli
+            // 
+            this.txtTelefoneCli.BackColor = System.Drawing.Color.White;
+            this.txtTelefoneCli.Location = new System.Drawing.Point(85, 176);
+            this.txtTelefoneCli.Name = "txtTelefoneCli";
+            this.txtTelefoneCli.PlaceholderText = "Telefone";
+            this.txtTelefoneCli.Size = new System.Drawing.Size(200, 23);
+            this.txtTelefoneCli.TabIndex = 8;
+            // 
+            // txtCpfCli
+            // 
+            this.txtCpfCli.BackColor = System.Drawing.Color.White;
+            this.txtCpfCli.Location = new System.Drawing.Point(85, 136);
+            this.txtCpfCli.Name = "txtCpfCli";
+            this.txtCpfCli.PlaceholderText = "CPF";
+            this.txtCpfCli.Size = new System.Drawing.Size(200, 23);
+            this.txtCpfCli.TabIndex = 9;
+            // 
+            // txtEmailCli
+            // 
+            this.txtEmailCli.BackColor = System.Drawing.Color.White;
+            this.txtEmailCli.Location = new System.Drawing.Point(85, 296);
+            this.txtEmailCli.Name = "txtEmailCli";
+            this.txtEmailCli.PlaceholderText = "E-mail";
+            this.txtEmailCli.Size = new System.Drawing.Size(200, 23);
+            this.txtEmailCli.TabIndex = 21;
+            // 
+            // lblHeaderCli
+            // 
+            this.lblHeaderCli.AutoSize = true;
+            this.lblHeaderCli.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderCli.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderCli.Location = new System.Drawing.Point(22, 26);
+            this.lblHeaderCli.Name = "lblHeaderCli";
+            this.lblHeaderCli.Size = new System.Drawing.Size(174, 23);
+            this.lblHeaderCli.TabIndex = 1;
+            this.lblHeaderCli.Text = "Cadastrar Cliente";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(47, 367);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(77, 40);
+            this.btnLimpar.TabIndex = 17;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.AutoSize = true;
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(690, 367);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(98, 40);
+            this.btnBuscar.TabIndex = 19;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // dgClientes
             // 
@@ -69,381 +171,329 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgClientes.Location = new System.Drawing.Point(14, 106);
+            this.dgClientes.Location = new System.Drawing.Point(375, 140);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.RowTemplate.Height = 25;
-            this.dgClientes.Size = new System.Drawing.Size(417, 270);
-            this.dgClientes.TabIndex = 35;
+            this.dgClientes.Size = new System.Drawing.Size(413, 221);
+            this.dgClientes.TabIndex = 12;
             // 
-            // pnlDivisao
+            // btnConfirmar
             // 
-            this.pnlDivisao.BackColor = System.Drawing.Color.SeaGreen;
-            this.pnlDivisao.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDivisao.Location = new System.Drawing.Point(341, 0);
-            this.pnlDivisao.Name = "pnlDivisao";
-            this.pnlDivisao.Size = new System.Drawing.Size(5, 450);
-            this.pnlDivisao.TabIndex = 39;
-            // 
-            // lblMsgError
-            // 
-            this.lblMsgError.AutoSize = true;
-            this.lblMsgError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgError.Location = new System.Drawing.Point(14, 23);
-            this.lblMsgError.Name = "lblMsgError";
-            this.lblMsgError.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgError.TabIndex = 41;
-            this.lblMsgError.Text = "*";
-            // 
-            // txtEnderecoCliente
-            // 
-            this.txtEnderecoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEnderecoCliente.Location = new System.Drawing.Point(117, 252);
-            this.txtEnderecoCliente.Name = "txtEnderecoCliente";
-            this.txtEnderecoCliente.PlaceholderText = "Endereço";
-            this.txtEnderecoCliente.Size = new System.Drawing.Size(208, 23);
-            this.txtEnderecoCliente.TabIndex = 23;
-            // 
-            // txtEmailCliente
-            // 
-            this.txtEmailCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailCliente.Location = new System.Drawing.Point(117, 222);
-            this.txtEmailCliente.Name = "txtEmailCliente";
-            this.txtEmailCliente.PlaceholderText = "E-mail";
-            this.txtEmailCliente.Size = new System.Drawing.Size(208, 23);
-            this.txtEmailCliente.TabIndex = 26;
-            // 
-            // txtTelefoneCliente
-            // 
-            this.txtTelefoneCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefoneCliente.Location = new System.Drawing.Point(117, 192);
-            this.txtTelefoneCliente.Name = "txtTelefoneCliente";
-            this.txtTelefoneCliente.PlaceholderText = "Telefone";
-            this.txtTelefoneCliente.Size = new System.Drawing.Size(208, 23);
-            this.txtTelefoneCliente.TabIndex = 25;
-            // 
-            // txtCpfCliente
-            // 
-            this.txtCpfCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCpfCliente.Location = new System.Drawing.Point(117, 162);
-            this.txtCpfCliente.Name = "txtCpfCliente";
-            this.txtCpfCliente.PlaceholderText = "CPF";
-            this.txtCpfCliente.Size = new System.Drawing.Size(208, 23);
-            this.txtCpfCliente.TabIndex = 24;
-            // 
-            // txtNomeCliente
-            // 
-            this.txtNomeCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeCliente.Location = new System.Drawing.Point(117, 132);
-            this.txtNomeCliente.Name = "txtNomeCliente";
-            this.txtNomeCliente.PlaceholderText = "Nome Completo";
-            this.txtNomeCliente.Size = new System.Drawing.Size(208, 23);
-            this.txtNomeCliente.TabIndex = 22;
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEndereco.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEndereco.Location = new System.Drawing.Point(10, 252);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(83, 21);
-            this.lblEndereco.TabIndex = 30;
-            this.lblEndereco.Text = "Endereço:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblEmail.Location = new System.Drawing.Point(10, 222);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(58, 21);
-            this.lblEmail.TabIndex = 29;
-            this.lblEmail.Text = "E-mail:";
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemover.BackColor = System.Drawing.Color.Firebrick;
-            this.btnRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemover.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
-            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(311, 385);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(120, 40);
-            this.btnRemover.TabIndex = 33;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRemover.UseVisualStyleBackColor = false;
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTelefone.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTelefone.Location = new System.Drawing.Point(10, 192);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(77, 21);
-            this.lblTelefone.TabIndex = 27;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // lblCpf
-            // 
-            this.lblCpf.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCpf.AutoSize = true;
-            this.lblCpf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCpf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCpf.Location = new System.Drawing.Point(10, 162);
-            this.lblCpf.Name = "lblCpf";
-            this.lblCpf.Size = new System.Drawing.Size(41, 21);
-            this.lblCpf.TabIndex = 28;
-            this.lblCpf.Text = "CPF:";
-            // 
-            // lblNome
-            // 
-            this.lblNome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNome.AutoSize = true;
-            this.lblNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNome.Location = new System.Drawing.Point(10, 132);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(63, 21);
-            this.lblNome.TabIndex = 21;
-            this.lblNome.Text = "Nome: ";
+            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnConfirmar.AutoSize = true;
+            this.btnConfirmar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmar.Location = new System.Drawing.Point(190, 367);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmar.TabIndex = 18;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnAlterar
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterar.BackColor = System.Drawing.Color.Teal;
-            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAlterar.AutoSize = true;
+            this.btnAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(203, 385);
+            this.btnAlterar.Location = new System.Drawing.Point(586, 367);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(102, 40);
-            this.btnAlterar.TabIndex = 37;
+            this.btnAlterar.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAlterar.UseVisualStyleBackColor = false;
             // 
-            // btnCancelar
+            // pnlMarcador
             // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.Firebrick;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelar.Location = new System.Drawing.Point(109, 385);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(93, 40);
-            this.btnCancelar.TabIndex = 32;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.pnlMarcador.BackColor = System.Drawing.Color.SeaGreen;
+            this.pnlMarcador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMarcador.Location = new System.Drawing.Point(22, 52);
+            this.pnlMarcador.Name = "pnlMarcador";
+            this.pnlMarcador.Size = new System.Drawing.Size(280, 5);
+            this.pnlMarcador.TabIndex = 10;
             // 
-            // btnConfirmar
+            // btnRemover
             // 
-            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(209, 385);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(116, 40);
-            this.btnConfirmar.TabIndex = 31;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemover.AutoSize = true;
+            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemover.FlatAppearance.BorderSize = 0;
+            this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemover.ForeColor = System.Drawing.Color.Black;
+            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
+            this.btnRemover.Location = new System.Drawing.Point(482, 367);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(98, 40);
+            this.btnRemover.TabIndex = 16;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemover.UseVisualStyleBackColor = false;
             // 
-            // imgCadCli
+            // lblMsgError
             // 
-            this.imgCadCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.imgCadCli.Image = ((System.Drawing.Image)(resources.GetObject("imgCadCli.Image")));
-            this.imgCadCli.Location = new System.Drawing.Point(247, 23);
-            this.imgCadCli.Name = "imgCadCli";
-            this.imgCadCli.Size = new System.Drawing.Size(64, 64);
-            this.imgCadCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgCadCli.TabIndex = 40;
-            this.imgCadCli.TabStop = false;
+            this.lblMsgError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgError.AutoSize = true;
+            this.lblMsgError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgError.Location = new System.Drawing.Point(22, 427);
+            this.lblMsgError.Name = "lblMsgError";
+            this.lblMsgError.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgError.TabIndex = 25;
+            this.lblMsgError.Text = "*";
             // 
-            // lblCadCli
+            // label1
             // 
-            this.lblCadCli.AutoSize = true;
-            this.lblCadCli.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCadCli.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCadCli.Location = new System.Drawing.Point(26, 23);
-            this.lblCadCli.Name = "lblCadCli";
-            this.lblCadCli.Size = new System.Drawing.Size(168, 25);
-            this.lblCadCli.TabIndex = 38;
-            this.lblCadCli.Text = "Cadastrar Cliente:";
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(35, 265);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.TabIndex = 26;
             // 
-            // pnlFundo
+            // textBox1
             // 
-            this.pnlFundo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlFundo.Controls.Add(this.txtEnderecoCliente);
-            this.pnlFundo.Controls.Add(this.txtNomeCliente);
-            this.pnlFundo.Controls.Add(this.txtEmailCliente);
-            this.pnlFundo.Controls.Add(this.txtCpfCliente);
-            this.pnlFundo.Controls.Add(this.txtTelefoneCliente);
-            this.pnlFundo.Controls.Add(this.pnlHeaderCli);
-            this.pnlFundo.Controls.Add(this.btnConfirmar);
-            this.pnlFundo.Controls.Add(this.pnlDivisao);
-            this.pnlFundo.Controls.Add(this.lblNome);
-            this.pnlFundo.Controls.Add(this.btnCancelar);
-            this.pnlFundo.Controls.Add(this.lblEndereco);
-            this.pnlFundo.Controls.Add(this.lblEmail);
-            this.pnlFundo.Controls.Add(this.lblCpf);
-            this.pnlFundo.Controls.Add(this.lblTelefone);
-            this.pnlFundo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFundo.Location = new System.Drawing.Point(0, 0);
-            this.pnlFundo.Name = "pnlFundo";
-            this.pnlFundo.Size = new System.Drawing.Size(346, 450);
-            this.pnlFundo.TabIndex = 42;
-            // 
-            // pnlHeaderCli
-            // 
-            this.pnlHeaderCli.Controls.Add(this.imgCadCli);
-            this.pnlHeaderCli.Controls.Add(this.lblCadCli);
-            this.pnlHeaderCli.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderCli.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeaderCli.Name = "pnlHeaderCli";
-            this.pnlHeaderCli.Size = new System.Drawing.Size(341, 100);
-            this.pnlHeaderCli.TabIndex = 40;
-            // 
-            // pnlViewCli
-            // 
-            this.pnlViewCli.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pnlViewCli.Controls.Add(this.imgBusca);
-            this.pnlViewCli.Controls.Add(this.txtBusca);
-            this.pnlViewCli.Controls.Add(this.imgMarcador);
-            this.pnlViewCli.Controls.Add(this.btnRemover);
-            this.pnlViewCli.Controls.Add(this.btnAlterar);
-            this.pnlViewCli.Controls.Add(this.dgClientes);
-            this.pnlViewCli.Controls.Add(this.lblMsgError);
-            this.pnlViewCli.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlViewCli.Location = new System.Drawing.Point(346, 0);
-            this.pnlViewCli.Name = "pnlViewCli";
-            this.pnlViewCli.Size = new System.Drawing.Size(454, 450);
-            this.pnlViewCli.TabIndex = 43;
-            // 
-            // imgBusca
-            // 
-            this.imgBusca.Image = ((System.Drawing.Image)(resources.GetObject("imgBusca.Image")));
-            this.imgBusca.Location = new System.Drawing.Point(14, 62);
-            this.imgBusca.Name = "imgBusca";
-            this.imgBusca.Size = new System.Drawing.Size(32, 32);
-            this.imgBusca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgBusca.TabIndex = 65;
-            this.imgBusca.TabStop = false;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Location = new System.Drawing.Point(85, 256);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Bairro";
+            this.textBox1.Size = new System.Drawing.Size(200, 23);
+            this.textBox1.TabIndex = 27;
             // 
             // txtBusca
             // 
-            this.txtBusca.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBusca.Location = new System.Drawing.Point(52, 71);
+            this.txtBusca.BackColor = System.Drawing.Color.White;
+            this.txtBusca.Location = new System.Drawing.Point(375, 111);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.PlaceholderText = "Digite aqui para buscar";
-            this.txtBusca.Size = new System.Drawing.Size(239, 23);
-            this.txtBusca.TabIndex = 64;
+            this.txtBusca.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBusca.Size = new System.Drawing.Size(218, 23);
+            this.txtBusca.TabIndex = 14;
             this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
-            // imgMarcador
+            // lblViewCli
             // 
-            this.imgMarcador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMarcador.Image = ((System.Drawing.Image)(resources.GetObject("imgMarcador.Image")));
-            this.imgMarcador.Location = new System.Drawing.Point(399, 23);
-            this.imgMarcador.Name = "imgMarcador";
-            this.imgMarcador.Size = new System.Drawing.Size(32, 32);
-            this.imgMarcador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgMarcador.TabIndex = 63;
-            this.imgMarcador.TabStop = false;
+            this.lblViewCli.AutoSize = true;
+            this.lblViewCli.BackColor = System.Drawing.Color.Transparent;
+            this.lblViewCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblViewCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblViewCli.ForeColor = System.Drawing.Color.Black;
+            this.lblViewCli.Location = new System.Drawing.Point(375, 26);
+            this.lblViewCli.Name = "lblViewCli";
+            this.lblViewCli.Size = new System.Drawing.Size(205, 23);
+            this.lblViewCli.TabIndex = 23;
+            this.lblViewCli.Text = "Clientes Registrados";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(375, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(413, 5);
+            this.panel1.TabIndex = 22;
+            // 
+            // pnlClientes
+            // 
+            this.pnlClientes.BackColor = System.Drawing.Color.White;
+            this.pnlClientes.Controls.Add(this.imgEmail);
+            this.pnlClientes.Controls.Add(this.imgBairro);
+            this.pnlClientes.Controls.Add(this.imgEndereco);
+            this.pnlClientes.Controls.Add(this.imgTelefone);
+            this.pnlClientes.Controls.Add(this.imgCpf);
+            this.pnlClientes.Controls.Add(this.imgCli);
+            this.pnlClientes.Controls.Add(this.pnlSBuscar);
+            this.pnlClientes.Controls.Add(this.pnlSAlterar);
+            this.pnlClientes.Controls.Add(this.pnlSRemover);
+            this.pnlClientes.Controls.Add(this.pnlSLimpar);
+            this.pnlClientes.Controls.Add(this.pnlSConfirmar);
+            this.pnlClientes.Controls.Add(this.txtNomeCli);
+            this.pnlClientes.Controls.Add(this.txtCpfCli);
+            this.pnlClientes.Controls.Add(this.txtEmailCli);
+            this.pnlClientes.Controls.Add(this.txtTelefoneCli);
+            this.pnlClientes.Controls.Add(this.txtEnderecoCli);
+            this.pnlClientes.Controls.Add(this.panel1);
+            this.pnlClientes.Controls.Add(this.lblViewCli);
+            this.pnlClientes.Controls.Add(this.txtBusca);
+            this.pnlClientes.Controls.Add(this.textBox1);
+            this.pnlClientes.Controls.Add(this.label1);
+            this.pnlClientes.Controls.Add(this.lblMsgError);
+            this.pnlClientes.Controls.Add(this.btnRemover);
+            this.pnlClientes.Controls.Add(this.pnlMarcador);
+            this.pnlClientes.Controls.Add(this.btnAlterar);
+            this.pnlClientes.Controls.Add(this.btnConfirmar);
+            this.pnlClientes.Controls.Add(this.dgClientes);
+            this.pnlClientes.Controls.Add(this.btnBuscar);
+            this.pnlClientes.Controls.Add(this.btnLimpar);
+            this.pnlClientes.Controls.Add(this.lblHeaderCli);
+            this.pnlClientes.Location = new System.Drawing.Point(0, 0);
+            this.pnlClientes.Name = "pnlClientes";
+            this.pnlClientes.Size = new System.Drawing.Size(800, 451);
+            this.pnlClientes.TabIndex = 26;
+            // 
+            // pnlSBuscar
+            // 
+            this.pnlSBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSBuscar.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlSBuscar.Location = new System.Drawing.Point(690, 413);
+            this.pnlSBuscar.Name = "pnlSBuscar";
+            this.pnlSBuscar.Size = new System.Drawing.Size(98, 3);
+            this.pnlSBuscar.TabIndex = 30;
+            // 
+            // pnlSAlterar
+            // 
+            this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlSAlterar.Location = new System.Drawing.Point(586, 413);
+            this.pnlSAlterar.Name = "pnlSAlterar";
+            this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
+            this.pnlSAlterar.TabIndex = 32;
+            // 
+            // pnlSRemover
+            // 
+            this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlSRemover.Location = new System.Drawing.Point(482, 413);
+            this.pnlSRemover.Name = "pnlSRemover";
+            this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
+            this.pnlSRemover.TabIndex = 31;
+            // 
+            // pnlSLimpar
+            // 
+            this.pnlSLimpar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pnlSLimpar.Location = new System.Drawing.Point(47, 413);
+            this.pnlSLimpar.Name = "pnlSLimpar";
+            this.pnlSLimpar.Size = new System.Drawing.Size(77, 3);
+            this.pnlSLimpar.TabIndex = 30;
+            // 
+            // pnlSConfirmar
+            // 
+            this.pnlSConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlSConfirmar.BackColor = System.Drawing.Color.GreenYellow;
+            this.pnlSConfirmar.Location = new System.Drawing.Point(190, 413);
+            this.pnlSConfirmar.Name = "pnlSConfirmar";
+            this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
+            this.pnlSConfirmar.TabIndex = 29;
+            // 
+            // imgCli
+            // 
+            this.imgCli.Image = ((System.Drawing.Image)(resources.GetObject("imgCli.Image")));
+            this.imgCli.Location = new System.Drawing.Point(47, 87);
+            this.imgCli.Name = "imgCli";
+            this.imgCli.Size = new System.Drawing.Size(32, 32);
+            this.imgCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCli.TabIndex = 33;
+            this.imgCli.TabStop = false;
+            // 
+            // imgCpf
+            // 
+            this.imgCpf.Location = new System.Drawing.Point(47, 127);
+            this.imgCpf.Name = "imgCpf";
+            this.imgCpf.Size = new System.Drawing.Size(32, 32);
+            this.imgCpf.TabIndex = 34;
+            this.imgCpf.TabStop = false;
+            // 
+            // imgTelefone
+            // 
+            this.imgTelefone.Location = new System.Drawing.Point(47, 167);
+            this.imgTelefone.Name = "imgTelefone";
+            this.imgTelefone.Size = new System.Drawing.Size(32, 32);
+            this.imgTelefone.TabIndex = 35;
+            this.imgTelefone.TabStop = false;
+            // 
+            // imgEndereco
+            // 
+            this.imgEndereco.Location = new System.Drawing.Point(47, 207);
+            this.imgEndereco.Name = "imgEndereco";
+            this.imgEndereco.Size = new System.Drawing.Size(32, 32);
+            this.imgEndereco.TabIndex = 36;
+            this.imgEndereco.TabStop = false;
+            // 
+            // imgBairro
+            // 
+            this.imgBairro.Location = new System.Drawing.Point(47, 247);
+            this.imgBairro.Name = "imgBairro";
+            this.imgBairro.Size = new System.Drawing.Size(32, 32);
+            this.imgBairro.TabIndex = 37;
+            this.imgBairro.TabStop = false;
+            // 
+            // imgEmail
+            // 
+            this.imgEmail.Image = ((System.Drawing.Image)(resources.GetObject("imgEmail.Image")));
+            this.imgEmail.Location = new System.Drawing.Point(47, 287);
+            this.imgEmail.Name = "imgEmail";
+            this.imgEmail.Size = new System.Drawing.Size(32, 32);
+            this.imgEmail.TabIndex = 38;
+            this.imgEmail.TabStop = false;
             // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlViewCli);
-            this.Controls.Add(this.pnlFundo);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(800, 451);
+            this.Controls.Add(this.pnlClientes);
             this.Name = "FormClientes";
             this.Text = "CLIENTES";
-            this.Load += new System.EventHandler(this.FormClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadCli)).EndInit();
-            this.pnlFundo.ResumeLayout(false);
-            this.pnlFundo.PerformLayout();
-            this.pnlHeaderCli.ResumeLayout(false);
-            this.pnlHeaderCli.PerformLayout();
-            this.pnlViewCli.ResumeLayout(false);
-            this.pnlViewCli.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).EndInit();
+            this.pnlClientes.ResumeLayout(false);
+            this.pnlClientes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private TextBox txtNomeCli;
+        private TextBox txtEnderecoCli;
+        private TextBox txtTelefoneCli;
+        private TextBox txtCpfCli;
+        private TextBox txtEmailCli;
+        private Label lblHeaderCli;
+        private Button btnLimpar;
+        private Button btnBuscar;
         private DataGridView dgClientes;
-        private Panel pnlDivisao;
-        private Label lblMsgError;
-        private TextBox txtEnderecoCliente;
-        private TextBox txtEmailCliente;
-        private TextBox txtTelefoneCliente;
-        private TextBox txtCpfCliente;
-        private TextBox txtNomeCliente;
-        private Label lblEndereco;
-        private Label lblEmail;
-        private Button btnRemover;
-        private Label lblTelefone;
-        private Label lblCpf;
-        private Label lblNome;
-        private Button btnAlterar;
-        private Button btnCancelar;
         private Button btnConfirmar;
-        private PictureBox imgCadCli;
-        private Label lblCadCli;
-        private Panel pnlFundo;
-        private Panel pnlHeaderCli;
-        private Panel pnlViewCli;
-        private PictureBox imgMarcador;
-        private PictureBox imgBusca;
+        private Button btnAlterar;
+        private Panel pnlMarcador;
+        private Button btnRemover;
+        private Label lblMsgError;
+        private Label label1;
+        private TextBox textBox1;
         private TextBox txtBusca;
+        private Label lblViewCli;
+        private Panel panel1;
+        private Panel pnlClientes;
+        private Panel pnlSBuscar;
+        private Panel pnlSAlterar;
+        private Panel pnlSRemover;
+        private Panel pnlSLimpar;
+        private Panel pnlSConfirmar;
+        private PictureBox imgCpf;
+        private PictureBox imgCli;
+        private PictureBox imgEmail;
+        private PictureBox imgBairro;
+        private PictureBox imgEndereco;
+        private PictureBox imgTelefone;
     }
 }
