@@ -49,25 +49,25 @@
             this.lblViewCli = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlClientes = new System.Windows.Forms.Panel();
+            this.imgEmail = new System.Windows.Forms.PictureBox();
+            this.imgBairro = new System.Windows.Forms.PictureBox();
+            this.imgEndereco = new System.Windows.Forms.PictureBox();
+            this.imgTelefone = new System.Windows.Forms.PictureBox();
+            this.imgCpf = new System.Windows.Forms.PictureBox();
+            this.imgCli = new System.Windows.Forms.PictureBox();
             this.pnlSBuscar = new System.Windows.Forms.Panel();
             this.pnlSAlterar = new System.Windows.Forms.Panel();
             this.pnlSRemover = new System.Windows.Forms.Panel();
             this.pnlSLimpar = new System.Windows.Forms.Panel();
             this.pnlSConfirmar = new System.Windows.Forms.Panel();
-            this.imgCli = new System.Windows.Forms.PictureBox();
-            this.imgCpf = new System.Windows.Forms.PictureBox();
-            this.imgTelefone = new System.Windows.Forms.PictureBox();
-            this.imgEndereco = new System.Windows.Forms.PictureBox();
-            this.imgBairro = new System.Windows.Forms.PictureBox();
-            this.imgEmail = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
             this.pnlClientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomeCli
@@ -308,7 +308,10 @@
             // 
             // pnlClientes
             // 
-            this.pnlClientes.BackColor = System.Drawing.Color.White;
+            this.pnlClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pnlClientes.Controls.Add(this.imgEmail);
             this.pnlClientes.Controls.Add(this.imgBairro);
             this.pnlClientes.Controls.Add(this.imgEndereco);
@@ -343,6 +346,62 @@
             this.pnlClientes.Name = "pnlClientes";
             this.pnlClientes.Size = new System.Drawing.Size(800, 451);
             this.pnlClientes.TabIndex = 26;
+            // 
+            // imgEmail
+            // 
+            this.imgEmail.Image = ((System.Drawing.Image)(resources.GetObject("imgEmail.Image")));
+            this.imgEmail.Location = new System.Drawing.Point(47, 287);
+            this.imgEmail.Name = "imgEmail";
+            this.imgEmail.Size = new System.Drawing.Size(32, 32);
+            this.imgEmail.TabIndex = 38;
+            this.imgEmail.TabStop = false;
+            // 
+            // imgBairro
+            // 
+            this.imgBairro.Image = ((System.Drawing.Image)(resources.GetObject("imgBairro.Image")));
+            this.imgBairro.Location = new System.Drawing.Point(47, 247);
+            this.imgBairro.Name = "imgBairro";
+            this.imgBairro.Size = new System.Drawing.Size(32, 32);
+            this.imgBairro.TabIndex = 37;
+            this.imgBairro.TabStop = false;
+            // 
+            // imgEndereco
+            // 
+            this.imgEndereco.Image = ((System.Drawing.Image)(resources.GetObject("imgEndereco.Image")));
+            this.imgEndereco.Location = new System.Drawing.Point(47, 207);
+            this.imgEndereco.Name = "imgEndereco";
+            this.imgEndereco.Size = new System.Drawing.Size(32, 32);
+            this.imgEndereco.TabIndex = 36;
+            this.imgEndereco.TabStop = false;
+            // 
+            // imgTelefone
+            // 
+            this.imgTelefone.Image = ((System.Drawing.Image)(resources.GetObject("imgTelefone.Image")));
+            this.imgTelefone.Location = new System.Drawing.Point(47, 167);
+            this.imgTelefone.Name = "imgTelefone";
+            this.imgTelefone.Size = new System.Drawing.Size(32, 32);
+            this.imgTelefone.TabIndex = 35;
+            this.imgTelefone.TabStop = false;
+            // 
+            // imgCpf
+            // 
+            this.imgCpf.Image = ((System.Drawing.Image)(resources.GetObject("imgCpf.Image")));
+            this.imgCpf.Location = new System.Drawing.Point(47, 127);
+            this.imgCpf.Name = "imgCpf";
+            this.imgCpf.Size = new System.Drawing.Size(32, 32);
+            this.imgCpf.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCpf.TabIndex = 34;
+            this.imgCpf.TabStop = false;
+            // 
+            // imgCli
+            // 
+            this.imgCli.Image = ((System.Drawing.Image)(resources.GetObject("imgCli.Image")));
+            this.imgCli.Location = new System.Drawing.Point(47, 87);
+            this.imgCli.Name = "imgCli";
+            this.imgCli.Size = new System.Drawing.Size(32, 32);
+            this.imgCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCli.TabIndex = 33;
+            this.imgCli.TabStop = false;
             // 
             // pnlSBuscar
             // 
@@ -389,57 +448,6 @@
             this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
             this.pnlSConfirmar.TabIndex = 29;
             // 
-            // imgCli
-            // 
-            this.imgCli.Image = ((System.Drawing.Image)(resources.GetObject("imgCli.Image")));
-            this.imgCli.Location = new System.Drawing.Point(47, 87);
-            this.imgCli.Name = "imgCli";
-            this.imgCli.Size = new System.Drawing.Size(32, 32);
-            this.imgCli.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgCli.TabIndex = 33;
-            this.imgCli.TabStop = false;
-            // 
-            // imgCpf
-            // 
-            this.imgCpf.Location = new System.Drawing.Point(47, 127);
-            this.imgCpf.Name = "imgCpf";
-            this.imgCpf.Size = new System.Drawing.Size(32, 32);
-            this.imgCpf.TabIndex = 34;
-            this.imgCpf.TabStop = false;
-            // 
-            // imgTelefone
-            // 
-            this.imgTelefone.Location = new System.Drawing.Point(47, 167);
-            this.imgTelefone.Name = "imgTelefone";
-            this.imgTelefone.Size = new System.Drawing.Size(32, 32);
-            this.imgTelefone.TabIndex = 35;
-            this.imgTelefone.TabStop = false;
-            // 
-            // imgEndereco
-            // 
-            this.imgEndereco.Location = new System.Drawing.Point(47, 207);
-            this.imgEndereco.Name = "imgEndereco";
-            this.imgEndereco.Size = new System.Drawing.Size(32, 32);
-            this.imgEndereco.TabIndex = 36;
-            this.imgEndereco.TabStop = false;
-            // 
-            // imgBairro
-            // 
-            this.imgBairro.Location = new System.Drawing.Point(47, 247);
-            this.imgBairro.Name = "imgBairro";
-            this.imgBairro.Size = new System.Drawing.Size(32, 32);
-            this.imgBairro.TabIndex = 37;
-            this.imgBairro.TabStop = false;
-            // 
-            // imgEmail
-            // 
-            this.imgEmail.Image = ((System.Drawing.Image)(resources.GetObject("imgEmail.Image")));
-            this.imgEmail.Location = new System.Drawing.Point(47, 287);
-            this.imgEmail.Name = "imgEmail";
-            this.imgEmail.Size = new System.Drawing.Size(32, 32);
-            this.imgEmail.TabIndex = 38;
-            this.imgEmail.TabStop = false;
-            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -452,12 +460,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
             this.pnlClientes.ResumeLayout(false);
             this.pnlClientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEndereco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCli)).EndInit();
             this.ResumeLayout(false);
 
         }
