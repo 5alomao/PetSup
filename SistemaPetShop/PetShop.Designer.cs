@@ -149,6 +149,7 @@
             // 
             // lblSoftware
             // 
+            this.lblSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblSoftware.AutoSize = true;
             this.lblSoftware.BackColor = System.Drawing.Color.Transparent;
             this.lblSoftware.ForeColor = System.Drawing.Color.White;

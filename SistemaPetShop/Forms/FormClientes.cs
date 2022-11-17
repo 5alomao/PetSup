@@ -19,7 +19,7 @@ namespace SistemaPetShop.Forms
         void listaCliente()
         {
             ConectaBanco con = new ConectaBanco();
-            dgClientes.DataSource = con.listaClientes(); ;
+            dgClientes.DataSource = con.listaClientes();
         }
         void limpaCampo()
         {
@@ -28,6 +28,7 @@ namespace SistemaPetShop.Forms
             txtEnderecoCli.Text = "";
             txtCpfCli.Text = "";
             txtNomeCli.Text = "";
+            txtBairroCliente.Text = "";
             txtNomeCli.Focus();
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -38,6 +39,7 @@ namespace SistemaPetShop.Forms
             c.TelefoneCliente = txtTelefoneCli.Text;
             c.EmailCliente = txtEmailCli.Text;
             c.EnderecoCliente = txtEnderecoCli.Text;
+            c.BairroCliente = txtBairroCliente.Text;
 
             ConectaBanco conecta = new ConectaBanco();
             bool retorno = conecta.insereCliente(c);
@@ -57,5 +59,19 @@ namespace SistemaPetShop.Forms
             ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBusca.Text);
         }
 
+        private void FormClientes_Load(object sender, EventArgs e)
+        {
+            listaCliente();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtTelefoneCli.Text = "";
+            txtEmailCli.Text = "";
+            txtEnderecoCli.Text = "";
+            txtCpfCli.Text = "";
+            txtNomeCli.Text = "";
+            txtBairroCliente.Text = "";
+        }
     }
 }

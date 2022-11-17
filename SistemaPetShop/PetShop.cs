@@ -103,6 +103,8 @@ namespace SistemaPetShop
             activeForm.Close();
             DesativaButton();
             DesativaCL();
+            pnlBordaCima.BackColor = Color.FromArgb(31, 31, 51);
+            pnlBordaEsquerda.BackColor = Color.FromArgb(31, 31, 51);
             lblTitle.Text = "HOME";
         }
 

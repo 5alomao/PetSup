@@ -100,6 +100,7 @@
             this.btnConfirmar.TabIndex = 33;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // btnCancelar
             // 
@@ -327,6 +328,7 @@
             this.txtBusca.PlaceholderText = "Digite aqui para buscar";
             this.txtBusca.Size = new System.Drawing.Size(239, 23);
             this.txtBusca.TabIndex = 45;
+            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
             // 
             // lblMsgError
             // 
@@ -401,6 +403,7 @@
             this.Controls.Add(this.pnlFundo);
             this.Name = "FormPets";
             this.Text = "PETS";
+            this.Load += new System.EventHandler(this.FormPets_Load);
             this.pnlFundo.ResumeLayout(false);
             this.pnlFundo.PerformLayout();
             this.pnlHeaderPets.ResumeLayout(false);

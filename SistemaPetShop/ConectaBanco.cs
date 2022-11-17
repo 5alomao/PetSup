@@ -68,6 +68,33 @@ namespace SistemaPetShop
             cmd.Parameters.AddWithValue("email", c.EmailCliente);
             cmd.Parameters.AddWithValue("telefone", c.TelefoneCliente);
             cmd.Parameters.AddWithValue("endereco", c.EnderecoCliente);
+            cmd.Parameters.AddWithValue("bairro", c.BairroCliente);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+
+        public bool inserePet(Pet p)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_inserePet", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nome", p.NomePet);
+            cmd.Parameters.AddWithValue("raca", p.RacaPet);
+            cmd.Parameters.AddWithValue("porte", p.PortePet);
+            cmd.Parameters.AddWithValue("tipo", p.TipoPet);
+            cmd.Parameters.AddWithValue("codCli", p.DonoPet);
             try
             {
                 conectaBD.Open();
