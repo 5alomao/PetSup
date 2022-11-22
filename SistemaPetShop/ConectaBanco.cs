@@ -112,5 +112,27 @@ namespace SistemaPetShop
             }
         }
 
+        public bool deletaCliente(int codCliente)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_deletaCliente", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codCli", codCliente);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }// fim deleta Cliente
+     
     }
 }

@@ -651,6 +651,7 @@
             this.Name = "PetShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetSupSoftware";
+            this.Load += new System.EventHandler(this.PetShop_Load);
             this.pnlEsquerda.ResumeLayout(false);
             this.pnlEsquerda.PerformLayout();
             this.pnlCima.ResumeLayout(false);

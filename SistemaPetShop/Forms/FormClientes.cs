@@ -73,5 +73,40 @@ namespace SistemaPetShop.Forms
             txtNomeCli.Text = "";
             txtBairroCliente.Text = "";
         }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+            int linha = dgClientes.CurrentRow.Index; //pegar linha selecionada
+            int codRemover = Convert.ToInt32(dgClientes.Rows[linha].Cells["codCliente"].Value.ToString());
+
+            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Altera Cliente", MessageBoxButtons.YesNo);
+
+            if (resposta == DialogResult.Yes)
+            {
+                ConectaBanco conecta = new ConectaBanco();
+                bool retorno = conecta.deletaCliente(codRemover);
+                if (retorno == true)
+                {
+                    MessageBox.Show("Cliente Removido");
+                }
+                else
+                    lblMsgError.Text = conecta.mensagem;
+            } // final if YES
+            else
+                MessageBox.Show("Operação Cancelada");
+
+            listaCliente();
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
-}
+    }
+

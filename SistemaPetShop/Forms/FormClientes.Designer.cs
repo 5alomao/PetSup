@@ -179,6 +179,7 @@
             this.dgClientes.RowTemplate.Height = 25;
             this.dgClientes.Size = new System.Drawing.Size(434, 273);
             this.dgClientes.TabIndex = 12;
+            this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
             // btnConfirmar
             // 
@@ -214,6 +215,7 @@
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // pnlMarcador
             // 
@@ -242,6 +244,7 @@
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
             // lblMsgError
             // 
@@ -312,7 +315,7 @@
             this.pnlClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pnlClientes.BackColor = System.Drawing.Color.White;
             this.pnlClientes.Controls.Add(this.imgEmail);
             this.pnlClientes.Controls.Add(this.imgBairro);
             this.pnlClientes.Controls.Add(this.imgEndereco);

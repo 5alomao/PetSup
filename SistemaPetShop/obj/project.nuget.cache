@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Rbe5xh+AkOt5F5VMOVadnVFqTn2UsEG+z8HFvIR/FHOZPkIYohT+nesXjvZRfjSu7k/L3565wwGq2iyeCiAYg==",
+  "dgSpecHash": "ZExixvoZ6hXSp3bIvAe7cPxVssTJoXlbFfR8Pe868vWaDbbsLKpCCWnNDcAfFaXkHyek0qZXVANS7WaOrrpcCQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\17413319608\\Desktop\\PetSup-main\\SistemaPetShop\\SistemaPetShop.csproj",
+  "projectFilePath": "C:\\Users\\17413319608\\Desktop\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\17413319608\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\17413319608\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",
