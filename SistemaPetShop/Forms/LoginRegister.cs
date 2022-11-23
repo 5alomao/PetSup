@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaPetShop.Forms
 {
-    public partial class FormFuncionarios : Form
+    public partial class LoginRegister : Form
     {
-        public FormFuncionarios()
+        public LoginRegister()
         {
             InitializeComponent();
         }

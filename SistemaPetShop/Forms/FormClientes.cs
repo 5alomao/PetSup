@@ -66,12 +66,7 @@ namespace SistemaPetShop.Forms
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-            txtTelefoneCli.Text = "";
-            txtEmailCli.Text = "";
-            txtEnderecoCli.Text = "";
-            txtCpfCli.Text = "";
-            txtNomeCli.Text = "";
-            txtBairroCliente.Text = "";
+            limpaCampo();
         }
 
         private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -82,9 +77,9 @@ namespace SistemaPetShop.Forms
         private void btnRemover_Click(object sender, EventArgs e)
         {
             int linha = dgClientes.CurrentRow.Index; //pegar linha selecionada
-            int codRemover = Convert.ToInt32(dgClientes.Rows[linha].Cells["codCliente"].Value.ToString());
+            int codRemover = Convert.ToInt32(dgClientes.Rows[linha].Cells["Código"].Value.ToString());
 
-            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Altera Cliente", MessageBoxButtons.YesNo);
+            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Deletar Cliente", MessageBoxButtons.YesNo);
 
             if (resposta == DialogResult.Yes)
             {
@@ -92,7 +87,7 @@ namespace SistemaPetShop.Forms
                 bool retorno = conecta.deletaCliente(codRemover);
                 if (retorno == true)
                 {
-                    MessageBox.Show("Cliente Removido");
+                    MessageBox.Show("Cliente Removido !");
                 }
                 else
                     lblMsgError.Text = conecta.mensagem;

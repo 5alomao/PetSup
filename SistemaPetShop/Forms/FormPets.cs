@@ -33,7 +33,17 @@ namespace SistemaPetShop.Forms
             txtNomePet.Focus();
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void txtBusca_TextChanged(object sender, EventArgs e)
+        {
+            ((DataTable)dgPets.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBusca.Text);
+        }
+
+        private void FormPets_Load(object sender, EventArgs e)
+        {
+            listaPet();
+        }
+
+        private void btnConfirmar_Click_1(object sender, EventArgs e)
         {
             Pet p = new Pet();
             p.NomePet = txtNomePet.Text;
@@ -55,14 +65,9 @@ namespace SistemaPetShop.Forms
             limpaCampo();
         }
 
-        private void txtBusca_TextChanged(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
-            ((DataTable)dgPets.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBusca.Text);
-        }
-
-        private void FormPets_Load(object sender, EventArgs e)
-        {
-            listaPet();
+            limpaCampo();
         }
     }
     }

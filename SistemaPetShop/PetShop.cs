@@ -33,36 +33,17 @@ namespace SistemaPetShop
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormProdutos());
-            btnProdutos.BackColor = Color.Goldenrod;
-            pnlCima.BackColor = Color.Goldenrod;
-            pnlBordaEsquerda.BackColor = Color.DarkGoldenrod;
-            pnlBordaCima.BackColor = Color.DarkGoldenrod;
-            btnLogo.BackColor = Color.DarkGoldenrod;
-            btnProdutos.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
 
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormFuncionarios());
-            btnFuncionarios.BackColor = Color.DarkCyan;
-            pnlCima.BackColor = Color.DarkCyan;
-            pnlBordaEsquerda.BackColor = Color.FromArgb(0, 64, 64);
-            pnlBordaCima.BackColor = Color.FromArgb(0, 64, 64);
-            btnLogo.BackColor = Color.FromArgb(0, 64, 64);
-            btnFuncionarios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.FormVendas());
-            btnVendas.BackColor = Color.Crimson;
-            pnlCima.BackColor = Color.Crimson;
-            pnlBordaCima.BackColor = Color.DarkRed;
-            pnlBordaEsquerda.BackColor = Color.DarkRed;
-            btnLogo.BackColor = Color.DarkRed;
-            btnVendas.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+
         }
         private void DesativaButton()
         {
@@ -106,11 +87,6 @@ namespace SistemaPetShop
             pnlBordaCima.BackColor = Color.FromArgb(31, 31, 51);
             pnlBordaEsquerda.BackColor = Color.FromArgb(31, 31, 51);
             lblTitle.Text = "HOME";
-        }
-
-        private void pnlRedes_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void pnlConteudo_Paint(object sender, PaintEventArgs e)

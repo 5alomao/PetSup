@@ -279,6 +279,7 @@
             // txtBusca
             // 
             this.txtBusca.BackColor = System.Drawing.Color.White;
+            this.txtBusca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBusca.Location = new System.Drawing.Point(375, 111);
             this.txtBusca.Name = "txtBusca";
             this.txtBusca.PlaceholderText = "Digite aqui para buscar";

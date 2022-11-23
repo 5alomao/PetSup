@@ -29,332 +29,332 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPets));
-            this.pnlFundo = new System.Windows.Forms.Panel();
-            this.btnConfirmar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDonoPet = new System.Windows.Forms.TextBox();
-            this.lblDono = new System.Windows.Forms.Label();
             this.txtRacaPet = new System.Windows.Forms.TextBox();
             this.txtPortePet = new System.Windows.Forms.TextBox();
             this.txtTipoPet = new System.Windows.Forms.TextBox();
             this.txtNomePet = new System.Windows.Forms.TextBox();
-            this.lblTipoPet = new System.Windows.Forms.Label();
-            this.lblRacaPet = new System.Windows.Forms.Label();
-            this.lblPortePet = new System.Windows.Forms.Label();
-            this.lblNomePet = new System.Windows.Forms.Label();
-            this.pnlHeaderPets = new System.Windows.Forms.Panel();
-            this.imgCadPet = new System.Windows.Forms.PictureBox();
-            this.lblCadPet = new System.Windows.Forms.Label();
-            this.pnlDivisao = new System.Windows.Forms.Panel();
-            this.pnlViewPets = new System.Windows.Forms.Panel();
-            this.imgMarcador = new System.Windows.Forms.PictureBox();
-            this.imgBusca = new System.Windows.Forms.PictureBox();
-            this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblMsgError = new System.Windows.Forms.Label();
+            this.dgPets = new System.Windows.Forms.DataGridView();
+            this.imgPet = new System.Windows.Forms.PictureBox();
+            this.txtBusca = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblViewCli = new System.Windows.Forms.Label();
+            this.pnlMarcador = new System.Windows.Forms.Panel();
+            this.lblHeaderPet = new System.Windows.Forms.Label();
+            this.imgTipoPet = new System.Windows.Forms.PictureBox();
+            this.imgRacaPet = new System.Windows.Forms.PictureBox();
+            this.imgPortePet = new System.Windows.Forms.PictureBox();
+            this.imgDono = new System.Windows.Forms.PictureBox();
+            this.pnlSLimpar = new System.Windows.Forms.Panel();
+            this.pnlSConfirmar = new System.Windows.Forms.Panel();
+            this.btnConfirmar = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSBuscar = new System.Windows.Forms.Panel();
+            this.pnlSAlterar = new System.Windows.Forms.Panel();
+            this.pnlSRemover = new System.Windows.Forms.Panel();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
-            this.dgPets = new System.Windows.Forms.DataGridView();
-            this.pnlFundo.SuspendLayout();
-            this.pnlHeaderPets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadPet)).BeginInit();
-            this.pnlViewPets.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).BeginInit();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPets)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlFundo
-            // 
-            this.pnlFundo.BackColor = System.Drawing.Color.LightCoral;
-            this.pnlFundo.Controls.Add(this.btnConfirmar);
-            this.pnlFundo.Controls.Add(this.btnCancelar);
-            this.pnlFundo.Controls.Add(this.txtDonoPet);
-            this.pnlFundo.Controls.Add(this.lblDono);
-            this.pnlFundo.Controls.Add(this.txtRacaPet);
-            this.pnlFundo.Controls.Add(this.txtPortePet);
-            this.pnlFundo.Controls.Add(this.txtTipoPet);
-            this.pnlFundo.Controls.Add(this.txtNomePet);
-            this.pnlFundo.Controls.Add(this.lblTipoPet);
-            this.pnlFundo.Controls.Add(this.lblRacaPet);
-            this.pnlFundo.Controls.Add(this.lblPortePet);
-            this.pnlFundo.Controls.Add(this.lblNomePet);
-            this.pnlFundo.Controls.Add(this.pnlHeaderPets);
-            this.pnlFundo.Controls.Add(this.pnlDivisao);
-            this.pnlFundo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlFundo.Location = new System.Drawing.Point(0, 0);
-            this.pnlFundo.Name = "pnlFundo";
-            this.pnlFundo.Size = new System.Drawing.Size(346, 450);
-            this.pnlFundo.TabIndex = 0;
-            // 
-            // btnConfirmar
-            // 
-            this.btnConfirmar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConfirmar.BackColor = System.Drawing.Color.LimeGreen;
-            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(209, 385);
-            this.btnConfirmar.Name = "btnConfirmar";
-            this.btnConfirmar.Size = new System.Drawing.Size(116, 40);
-            this.btnConfirmar.TabIndex = 33;
-            this.btnConfirmar.Text = "Confirmar";
-            this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.Color.Firebrick;
-            this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelar.Location = new System.Drawing.Point(109, 385);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(93, 40);
-            this.btnCancelar.TabIndex = 34;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // txtDonoPet
             // 
-            this.txtDonoPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDonoPet.Location = new System.Drawing.Point(117, 252);
+            this.txtDonoPet.Location = new System.Drawing.Point(85, 256);
             this.txtDonoPet.Name = "txtDonoPet";
             this.txtDonoPet.PlaceholderText = "Código do Dono";
-            this.txtDonoPet.Size = new System.Drawing.Size(198, 23);
-            this.txtDonoPet.TabIndex = 11;
-            // 
-            // lblDono
-            // 
-            this.lblDono.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDono.AutoSize = true;
-            this.lblDono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblDono.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblDono.Location = new System.Drawing.Point(10, 252);
-            this.lblDono.Name = "lblDono";
-            this.lblDono.Size = new System.Drawing.Size(54, 21);
-            this.lblDono.TabIndex = 10;
-            this.lblDono.Text = "Dono:";
+            this.txtDonoPet.Size = new System.Drawing.Size(186, 23);
+            this.txtDonoPet.TabIndex = 73;
             // 
             // txtRacaPet
             // 
-            this.txtRacaPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRacaPet.Location = new System.Drawing.Point(117, 192);
+            this.txtRacaPet.Location = new System.Drawing.Point(85, 176);
             this.txtRacaPet.Name = "txtRacaPet";
             this.txtRacaPet.PlaceholderText = "Raça";
-            this.txtRacaPet.Size = new System.Drawing.Size(198, 23);
-            this.txtRacaPet.TabIndex = 9;
+            this.txtRacaPet.Size = new System.Drawing.Size(186, 23);
+            this.txtRacaPet.TabIndex = 71;
             // 
             // txtPortePet
             // 
-            this.txtPortePet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPortePet.Location = new System.Drawing.Point(117, 222);
+            this.txtPortePet.Location = new System.Drawing.Point(85, 216);
             this.txtPortePet.Name = "txtPortePet";
             this.txtPortePet.PlaceholderText = "Porte";
-            this.txtPortePet.Size = new System.Drawing.Size(198, 23);
-            this.txtPortePet.TabIndex = 8;
+            this.txtPortePet.Size = new System.Drawing.Size(186, 23);
+            this.txtPortePet.TabIndex = 70;
             // 
             // txtTipoPet
             // 
-            this.txtTipoPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTipoPet.Location = new System.Drawing.Point(117, 162);
+            this.txtTipoPet.Location = new System.Drawing.Point(85, 136);
             this.txtTipoPet.Name = "txtTipoPet";
             this.txtTipoPet.PlaceholderText = "Tipo";
-            this.txtTipoPet.Size = new System.Drawing.Size(198, 23);
-            this.txtTipoPet.TabIndex = 7;
+            this.txtTipoPet.Size = new System.Drawing.Size(186, 23);
+            this.txtTipoPet.TabIndex = 69;
             // 
             // txtNomePet
             // 
-            this.txtNomePet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomePet.Location = new System.Drawing.Point(117, 132);
+            this.txtNomePet.Location = new System.Drawing.Point(85, 96);
             this.txtNomePet.Name = "txtNomePet";
             this.txtNomePet.PlaceholderText = "Nome";
-            this.txtNomePet.Size = new System.Drawing.Size(198, 23);
-            this.txtNomePet.TabIndex = 6;
-            // 
-            // lblTipoPet
-            // 
-            this.lblTipoPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTipoPet.AutoSize = true;
-            this.lblTipoPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTipoPet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTipoPet.Location = new System.Drawing.Point(10, 162);
-            this.lblTipoPet.Name = "lblTipoPet";
-            this.lblTipoPet.Size = new System.Drawing.Size(47, 21);
-            this.lblTipoPet.TabIndex = 5;
-            this.lblTipoPet.Text = "Tipo:";
-            // 
-            // lblRacaPet
-            // 
-            this.lblRacaPet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRacaPet.AutoSize = true;
-            this.lblRacaPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRacaPet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblRacaPet.Location = new System.Drawing.Point(10, 192);
-            this.lblRacaPet.Name = "lblRacaPet";
-            this.lblRacaPet.Size = new System.Drawing.Size(48, 21);
-            this.lblRacaPet.TabIndex = 4;
-            this.lblRacaPet.Text = "Raça:";
-            // 
-            // lblPortePet
-            // 
-            this.lblPortePet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPortePet.AutoSize = true;
-            this.lblPortePet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblPortePet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblPortePet.Location = new System.Drawing.Point(10, 222);
-            this.lblPortePet.Name = "lblPortePet";
-            this.lblPortePet.Size = new System.Drawing.Size(53, 21);
-            this.lblPortePet.TabIndex = 3;
-            this.lblPortePet.Text = "Porte:";
-            // 
-            // lblNomePet
-            // 
-            this.lblNomePet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNomePet.AutoSize = true;
-            this.lblNomePet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblNomePet.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblNomePet.Location = new System.Drawing.Point(10, 132);
-            this.lblNomePet.Name = "lblNomePet";
-            this.lblNomePet.Size = new System.Drawing.Size(59, 21);
-            this.lblNomePet.TabIndex = 2;
-            this.lblNomePet.Text = "Nome:";
-            // 
-            // pnlHeaderPets
-            // 
-            this.pnlHeaderPets.Controls.Add(this.imgCadPet);
-            this.pnlHeaderPets.Controls.Add(this.lblCadPet);
-            this.pnlHeaderPets.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeaderPets.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeaderPets.Name = "pnlHeaderPets";
-            this.pnlHeaderPets.Size = new System.Drawing.Size(341, 100);
-            this.pnlHeaderPets.TabIndex = 0;
-            // 
-            // imgCadPet
-            // 
-            this.imgCadPet.Image = ((System.Drawing.Image)(resources.GetObject("imgCadPet.Image")));
-            this.imgCadPet.Location = new System.Drawing.Point(247, 23);
-            this.imgCadPet.Name = "imgCadPet";
-            this.imgCadPet.Size = new System.Drawing.Size(64, 64);
-            this.imgCadPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgCadPet.TabIndex = 1;
-            this.imgCadPet.TabStop = false;
-            // 
-            // lblCadPet
-            // 
-            this.lblCadPet.AutoSize = true;
-            this.lblCadPet.BackColor = System.Drawing.Color.Transparent;
-            this.lblCadPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblCadPet.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblCadPet.Location = new System.Drawing.Point(26, 23);
-            this.lblCadPet.Name = "lblCadPet";
-            this.lblCadPet.Size = new System.Drawing.Size(135, 25);
-            this.lblCadPet.TabIndex = 0;
-            this.lblCadPet.Text = "Cadastrar Pet:";
-            // 
-            // pnlDivisao
-            // 
-            this.pnlDivisao.BackColor = System.Drawing.Color.Maroon;
-            this.pnlDivisao.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlDivisao.Location = new System.Drawing.Point(341, 0);
-            this.pnlDivisao.Name = "pnlDivisao";
-            this.pnlDivisao.Size = new System.Drawing.Size(5, 450);
-            this.pnlDivisao.TabIndex = 1;
-            // 
-            // pnlViewPets
-            // 
-            this.pnlViewPets.BackColor = System.Drawing.Color.LightCoral;
-            this.pnlViewPets.Controls.Add(this.imgMarcador);
-            this.pnlViewPets.Controls.Add(this.imgBusca);
-            this.pnlViewPets.Controls.Add(this.txtBusca);
-            this.pnlViewPets.Controls.Add(this.lblMsgError);
-            this.pnlViewPets.Controls.Add(this.btnRemover);
-            this.pnlViewPets.Controls.Add(this.btnAlterar);
-            this.pnlViewPets.Controls.Add(this.dgPets);
-            this.pnlViewPets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlViewPets.Location = new System.Drawing.Point(346, 0);
-            this.pnlViewPets.Name = "pnlViewPets";
-            this.pnlViewPets.Size = new System.Drawing.Size(454, 450);
-            this.pnlViewPets.TabIndex = 1;
-            // 
-            // imgMarcador
-            // 
-            this.imgMarcador.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMarcador.Image = ((System.Drawing.Image)(resources.GetObject("imgMarcador.Image")));
-            this.imgMarcador.Location = new System.Drawing.Point(399, 23);
-            this.imgMarcador.Name = "imgMarcador";
-            this.imgMarcador.Size = new System.Drawing.Size(32, 32);
-            this.imgMarcador.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgMarcador.TabIndex = 49;
-            this.imgMarcador.TabStop = false;
-            // 
-            // imgBusca
-            // 
-            this.imgBusca.Image = ((System.Drawing.Image)(resources.GetObject("imgBusca.Image")));
-            this.imgBusca.Location = new System.Drawing.Point(14, 62);
-            this.imgBusca.Name = "imgBusca";
-            this.imgBusca.Size = new System.Drawing.Size(32, 32);
-            this.imgBusca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgBusca.TabIndex = 48;
-            this.imgBusca.TabStop = false;
-            // 
-            // txtBusca
-            // 
-            this.txtBusca.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBusca.Location = new System.Drawing.Point(52, 71);
-            this.txtBusca.Name = "txtBusca";
-            this.txtBusca.PlaceholderText = "Digite aqui para buscar";
-            this.txtBusca.Size = new System.Drawing.Size(239, 23);
-            this.txtBusca.TabIndex = 45;
-            this.txtBusca.TextChanged += new System.EventHandler(this.txtBusca_TextChanged);
+            this.txtNomePet.Size = new System.Drawing.Size(186, 23);
+            this.txtNomePet.TabIndex = 68;
             // 
             // lblMsgError
             // 
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgError.Location = new System.Drawing.Point(14, 23);
+            this.lblMsgError.Location = new System.Drawing.Point(22, 479);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgError.TabIndex = 47;
+            this.lblMsgError.TabIndex = 62;
             this.lblMsgError.Text = "*";
+            // 
+            // dgPets
+            // 
+            this.dgPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgPets.BackgroundColor = System.Drawing.Color.White;
+            this.dgPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPets.Location = new System.Drawing.Point(374, 140);
+            this.dgPets.Name = "dgPets";
+            this.dgPets.RowTemplate.Height = 25;
+            this.dgPets.Size = new System.Drawing.Size(434, 273);
+            this.dgPets.TabIndex = 60;
+            // 
+            // imgPet
+            // 
+            this.imgPet.BackColor = System.Drawing.Color.Transparent;
+            this.imgPet.Image = ((System.Drawing.Image)(resources.GetObject("imgPet.Image")));
+            this.imgPet.Location = new System.Drawing.Point(47, 87);
+            this.imgPet.Name = "imgPet";
+            this.imgPet.Size = new System.Drawing.Size(32, 32);
+            this.imgPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgPet.TabIndex = 74;
+            this.imgPet.TabStop = false;
+            // 
+            // txtBusca
+            // 
+            this.txtBusca.BackColor = System.Drawing.Color.White;
+            this.txtBusca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBusca.Location = new System.Drawing.Point(375, 111);
+            this.txtBusca.Name = "txtBusca";
+            this.txtBusca.PlaceholderText = "Digite aqui para buscar";
+            this.txtBusca.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBusca.Size = new System.Drawing.Size(218, 23);
+            this.txtBusca.TabIndex = 75;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(375, 52);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(413, 5);
+            this.panel1.TabIndex = 78;
+            // 
+            // lblViewCli
+            // 
+            this.lblViewCli.AutoSize = true;
+            this.lblViewCli.BackColor = System.Drawing.Color.Transparent;
+            this.lblViewCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblViewCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblViewCli.ForeColor = System.Drawing.Color.Black;
+            this.lblViewCli.Location = new System.Drawing.Point(375, 26);
+            this.lblViewCli.Name = "lblViewCli";
+            this.lblViewCli.Size = new System.Drawing.Size(168, 23);
+            this.lblViewCli.TabIndex = 79;
+            this.lblViewCli.Text = "Pets Registrados";
+            // 
+            // pnlMarcador
+            // 
+            this.pnlMarcador.BackColor = System.Drawing.Color.Maroon;
+            this.pnlMarcador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMarcador.Location = new System.Drawing.Point(22, 52);
+            this.pnlMarcador.Name = "pnlMarcador";
+            this.pnlMarcador.Size = new System.Drawing.Size(280, 5);
+            this.pnlMarcador.TabIndex = 77;
+            // 
+            // lblHeaderPet
+            // 
+            this.lblHeaderPet.AutoSize = true;
+            this.lblHeaderPet.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderPet.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderPet.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderPet.Location = new System.Drawing.Point(22, 26);
+            this.lblHeaderPet.Name = "lblHeaderPet";
+            this.lblHeaderPet.Size = new System.Drawing.Size(137, 23);
+            this.lblHeaderPet.TabIndex = 76;
+            this.lblHeaderPet.Text = "Cadastrar Pet";
+            // 
+            // imgTipoPet
+            // 
+            this.imgTipoPet.Location = new System.Drawing.Point(47, 129);
+            this.imgTipoPet.Name = "imgTipoPet";
+            this.imgTipoPet.Size = new System.Drawing.Size(32, 32);
+            this.imgTipoPet.TabIndex = 80;
+            this.imgTipoPet.TabStop = false;
+            // 
+            // imgRacaPet
+            // 
+            this.imgRacaPet.Location = new System.Drawing.Point(47, 167);
+            this.imgRacaPet.Name = "imgRacaPet";
+            this.imgRacaPet.Size = new System.Drawing.Size(32, 32);
+            this.imgRacaPet.TabIndex = 81;
+            this.imgRacaPet.TabStop = false;
+            // 
+            // imgPortePet
+            // 
+            this.imgPortePet.Location = new System.Drawing.Point(47, 207);
+            this.imgPortePet.Name = "imgPortePet";
+            this.imgPortePet.Size = new System.Drawing.Size(32, 32);
+            this.imgPortePet.TabIndex = 82;
+            this.imgPortePet.TabStop = false;
+            // 
+            // imgDono
+            // 
+            this.imgDono.Location = new System.Drawing.Point(47, 247);
+            this.imgDono.Name = "imgDono";
+            this.imgDono.Size = new System.Drawing.Size(32, 32);
+            this.imgDono.TabIndex = 83;
+            this.imgDono.TabStop = false;
+            // 
+            // pnlSLimpar
+            // 
+            this.pnlSLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pnlSLimpar.Location = new System.Drawing.Point(47, 413);
+            this.pnlSLimpar.Name = "pnlSLimpar";
+            this.pnlSLimpar.Size = new System.Drawing.Size(77, 3);
+            this.pnlSLimpar.TabIndex = 87;
+            // 
+            // pnlSConfirmar
+            // 
+            this.pnlSConfirmar.BackColor = System.Drawing.Color.GreenYellow;
+            this.pnlSConfirmar.Location = new System.Drawing.Point(190, 413);
+            this.pnlSConfirmar.Name = "pnlSConfirmar";
+            this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
+            this.pnlSConfirmar.TabIndex = 86;
+            // 
+            // btnConfirmar
+            // 
+            this.btnConfirmar.AutoSize = true;
+            this.btnConfirmar.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmar.FlatAppearance.BorderSize = 0;
+            this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmar.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmar.Location = new System.Drawing.Point(190, 367);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmar.TabIndex = 85;
+            this.btnConfirmar.Text = "Confirmar";
+            this.btnConfirmar.UseVisualStyleBackColor = false;
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click_1);
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.AutoSize = true;
+            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimpar.FlatAppearance.BorderSize = 0;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.ForeColor = System.Drawing.Color.Black;
+            this.btnLimpar.Location = new System.Drawing.Point(47, 367);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(77, 40);
+            this.btnLimpar.TabIndex = 84;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.imgPet);
+            this.panel2.Controls.Add(this.pnlSBuscar);
+            this.panel2.Controls.Add(this.pnlSAlterar);
+            this.panel2.Controls.Add(this.pnlSRemover);
+            this.panel2.Controls.Add(this.btnRemover);
+            this.panel2.Controls.Add(this.btnAlterar);
+            this.panel2.Controls.Add(this.btnBuscar);
+            this.panel2.Controls.Add(this.lblMsgError);
+            this.panel2.Controls.Add(this.pnlSLimpar);
+            this.panel2.Controls.Add(this.txtNomePet);
+            this.panel2.Controls.Add(this.btnLimpar);
+            this.panel2.Controls.Add(this.pnlSConfirmar);
+            this.panel2.Controls.Add(this.txtTipoPet);
+            this.panel2.Controls.Add(this.btnConfirmar);
+            this.panel2.Controls.Add(this.txtRacaPet);
+            this.panel2.Controls.Add(this.txtPortePet);
+            this.panel2.Controls.Add(this.txtBusca);
+            this.panel2.Controls.Add(this.dgPets);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Controls.Add(this.imgDono);
+            this.panel2.Controls.Add(this.lblViewCli);
+            this.panel2.Controls.Add(this.txtDonoPet);
+            this.panel2.Controls.Add(this.pnlMarcador);
+            this.panel2.Controls.Add(this.imgPortePet);
+            this.panel2.Controls.Add(this.lblHeaderPet);
+            this.panel2.Controls.Add(this.imgRacaPet);
+            this.panel2.Controls.Add(this.imgTipoPet);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(821, 503);
+            this.panel2.TabIndex = 88;
+            // 
+            // pnlSBuscar
+            // 
+            this.pnlSBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSBuscar.BackColor = System.Drawing.Color.DarkOrange;
+            this.pnlSBuscar.Location = new System.Drawing.Point(711, 465);
+            this.pnlSBuscar.Name = "pnlSBuscar";
+            this.pnlSBuscar.Size = new System.Drawing.Size(98, 3);
+            this.pnlSBuscar.TabIndex = 91;
+            // 
+            // pnlSAlterar
+            // 
+            this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pnlSAlterar.Location = new System.Drawing.Point(607, 465);
+            this.pnlSAlterar.Name = "pnlSAlterar";
+            this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
+            this.pnlSAlterar.TabIndex = 93;
+            // 
+            // pnlSRemover
+            // 
+            this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pnlSRemover.Location = new System.Drawing.Point(503, 465);
+            this.pnlSRemover.Name = "pnlSRemover";
+            this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
+            this.pnlSRemover.TabIndex = 92;
             // 
             // btnRemover
             // 
             this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemover.BackColor = System.Drawing.Color.Firebrick;
-            this.btnRemover.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnRemover.AutoSize = true;
+            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemover.FlatAppearance.BorderSize = 0;
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemover.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRemover.ForeColor = System.Drawing.Color.White;
+            this.btnRemover.ForeColor = System.Drawing.Color.Black;
             this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
-            this.btnRemover.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRemover.Location = new System.Drawing.Point(311, 385);
+            this.btnRemover.Location = new System.Drawing.Point(503, 419);
             this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(120, 40);
-            this.btnRemover.TabIndex = 42;
+            this.btnRemover.Size = new System.Drawing.Size(98, 40);
+            this.btnRemover.TabIndex = 89;
             this.btnRemover.Text = "Remover";
             this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
@@ -363,87 +363,93 @@
             // btnAlterar
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterar.BackColor = System.Drawing.Color.Teal;
-            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnAlterar.AutoSize = true;
+            this.btnAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAlterar.ForeColor = System.Drawing.Color.White;
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Location = new System.Drawing.Point(203, 385);
+            this.btnAlterar.Location = new System.Drawing.Point(607, 419);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(102, 40);
-            this.btnAlterar.TabIndex = 46;
+            this.btnAlterar.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterar.TabIndex = 88;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAlterar.UseVisualStyleBackColor = false;
             // 
-            // dgPets
+            // btnBuscar
             // 
-            this.dgPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPets.BackgroundColor = System.Drawing.Color.White;
-            this.dgPets.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPets.Location = new System.Drawing.Point(14, 106);
-            this.dgPets.Name = "dgPets";
-            this.dgPets.RowTemplate.Height = 25;
-            this.dgPets.Size = new System.Drawing.Size(417, 270);
-            this.dgPets.TabIndex = 44;
+            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBuscar.AutoSize = true;
+            this.btnBuscar.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnBuscar.FlatAppearance.BorderSize = 0;
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Location = new System.Drawing.Point(711, 419);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(98, 40);
+            this.btnBuscar.TabIndex = 90;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // FormPets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pnlViewPets);
-            this.Controls.Add(this.pnlFundo);
+            this.ClientSize = new System.Drawing.Size(821, 503);
+            this.Controls.Add(this.panel2);
             this.Name = "FormPets";
             this.Text = "PETS";
             this.Load += new System.EventHandler(this.FormPets_Load);
-            this.pnlFundo.ResumeLayout(false);
-            this.pnlFundo.PerformLayout();
-            this.pnlHeaderPets.ResumeLayout(false);
-            this.pnlHeaderPets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadPet)).EndInit();
-            this.pnlViewPets.ResumeLayout(false);
-            this.pnlViewPets.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMarcador)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgBusca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPets)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Panel pnlFundo;
-        private Panel pnlHeaderPets;
-        private Panel pnlDivisao;
-        private Panel pnlViewPets;
-        private Label lblCadPet;
-        private Label lblNomePet;
-        private Label lblTipoPet;
-        private Label lblRacaPet;
-        private Label lblPortePet;
+        private TextBox txtDonoPet;
         private TextBox txtRacaPet;
         private TextBox txtPortePet;
         private TextBox txtTipoPet;
         private TextBox txtNomePet;
-        private Label lblDono;
-        private TextBox txtDonoPet;
-        private Button btnConfirmar;
-        private Button btnCancelar;
-        private PictureBox imgCadPet;
-        private TextBox txtBusca;
         private Label lblMsgError;
+        private DataGridView dgPets;
+        private PictureBox imgPet;
+        private TextBox txtBusca;
+        private Panel panel1;
+        private Label lblViewCli;
+        private Panel pnlMarcador;
+        private Label lblHeaderPet;
+        private PictureBox imgTipoPet;
+        private PictureBox imgRacaPet;
+        private PictureBox imgPortePet;
+        private PictureBox imgDono;
+        private Panel pnlSLimpar;
+        private Panel pnlSConfirmar;
+        private Button btnConfirmar;
+        private Button btnLimpar;
+        private Panel panel2;
+        private Panel pnlSBuscar;
+        private Panel pnlSAlterar;
+        private Panel pnlSRemover;
         private Button btnRemover;
         private Button btnAlterar;
-        private DataGridView dgPets;
-        private PictureBox imgBusca;
-        private PictureBox imgMarcador;
+        private Button btnBuscar;
     }
 }
