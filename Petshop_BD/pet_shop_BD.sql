@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.10-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              10.3.0.5771
+-- Versão do servidor:           10.1.35-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              11.0.0.5919
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 -- Copiando dados para a tabela pet_shop.cliente: ~2 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
 INSERT INTO `cliente` (`codCliente`, `nomeCliente`, `cpfCliente`, `enderecoCliente`, `telefoneCliente`, `emailCliente`, `bairroCliente`) VALUES
-	(6, 'Salomão Ferreira Junior', '174.133.196-08', 'Rua São Lucas', '(35)99769-5915', 'salomao@gmail.com', 'Jardim das Oliveiras'),
-	(7, 'Miguel Silva Ferreira', '123.234.543-21', 'Rua São Lucas', '(35)98830-1114', 'miguel@gmail.com', 'Jardim das Oliveiras');
+	(6, 'Salomão Ferreira', '174.133.196-08', 'Rua São Lucas', '(35)99769-5915', 'salomao@gmail.com', 'Jardim das Oliveiras'),
+	(7, 'Miguel Ferreira Silva', '123.123.123-12', 'Rua São Lucas', '3295-5050', 'miguel@gmail.com', 'Jardim das Oliveiras');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.pet
@@ -57,6 +57,15 @@ INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIEN
 	(2, 'Jade', 'Shi-Tsu', 'Cachorro', 'Pequeno', 6),
 	(3, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 7);
 /*!40000 ALTER TABLE `pet` ENABLE KEYS */;
+
+-- Copiando estrutura para procedure pet_shop.proc_alteraCliente
+DROP PROCEDURE IF EXISTS `proc_alteraCliente`;
+DELIMITER //
+CREATE PROCEDURE `proc_alteraCliente`(in nome varchar(200), in cpf varchar(14), in email varchar(150), in telefone varchar(45), in endereco varchar(150), in bairro varchar (100), in codCli int)
+BEGIN
+	update cliente set nomeCliente = nome, cpfCliente = cpf, emailCliente = email, telefoneCliente = telefone, enderecoCliente = endereco, bairroCliente = bairro where codCliente = codCli;
+END//
+DELIMITER ;
 
 -- Copiando estrutura para procedure pet_shop.proc_insereCliente
 DROP PROCEDURE IF EXISTS `proc_insereCliente`;
@@ -90,13 +99,13 @@ DROP PROCEDURE IF EXISTS `proc_listaCliente`;
 DELIMITER //
 CREATE PROCEDURE `proc_listaCliente`()
 BEGIN
-	select 
-    codCliente as Código,
+select 
+    codCliente as Codigo,
     nomeCliente as Nome,
     cpfCliente as CPF,
     telefoneCliente as Telefone,
-    emailCliente as "E-mail",
-    enderecoCliente as Endereço,
+    emailCliente as Email,
+    enderecoCliente as Endereco,
 	bairroCliente as Bairro
     from cliente;
 END//

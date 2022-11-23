@@ -44,11 +44,12 @@
             this.btnRemover = new System.Windows.Forms.Button();
             this.lblMsgError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBairroCliente = new System.Windows.Forms.TextBox();
+            this.txtBairroCli = new System.Windows.Forms.TextBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblViewCli = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlClientes = new System.Windows.Forms.Panel();
+            this.btnConfirmaAlteracao = new System.Windows.Forms.Button();
             this.imgEmail = new System.Windows.Forms.PictureBox();
             this.imgBairro = new System.Windows.Forms.PictureBox();
             this.imgEndereco = new System.Windows.Forms.PictureBox();
@@ -267,14 +268,14 @@
             this.label1.Size = new System.Drawing.Size(0, 21);
             this.label1.TabIndex = 26;
             // 
-            // txtBairroCliente
+            // txtBairroCli
             // 
-            this.txtBairroCliente.BackColor = System.Drawing.Color.White;
-            this.txtBairroCliente.Location = new System.Drawing.Point(85, 256);
-            this.txtBairroCliente.Name = "txtBairroCliente";
-            this.txtBairroCliente.PlaceholderText = "Bairro";
-            this.txtBairroCliente.Size = new System.Drawing.Size(200, 23);
-            this.txtBairroCliente.TabIndex = 27;
+            this.txtBairroCli.BackColor = System.Drawing.Color.White;
+            this.txtBairroCli.Location = new System.Drawing.Point(85, 256);
+            this.txtBairroCli.Name = "txtBairroCli";
+            this.txtBairroCli.PlaceholderText = "Bairro";
+            this.txtBairroCli.Size = new System.Drawing.Size(200, 23);
+            this.txtBairroCli.TabIndex = 27;
             // 
             // txtBusca
             // 
@@ -317,6 +318,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlClientes.BackColor = System.Drawing.Color.White;
+            this.pnlClientes.Controls.Add(this.btnConfirmaAlteracao);
             this.pnlClientes.Controls.Add(this.imgEmail);
             this.pnlClientes.Controls.Add(this.imgBairro);
             this.pnlClientes.Controls.Add(this.imgEndereco);
@@ -336,7 +338,7 @@
             this.pnlClientes.Controls.Add(this.panel1);
             this.pnlClientes.Controls.Add(this.lblViewCli);
             this.pnlClientes.Controls.Add(this.txtBusca);
-            this.pnlClientes.Controls.Add(this.txtBairroCliente);
+            this.pnlClientes.Controls.Add(this.txtBairroCli);
             this.pnlClientes.Controls.Add(this.label1);
             this.pnlClientes.Controls.Add(this.lblMsgError);
             this.pnlClientes.Controls.Add(this.btnRemover);
@@ -351,6 +353,23 @@
             this.pnlClientes.Name = "pnlClientes";
             this.pnlClientes.Size = new System.Drawing.Size(821, 503);
             this.pnlClientes.TabIndex = 26;
+            // 
+            // btnConfirmaAlteracao
+            // 
+            this.btnConfirmaAlteracao.AutoSize = true;
+            this.btnConfirmaAlteracao.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnConfirmaAlteracao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmaAlteracao.FlatAppearance.BorderSize = 0;
+            this.btnConfirmaAlteracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmaAlteracao.ForeColor = System.Drawing.Color.Black;
+            this.btnConfirmaAlteracao.Location = new System.Drawing.Point(190, 367);
+            this.btnConfirmaAlteracao.Name = "btnConfirmaAlteracao";
+            this.btnConfirmaAlteracao.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmaAlteracao.TabIndex = 39;
+            this.btnConfirmaAlteracao.Text = "Concluir";
+            this.btnConfirmaAlteracao.UseVisualStyleBackColor = false;
+            this.btnConfirmaAlteracao.Visible = false;
+            this.btnConfirmaAlteracao.Click += new System.EventHandler(this.btnConfirmaAlteracao_Click_1);
             // 
             // imgEmail
             // 
@@ -497,7 +516,7 @@
         private Button btnRemover;
         private Label lblMsgError;
         private Label label1;
-        private TextBox txtBairroCliente;
+        private TextBox txtBairroCli;
         private TextBox txtBusca;
         private Label lblViewCli;
         private Panel panel1;
@@ -513,5 +532,6 @@
         private PictureBox imgBairro;
         private PictureBox imgEndereco;
         private PictureBox imgTelefone;
+        private Button btnConfirmaAlteracao;
     }
 }

@@ -133,6 +133,34 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }// fim deleta Cliente
-     
+
+        public bool alteraCliente(Cliente c, int codCliente)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_alteraCliente", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codCli", codCliente);
+            cmd.Parameters.AddWithValue("nome", c.NomeCliente);
+            cmd.Parameters.AddWithValue("cpf", c.CpfCliente);
+            cmd.Parameters.AddWithValue("email", c.EmailCliente);
+            cmd.Parameters.AddWithValue("telefone", c.TelefoneCliente);
+            cmd.Parameters.AddWithValue("endereco", c.EnderecoCliente);
+            cmd.Parameters.AddWithValue("bairro", c.BairroCliente);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }// fim altera cliente
+
     }
 }

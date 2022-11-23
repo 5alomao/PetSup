@@ -12,6 +12,7 @@ namespace SistemaPetShop.Forms
 {
     public partial class FormClientes : Form
     {
+        int codAlterar;
         public FormClientes()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace SistemaPetShop.Forms
         {
             ConectaBanco con = new ConectaBanco();
             dgClientes.DataSource = con.listaClientes();
+
         }
         void limpaCampo()
         {
@@ -28,7 +30,7 @@ namespace SistemaPetShop.Forms
             txtEnderecoCli.Text = "";
             txtCpfCli.Text = "";
             txtNomeCli.Text = "";
-            txtBairroCliente.Text = "";
+            txtBairroCli.Text = "";
             txtNomeCli.Focus();
         }
         private void btnConfirmar_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace SistemaPetShop.Forms
             c.TelefoneCliente = txtTelefoneCli.Text;
             c.EmailCliente = txtEmailCli.Text;
             c.EnderecoCliente = txtEnderecoCli.Text;
-            c.BairroCliente = txtBairroCliente.Text;
+            c.BairroCliente = txtBairroCli.Text;
 
             ConectaBanco conecta = new ConectaBanco();
             bool retorno = conecta.insereCliente(c);
@@ -77,7 +79,7 @@ namespace SistemaPetShop.Forms
         private void btnRemover_Click(object sender, EventArgs e)
         {
             int linha = dgClientes.CurrentRow.Index; //pegar linha selecionada
-            int codRemover = Convert.ToInt32(dgClientes.Rows[linha].Cells["Código"].Value.ToString());
+            int codRemover = Convert.ToInt32(dgClientes.Rows[linha].Cells["Codigo"].Value.ToString());
 
             DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Deletar Cliente", MessageBoxButtons.YesNo);
 
@@ -100,7 +102,53 @@ namespace SistemaPetShop.Forms
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-           
+            lblHeaderCli.Text = "Alterar Cliente";
+            pnlSConfirmar.BackColor = Color.DarkTurquoise;
+            btnConfirmar.Visible = false;
+            btnConfirmaAlteracao.Visible = true;
+
+            int linha = dgClientes.CurrentRow.Index; //pegar linha selecionada
+            codAlterar = Convert.ToInt32(dgClientes.Rows[linha].Cells["Codigo"].Value.ToString());
+
+            txtNomeCli.Text = dgClientes.Rows[linha].Cells["Nome"].Value.ToString();
+            txtCpfCli.Text = dgClientes.Rows[linha].Cells["CPF"].Value.ToString();
+            txtTelefoneCli.Text = dgClientes.Rows[linha].Cells["Telefone"].Value.ToString();
+            txtBairroCli.Text = dgClientes.Rows[linha].Cells["Bairro"].Value.ToString();
+            txtEnderecoCli.Text = dgClientes.Rows[linha].Cells["Endereco"].Value.ToString();
+            txtEmailCli.Text = dgClientes.Rows[linha].Cells["Email"].Value.ToString();
+
+        }
+
+
+        private void btnConfirmaAlteracao_Click_1(object sender, EventArgs e)
+        {
+            Cliente c = new Cliente();
+            c.NomeCliente = txtNomeCli.Text;
+            c.CpfCliente = txtCpfCli.Text;
+            c.EmailCliente = txtEmailCli.Text;
+            c.TelefoneCliente = txtTelefoneCli.Text;
+            c.BairroCliente = txtBairroCli.Text;
+            c.EnderecoCliente = txtEnderecoCli.Text;
+
+            //Enviar dados para alterar
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.alteraCliente(c, codAlterar);
+
+            if(retorno == true)
+            {
+                MessageBox.Show("Dados alterados com sucesso !");
+                limpaCampo();
+            }
+            else
+            {
+                lblMsgError.Text = conecta.mensagem;
+            }
+
+            listaCliente();
+            btnConfirmaAlteracao.Visible = false;
+            btnConfirmar.Visible = true;
+            lblHeaderCli.Text = "Cadastrar Cliente";
+            pnlSConfirmar.BackColor = Color.GreenYellow;
         }
     }
     }

@@ -41,9 +41,10 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblOu = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnlBordaEsquerda = new System.Windows.Forms.Panel();
             this.pnlBordaCima = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.titulo = new System.Windows.Forms.Label();
             this.pnlEsquerda.SuspendLayout();
             this.pnlCima.SuspendLayout();
             this.pnlConteudo.SuspendLayout();
@@ -243,6 +244,7 @@
             // pnlConteudo
             // 
             this.pnlConteudo.BackColor = System.Drawing.Color.White;
+            this.pnlConteudo.Controls.Add(this.titulo);
             this.pnlConteudo.Controls.Add(this.pictureBox6);
             this.pnlConteudo.Controls.Add(this.pnlBordaEsquerda);
             this.pnlConteudo.Controls.Add(this.pnlBordaCima);
@@ -252,6 +254,16 @@
             this.pnlConteudo.Size = new System.Drawing.Size(732, 456);
             this.pnlConteudo.TabIndex = 9;
             this.pnlConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlConteudo_Paint);
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(245, 84);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(256, 256);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox6.TabIndex = 12;
+            this.pictureBox6.TabStop = false;
             // 
             // pnlBordaEsquerda
             // 
@@ -271,15 +283,19 @@
             this.pnlBordaCima.Size = new System.Drawing.Size(732, 5);
             this.pnlBordaCima.TabIndex = 11;
             // 
-            // pictureBox6
+            // titulo
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(246, 84);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(256, 256);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 12;
-            this.pictureBox6.TabStop = false;
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.Black;
+            this.titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titulo.ForeColor = System.Drawing.Color.White;
+            this.titulo.Location = new System.Drawing.Point(298, 261);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(152, 25);
+            this.titulo.TabIndex = 13;
+            this.titulo.Text = "PetSup Software";
             // 
             // PetShop
             // 
@@ -352,5 +368,6 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private PictureBox pictureBox6;
+        private Label titulo;
     }
 }
