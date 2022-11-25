@@ -41,10 +41,10 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblOu = new System.Windows.Forms.Label();
             this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.titulo = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pnlBordaEsquerda = new System.Windows.Forms.Panel();
             this.pnlBordaCima = new System.Windows.Forms.Panel();
-            this.titulo = new System.Windows.Forms.Label();
             this.pnlEsquerda.SuspendLayout();
             this.pnlCima.SuspendLayout();
             this.pnlConteudo.SuspendLayout();
@@ -64,7 +64,7 @@
             this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlEsquerda.Location = new System.Drawing.Point(0, 0);
             this.pnlEsquerda.Name = "pnlEsquerda";
-            this.pnlEsquerda.Size = new System.Drawing.Size(194, 536);
+            this.pnlEsquerda.Size = new System.Drawing.Size(194, 681);
             this.pnlEsquerda.TabIndex = 0;
             // 
             // btnVendas
@@ -115,7 +115,7 @@
             this.lblSoftware.AutoSize = true;
             this.lblSoftware.BackColor = System.Drawing.Color.Transparent;
             this.lblSoftware.ForeColor = System.Drawing.Color.White;
-            this.lblSoftware.Location = new System.Drawing.Point(12, 512);
+            this.lblSoftware.Location = new System.Drawing.Point(12, 657);
             this.lblSoftware.Name = "lblSoftware";
             this.lblSoftware.Size = new System.Drawing.Size(59, 15);
             this.lblSoftware.TabIndex = 16;
@@ -211,7 +211,7 @@
             this.pnlCima.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCima.Location = new System.Drawing.Point(194, 0);
             this.pnlCima.Name = "pnlCima";
-            this.pnlCima.Size = new System.Drawing.Size(732, 80);
+            this.pnlCima.Size = new System.Drawing.Size(990, 80);
             this.pnlCima.TabIndex = 1;
             // 
             // lblTitle
@@ -221,7 +221,7 @@
             this.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(328, 28);
+            this.lblTitle.Location = new System.Drawing.Point(457, 28);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(68, 25);
             this.lblTitle.TabIndex = 0;
@@ -251,14 +251,28 @@
             this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudo.Location = new System.Drawing.Point(194, 80);
             this.pnlConteudo.Name = "pnlConteudo";
-            this.pnlConteudo.Size = new System.Drawing.Size(732, 456);
+            this.pnlConteudo.Size = new System.Drawing.Size(990, 601);
             this.pnlConteudo.TabIndex = 9;
             this.pnlConteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlConteudo_Paint);
+            // 
+            // titulo
+            // 
+            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.titulo.AutoSize = true;
+            this.titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(51)))));
+            this.titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.titulo.Font = new System.Drawing.Font("Comic Sans MS", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.titulo.ForeColor = System.Drawing.Color.White;
+            this.titulo.Location = new System.Drawing.Point(221, 224);
+            this.titulo.Name = "titulo";
+            this.titulo.Size = new System.Drawing.Size(565, 90);
+            this.titulo.TabIndex = 13;
+            this.titulo.Text = "PetSup Software";
             // 
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(245, 84);
+            this.pictureBox6.Location = new System.Drawing.Point(649, 31);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(256, 256);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -271,7 +285,7 @@
             this.pnlBordaEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlBordaEsquerda.Location = new System.Drawing.Point(0, 5);
             this.pnlBordaEsquerda.Name = "pnlBordaEsquerda";
-            this.pnlBordaEsquerda.Size = new System.Drawing.Size(5, 451);
+            this.pnlBordaEsquerda.Size = new System.Drawing.Size(5, 596);
             this.pnlBordaEsquerda.TabIndex = 10;
             // 
             // pnlBordaCima
@@ -280,22 +294,8 @@
             this.pnlBordaCima.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBordaCima.Location = new System.Drawing.Point(0, 0);
             this.pnlBordaCima.Name = "pnlBordaCima";
-            this.pnlBordaCima.Size = new System.Drawing.Size(732, 5);
+            this.pnlBordaCima.Size = new System.Drawing.Size(990, 5);
             this.pnlBordaCima.TabIndex = 11;
-            // 
-            // titulo
-            // 
-            this.titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.titulo.AutoSize = true;
-            this.titulo.BackColor = System.Drawing.Color.Black;
-            this.titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.titulo.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.titulo.ForeColor = System.Drawing.Color.White;
-            this.titulo.Location = new System.Drawing.Point(298, 261);
-            this.titulo.Name = "titulo";
-            this.titulo.Size = new System.Drawing.Size(152, 25);
-            this.titulo.TabIndex = 13;
-            this.titulo.Text = "PetSup Software";
             // 
             // PetShop
             // 
@@ -303,7 +303,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(926, 536);
+            this.ClientSize = new System.Drawing.Size(1184, 681);
             this.Controls.Add(this.pnlConteudo);
             this.Controls.Add(this.pnlCima);
             this.Controls.Add(this.pnlEsquerda);

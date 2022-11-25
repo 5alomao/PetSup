@@ -148,7 +148,7 @@ namespace SistemaPetShop.Forms
             btnConfirmaAlteracao.Visible = false;
             btnConfirmar.Visible = true;
             lblHeaderCli.Text = "Cadastrar Cliente";
-            pnlSConfirmar.BackColor = Color.GreenYellow;
+            pnlSConfirmar.BackColor = Color.ForestGreen;
         }
     }
     }

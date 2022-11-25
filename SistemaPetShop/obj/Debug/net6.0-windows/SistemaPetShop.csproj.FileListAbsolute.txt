@@ -105,9 +105,6 @@ C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\refint\
 C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.pdb
 C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.genruntimeconfig.cache
 C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\ref\SistemaPetShop.dll
-C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormFuncionarios.resources
-C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormProdutos.resources
-C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormVendas.resources
 C:\Users\17413319608\Desktop\PetSup-main\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.csproj.AssemblyReference.cache
 C:\Users\17413319608\Desktop\PetSup-main\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormClientes.resources
 C:\Users\17413319608\Desktop\PetSup-main\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormFuncionarios.resources
@@ -168,3 +165,4 @@ C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\Sist
 C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.genruntimeconfig.cache
 C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\ref\SistemaPetShop.dll
 C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.LoginRegister.resources
+C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.LoginRegister.resources

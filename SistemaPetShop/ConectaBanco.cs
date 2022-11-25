@@ -162,5 +162,55 @@ namespace SistemaPetShop
             }
         }// fim altera cliente
 
+        public bool deletaPet(int codPet)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_deletaPet", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codP", codPet);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }// fim deleta Pet
+
+        public bool alteraPet(Pet p, int codPet)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_alteraPet", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codP", codPet);
+            cmd.Parameters.AddWithValue("nome", p.NomePet);
+            cmd.Parameters.AddWithValue("tipo", p.TipoPet);
+            cmd.Parameters.AddWithValue("cor", p.CorPet);
+            cmd.Parameters.AddWithValue("raca", p.RacaPet);
+            cmd.Parameters.AddWithValue("porte", p.PortePet);
+            cmd.Parameters.AddWithValue("codCli", p.DonoPet);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }// fim altera cliente
+
     }
 }

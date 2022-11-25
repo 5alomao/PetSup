@@ -13,11 +13,13 @@ namespace SistemaPetShop
         string racaPet;
         string portePet;
         string donoPet;
+        string corPet;
 
         public string NomePet { get => nomePet; set => nomePet = value; }
         public string TipoPet { get => tipoPet; set => tipoPet = value; }
         public string RacaPet { get => racaPet; set => racaPet = value; }
         public string PortePet { get => portePet; set => portePet = value; }
         public string DonoPet { get => donoPet; set => donoPet = value; }
+        public string CorPet { get => corPet; set => corPet = value; }
     }
 }

@@ -13,6 +13,7 @@ namespace SistemaPetShop
         }
         private void btnClientes_Click(object sender, EventArgs e)
         {
+            activeForm.Close();
             OpenChildForm(new Forms.FormClientes());
             btnClientes.BackColor = Color.MediumSeaGreen;
             pnlCima.BackColor = Color.MediumSeaGreen;
@@ -23,6 +24,7 @@ namespace SistemaPetShop
         }
         private void btnPets_Click(object sender, EventArgs e)
         {
+            activeForm.Close();
             OpenChildForm(new Forms.FormPets());
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
@@ -33,17 +35,17 @@ namespace SistemaPetShop
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
-
+            activeForm.Close();
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
-            
+            activeForm.Close();
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
         {
-
+            activeForm.Close();
         }
         private void DesativaButton()
         {
