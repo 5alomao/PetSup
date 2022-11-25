@@ -94,6 +94,7 @@ namespace SistemaPetShop
             cmd.Parameters.AddWithValue("raca", p.RacaPet);
             cmd.Parameters.AddWithValue("porte", p.PortePet);
             cmd.Parameters.AddWithValue("tipo", p.TipoPet);
+            cmd.Parameters.AddWithValue("cor", p.CorPet);
             cmd.Parameters.AddWithValue("codCli", p.DonoPet);
             try
             {

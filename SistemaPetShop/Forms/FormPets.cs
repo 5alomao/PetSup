@@ -31,6 +31,7 @@ namespace SistemaPetShop.Forms
             txtPortePet.Text = "";
             txtRacaPet.Text = "";
             txtDonoPet.Text = "";
+            txtCorPet.Text = "";
             txtNomePet.Focus();
         }
 
@@ -49,6 +50,7 @@ namespace SistemaPetShop.Forms
             Pet p = new Pet();
             p.NomePet = txtNomePet.Text;
             p.TipoPet = txtTipoPet.Text;
+            p.CorPet = txtCorPet.Text;
             p.RacaPet = txtRacaPet.Text;
             p.PortePet = txtPortePet.Text;
             p.DonoPet = txtDonoPet.Text;

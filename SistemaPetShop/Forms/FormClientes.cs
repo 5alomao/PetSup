@@ -109,7 +109,6 @@ namespace SistemaPetShop.Forms
 
             int linha = dgClientes.CurrentRow.Index; //pegar linha selecionada
             codAlterar = Convert.ToInt32(dgClientes.Rows[linha].Cells["Codigo"].Value.ToString());
-
             txtNomeCli.Text = dgClientes.Rows[linha].Cells["Nome"].Value.ToString();
             txtCpfCli.Text = dgClientes.Rows[linha].Cells["CPF"].Value.ToString();
             txtTelefoneCli.Text = dgClientes.Rows[linha].Cells["Telefone"].Value.ToString();
