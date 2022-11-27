@@ -36,7 +36,6 @@
             this.txtEmailCli = new System.Windows.Forms.TextBox();
             this.lblHeaderCli = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.btnConfirmar = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -47,7 +46,7 @@
             this.txtBairroCli = new System.Windows.Forms.TextBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.lblViewCli = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMarcador2 = new System.Windows.Forms.Panel();
             this.pnlClientes = new System.Windows.Forms.Panel();
             this.pnlLinhaBairro = new System.Windows.Forms.Panel();
             this.pnlLinhaEndereco = new System.Windows.Forms.Panel();
@@ -62,7 +61,6 @@
             this.imgTelefone = new System.Windows.Forms.PictureBox();
             this.imgCpf = new System.Windows.Forms.PictureBox();
             this.imgCli = new System.Windows.Forms.PictureBox();
-            this.pnlSBuscar = new System.Windows.Forms.Panel();
             this.pnlSAlterar = new System.Windows.Forms.Panel();
             this.pnlSRemover = new System.Windows.Forms.Panel();
             this.pnlSLimpar = new System.Windows.Forms.Panel();
@@ -132,18 +130,18 @@
             this.lblHeaderCli.AutoSize = true;
             this.lblHeaderCli.BackColor = System.Drawing.Color.Transparent;
             this.lblHeaderCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHeaderCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblHeaderCli.ForeColor = System.Drawing.Color.Black;
             this.lblHeaderCli.Location = new System.Drawing.Point(47, 44);
             this.lblHeaderCli.Name = "lblHeaderCli";
-            this.lblHeaderCli.Size = new System.Drawing.Size(174, 23);
+            this.lblHeaderCli.Size = new System.Drawing.Size(198, 23);
             this.lblHeaderCli.TabIndex = 1;
             this.lblHeaderCli.Text = "Cadastrar Cliente";
             // 
             // btnLimpar
             // 
             this.btnLimpar.AutoSize = true;
-            this.btnLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnLimpar.BackColor = System.Drawing.Color.Black;
             this.btnLimpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLimpar.FlatAppearance.BorderSize = 0;
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -155,27 +153,6 @@
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnBuscar.AutoSize = true;
-            this.btnBuscar.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnBuscar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(1074, 597);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(98, 40);
-            this.btnBuscar.TabIndex = 19;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnBuscar.UseVisualStyleBackColor = false;
             // 
             // dgClientes
             // 
@@ -191,14 +168,14 @@
             this.dgClientes.Location = new System.Drawing.Point(375, 140);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.RowTemplate.Height = 25;
-            this.dgClientes.Size = new System.Drawing.Size(797, 451);
+            this.dgClientes.Size = new System.Drawing.Size(587, 332);
             this.dgClientes.TabIndex = 12;
             this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
             // btnConfirmar
             // 
             this.btnConfirmar.AutoSize = true;
-            this.btnConfirmar.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnConfirmar.BackColor = System.Drawing.Color.Black;
             this.btnConfirmar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -215,25 +192,23 @@
             // 
             this.btnAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAlterar.AutoSize = true;
-            this.btnAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnAlterar.BackColor = System.Drawing.Color.Black;
             this.btnAlterar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAlterar.FlatAppearance.BorderSize = 0;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.ForeColor = System.Drawing.Color.White;
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.Location = new System.Drawing.Point(970, 597);
+            this.btnAlterar.Location = new System.Drawing.Point(864, 478);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(98, 40);
             this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // pnlMarcador
             // 
-            this.pnlMarcador.BackColor = System.Drawing.Color.SeaGreen;
+            this.pnlMarcador.BackColor = System.Drawing.Color.Black;
             this.pnlMarcador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlMarcador.Location = new System.Drawing.Point(47, 70);
             this.pnlMarcador.Name = "pnlMarcador";
@@ -244,18 +219,16 @@
             // 
             this.btnRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemover.AutoSize = true;
-            this.btnRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemover.BackColor = System.Drawing.Color.Black;
             this.btnRemover.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRemover.FlatAppearance.BorderSize = 0;
             this.btnRemover.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemover.ForeColor = System.Drawing.Color.White;
-            this.btnRemover.Image = ((System.Drawing.Image)(resources.GetObject("btnRemover.Image")));
-            this.btnRemover.Location = new System.Drawing.Point(866, 597);
+            this.btnRemover.Location = new System.Drawing.Point(760, 478);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(98, 40);
             this.btnRemover.TabIndex = 16;
             this.btnRemover.Text = "Remover";
-            this.btnRemover.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRemover.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRemover.UseVisualStyleBackColor = false;
             this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
@@ -265,7 +238,7 @@
             this.lblMsgError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMsgError.AutoSize = true;
             this.lblMsgError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgError.Location = new System.Drawing.Point(22, 657);
+            this.lblMsgError.Location = new System.Drawing.Point(22, 538);
             this.lblMsgError.Name = "lblMsgError";
             this.lblMsgError.Size = new System.Drawing.Size(12, 15);
             this.lblMsgError.TabIndex = 25;
@@ -307,23 +280,23 @@
             this.lblViewCli.AutoSize = true;
             this.lblViewCli.BackColor = System.Drawing.Color.Transparent;
             this.lblViewCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblViewCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblViewCli.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblViewCli.ForeColor = System.Drawing.Color.Black;
             this.lblViewCli.Location = new System.Drawing.Point(375, 44);
             this.lblViewCli.Name = "lblViewCli";
-            this.lblViewCli.Size = new System.Drawing.Size(205, 23);
+            this.lblViewCli.Size = new System.Drawing.Size(232, 23);
             this.lblViewCli.TabIndex = 23;
             this.lblViewCli.Text = "Clientes Registrados";
             // 
-            // panel1
+            // pnlMarcador2
             // 
-            this.panel1.BackColor = System.Drawing.Color.SeaGreen;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(375, 70);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(434, 3);
-            this.panel1.TabIndex = 22;
+            this.pnlMarcador2.BackColor = System.Drawing.Color.Black;
+            this.pnlMarcador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMarcador2.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.pnlMarcador2.Location = new System.Drawing.Point(375, 70);
+            this.pnlMarcador2.Name = "pnlMarcador2";
+            this.pnlMarcador2.Size = new System.Drawing.Size(434, 3);
+            this.pnlMarcador2.TabIndex = 22;
             // 
             // pnlClientes
             // 
@@ -344,7 +317,6 @@
             this.pnlClientes.Controls.Add(this.imgTelefone);
             this.pnlClientes.Controls.Add(this.imgCpf);
             this.pnlClientes.Controls.Add(this.imgCli);
-            this.pnlClientes.Controls.Add(this.pnlSBuscar);
             this.pnlClientes.Controls.Add(this.pnlSAlterar);
             this.pnlClientes.Controls.Add(this.pnlSRemover);
             this.pnlClientes.Controls.Add(this.pnlSLimpar);
@@ -354,7 +326,7 @@
             this.pnlClientes.Controls.Add(this.txtEmailCli);
             this.pnlClientes.Controls.Add(this.txtTelefoneCli);
             this.pnlClientes.Controls.Add(this.txtEnderecoCli);
-            this.pnlClientes.Controls.Add(this.panel1);
+            this.pnlClientes.Controls.Add(this.pnlMarcador2);
             this.pnlClientes.Controls.Add(this.lblViewCli);
             this.pnlClientes.Controls.Add(this.txtBusca);
             this.pnlClientes.Controls.Add(this.txtBairroCli);
@@ -365,13 +337,13 @@
             this.pnlClientes.Controls.Add(this.btnAlterar);
             this.pnlClientes.Controls.Add(this.btnConfirmar);
             this.pnlClientes.Controls.Add(this.dgClientes);
-            this.pnlClientes.Controls.Add(this.btnBuscar);
             this.pnlClientes.Controls.Add(this.btnLimpar);
             this.pnlClientes.Controls.Add(this.lblHeaderCli);
             this.pnlClientes.Location = new System.Drawing.Point(0, 0);
             this.pnlClientes.Name = "pnlClientes";
-            this.pnlClientes.Size = new System.Drawing.Size(1184, 681);
+            this.pnlClientes.Size = new System.Drawing.Size(974, 562);
             this.pnlClientes.TabIndex = 26;
+            this.pnlClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlClientes_Paint);
             // 
             // pnlLinhaBairro
             // 
@@ -436,7 +408,7 @@
             // btnConfirmaAlteracao
             // 
             this.btnConfirmaAlteracao.AutoSize = true;
-            this.btnConfirmaAlteracao.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnConfirmaAlteracao.BackColor = System.Drawing.Color.Black;
             this.btnConfirmaAlteracao.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnConfirmaAlteracao.FlatAppearance.BorderSize = 0;
             this.btnConfirmaAlteracao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -512,20 +484,11 @@
             this.imgCli.TabIndex = 33;
             this.imgCli.TabStop = false;
             // 
-            // pnlSBuscar
-            // 
-            this.pnlSBuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSBuscar.BackColor = System.Drawing.Color.DarkOrange;
-            this.pnlSBuscar.Location = new System.Drawing.Point(1074, 643);
-            this.pnlSBuscar.Name = "pnlSBuscar";
-            this.pnlSBuscar.Size = new System.Drawing.Size(98, 3);
-            this.pnlSBuscar.TabIndex = 30;
-            // 
             // pnlSAlterar
             // 
             this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSAlterar.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.pnlSAlterar.Location = new System.Drawing.Point(970, 643);
+            this.pnlSAlterar.BackColor = System.Drawing.Color.Black;
+            this.pnlSAlterar.Location = new System.Drawing.Point(864, 524);
             this.pnlSAlterar.Name = "pnlSAlterar";
             this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
             this.pnlSAlterar.TabIndex = 32;
@@ -533,15 +496,15 @@
             // pnlSRemover
             // 
             this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSRemover.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pnlSRemover.Location = new System.Drawing.Point(866, 643);
+            this.pnlSRemover.BackColor = System.Drawing.Color.Black;
+            this.pnlSRemover.Location = new System.Drawing.Point(760, 526);
             this.pnlSRemover.Name = "pnlSRemover";
             this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
             this.pnlSRemover.TabIndex = 31;
             // 
             // pnlSLimpar
             // 
-            this.pnlSLimpar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.pnlSLimpar.BackColor = System.Drawing.Color.Black;
             this.pnlSLimpar.Location = new System.Drawing.Point(47, 465);
             this.pnlSLimpar.Name = "pnlSLimpar";
             this.pnlSLimpar.Size = new System.Drawing.Size(77, 3);
@@ -549,7 +512,7 @@
             // 
             // pnlSConfirmar
             // 
-            this.pnlSConfirmar.BackColor = System.Drawing.Color.ForestGreen;
+            this.pnlSConfirmar.BackColor = System.Drawing.Color.Black;
             this.pnlSConfirmar.Location = new System.Drawing.Point(190, 465);
             this.pnlSConfirmar.Name = "pnlSConfirmar";
             this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
@@ -560,7 +523,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1184, 681);
+            this.ClientSize = new System.Drawing.Size(974, 562);
             this.Controls.Add(this.pnlClientes);
             this.Name = "FormClientes";
             this.Text = "CLIENTES";
@@ -587,7 +550,6 @@
         private TextBox txtEmailCli;
         private Label lblHeaderCli;
         private Button btnLimpar;
-        private Button btnBuscar;
         private DataGridView dgClientes;
         private Button btnConfirmar;
         private Button btnAlterar;
@@ -598,9 +560,8 @@
         private TextBox txtBairroCli;
         private TextBox txtBusca;
         private Label lblViewCli;
-        private Panel panel1;
+        private Panel pnlMarcador2;
         private Panel pnlClientes;
-        private Panel pnlSBuscar;
         private Panel pnlSAlterar;
         private Panel pnlSRemover;
         private Panel pnlSLimpar;

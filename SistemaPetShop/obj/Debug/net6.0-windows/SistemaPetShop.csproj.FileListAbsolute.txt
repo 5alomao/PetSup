@@ -166,3 +166,32 @@ C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\Sist
 C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\ref\SistemaPetShop.dll
 C:\Users\17413319608\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.LoginRegister.resources
 C:\Users\Salomão\Desktop\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.LoginRegister.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\SistemaPetShop.exe
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\SistemaPetShop.deps.json
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\SistemaPetShop.runtimeconfig.json
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\SistemaPetShop.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\SistemaPetShop.pdb
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\Google.Protobuf.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\K4os.Compression.LZ4.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\K4os.Hash.xxHash.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\MySql.Data.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\ZstdNet.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\bin\Debug\net6.0-windows\BouncyCastle.Crypto.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.csproj.AssemblyReference.cache
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormClientes.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.FormPets.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Forms.LoginRegister.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.PetShop.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.Properties.Resources.resources
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.csproj.GenerateResource.cache
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.AssemblyInfoInputs.cache
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.AssemblyInfo.cs
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.csproj.CoreCompileInputs.cache
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.csproj.CopyComplete
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\refint\SistemaPetShop.dll
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.pdb
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\SistemaPetShop.genruntimeconfig.cache
+C:\Users\Home\OneDrive\Área de Trabalho\PetSup\SistemaPetShop\obj\Debug\net6.0-windows\ref\SistemaPetShop.dll

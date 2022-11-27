@@ -149,6 +149,11 @@ namespace SistemaPetShop.Forms
             lblHeaderCli.Text = "Cadastrar Cliente";
             pnlSConfirmar.BackColor = Color.ForestGreen;
         }
+
+        private void pnlClientes_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     }
 

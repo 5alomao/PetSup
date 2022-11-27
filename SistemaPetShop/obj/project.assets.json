@@ -893,24 +893,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Salomão\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Home\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
+      "projectUniqueName": "C:\\Users\\Home\\OneDrive\\Área de Trabalho\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
       "projectName": "SistemaPetShop",
-      "projectPath": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
-      "packagesPath": "C:\\Users\\Salomão\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Salomão\\Desktop\\PetSup\\SistemaPetShop\\obj\\",
+      "projectPath": "C:\\Users\\Home\\OneDrive\\Área de Trabalho\\PetSup\\SistemaPetShop\\SistemaPetShop.csproj",
+      "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Home\\OneDrive\\Área de Trabalho\\PetSup\\SistemaPetShop\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Salomão\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -918,7 +913,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -961,7 +955,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

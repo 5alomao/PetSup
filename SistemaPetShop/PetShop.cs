@@ -13,26 +13,27 @@ namespace SistemaPetShop
         }
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            activeForm.Close();
+            
             DesativaCL();
             DesativaButton();
+            pnlCadCli.Visible = true;
+            pnlCadPet.Visible = false;
             btnClientes.BackColor = Color.MediumSeaGreen;
             pnlCima.BackColor = Color.MediumSeaGreen; 
             btnLogo.BackColor = Color.SeaGreen;
-            
-            OpenChildForm(new Forms.FormClientes());
+
 
         }
         private void btnPets_Click(object sender, EventArgs e)
         {
-            activeForm.Close();
             DesativaCL();
             DesativaButton();
+            pnlCadPet.Visible = true;
+            pnlCadCli.Visible = false;
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
             btnLogo.BackColor = Color.Maroon;
-            
-            OpenChildForm(new Forms.FormPets());
+    
         }
         private void btnProdutos_Click(object sender, EventArgs e)
         {
@@ -99,31 +100,27 @@ namespace SistemaPetShop
         }
 
         private void btnLogo_Click(object sender, EventArgs e)
-        {
-            activeForm.Close();
-            DesativaButton();
-            DesativaCL();
-            
+        {  
         }
 
         private void pnlConteudo_Paint(object sender, PaintEventArgs e)
         {
-
         }
 
         private void PetShop_Load(object sender, EventArgs e)
         {
-
+            pnlCadCli.Visible = false; 
+            pnlCadPet.Visible = false;
         }
 
-        private void lblTitle_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
+           
+            DesativaButton();
+            DesativaCL();
+            pnlCadCli.Visible = false;
+            pnlCadPet.Visible = false;
+            btnLogo.BackColor = Color.FromArgb(10, 10, 10);
         }
     }
 }
