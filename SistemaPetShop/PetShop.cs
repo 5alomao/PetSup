@@ -22,9 +22,10 @@ namespace SistemaPetShop
             DesativaCL();
             DesativaButton();
             DesativaPnl();
-            btnProdutos.BackColor = Color.Goldenrod;
-            pnlCima.BackColor = Color.Goldenrod;
-            btnLogo.BackColor = Color.DarkGoldenrod;
+            pnlProdutos.Visible = true;
+            btnProdutos.BackColor = Color.FromArgb(97,24,96);
+            pnlCima.BackColor = Color.FromArgb(97,24,96);
+            btnLogo.BackColor = Color.FromArgb(80,02,80);
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
@@ -32,6 +33,7 @@ namespace SistemaPetShop
             DesativaCL();
             DesativaButton();
             DesativaPnl();
+            pnlFuncionarios.Visible = true;
             btnFuncionarios.BackColor = Color.DarkCyan;
             pnlCima.BackColor = Color.DarkCyan;
             btnLogo.BackColor = Color.Teal;  
@@ -42,9 +44,10 @@ namespace SistemaPetShop
             DesativaCL();
             DesativaButton();
             DesativaPnl();
-            btnVendas.BackColor = Color.Crimson;
-            pnlCima.BackColor = Color.Crimson;
-            btnLogo.BackColor = Color.DarkRed;
+            pnlVendas.Visible = true;
+            btnVendas.BackColor = Color.Orange;
+            pnlCima.BackColor = Color.Orange;
+            btnLogo.BackColor = Color.DarkOrange;
         }
 
         // Resets
@@ -68,6 +71,10 @@ namespace SistemaPetShop
         {
             pnlCadCli.Visible = false;
             pnlCadPet.Visible = false;
+            pnlHome.Visible = false;
+            pnlVendas.Visible = false;
+            pnlProdutos.Visible = false;
+            pnlFuncionarios.Visible = false;
         }
 
         void limpaCampoCli()
@@ -98,6 +105,7 @@ namespace SistemaPetShop
             DesativaButton();
             DesativaCL();
             DesativaPnl();
+            pnlHome.Visible = true;
             btnLogo.BackColor = Color.FromArgb(10, 10, 10);
         }
 
@@ -378,7 +386,10 @@ namespace SistemaPetShop
             ((DataTable)dgPets.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBuscaPet.Text);
         }
 
-        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
     
