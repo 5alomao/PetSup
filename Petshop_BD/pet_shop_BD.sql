@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `emailCliente` varchar(150) DEFAULT NULL,
   `bairroCliente` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.cliente: ~4 rows (aproximadamente)
 INSERT INTO `cliente` (`codCliente`, `nomeCliente`, `cpfCliente`, `enderecoCliente`, `telefoneCliente`, `emailCliente`, `bairroCliente`) VALUES
@@ -140,6 +140,7 @@ DELIMITER //
 CREATE PROCEDURE `proc_listaPet`()
 BEGIN
 	select
+    codPet as Codigo,
     nomePet as Nome, 
     tipoPet as Especie, 
     corPet as Cor, 
