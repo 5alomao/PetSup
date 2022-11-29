@@ -13,6 +13,7 @@ namespace SistemaPetShop
         private void PetShop_Load(object sender, EventArgs e)
         {
             DesativaPnl();
+            pnlHome.Visible = true;
             listaCliente();
             listaPet();
         }
@@ -26,6 +27,7 @@ namespace SistemaPetShop
             btnProdutos.BackColor = Color.FromArgb(97,24,96);
             pnlCima.BackColor = Color.FromArgb(97,24,96);
             btnLogo.BackColor = Color.FromArgb(80,02,80);
+            
         }
 
         private void btnFuncionarios_Click(object sender, EventArgs e)
@@ -36,7 +38,7 @@ namespace SistemaPetShop
             pnlFuncionarios.Visible = true;
             btnFuncionarios.BackColor = Color.DarkCyan;
             pnlCima.BackColor = Color.DarkCyan;
-            btnLogo.BackColor = Color.Teal;  
+            btnLogo.BackColor = Color.Teal; 
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -389,6 +391,20 @@ namespace SistemaPetShop
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void txtBairroCli_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void pnlAba_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

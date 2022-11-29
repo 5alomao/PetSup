@@ -29,15 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
-            this.pnlEsquerda = new System.Windows.Forms.Panel();
-            this.btnVendas = new System.Windows.Forms.Button();
-            this.btnFuncionarios = new System.Windows.Forms.Button();
-            this.lblSoftware = new System.Windows.Forms.Label();
-            this.btnProdutos = new System.Windows.Forms.Button();
-            this.btnPets = new System.Windows.Forms.Button();
-            this.btnClientes = new System.Windows.Forms.Button();
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.pnlHome = new System.Windows.Forms.Panel();
             this.pnlCadCli = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRemoverCli = new System.Windows.Forms.Button();
@@ -115,18 +107,25 @@
             this.lblFuncionarios = new System.Windows.Forms.Label();
             this.pnlVendas = new System.Windows.Forms.Panel();
             this.lblVendas = new System.Windows.Forms.Label();
+            this.pnlHome = new System.Windows.Forms.Panel();
+            this.imgLogoPetSupHome = new System.Windows.Forms.PictureBox();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCima = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.imgLogoPetSupHome = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnSobre = new System.Windows.Forms.Button();
+            this.btnContatos = new System.Windows.Forms.Button();
+            this.pnlAba = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.pnlEsquerda.SuspendLayout();
+            this.btnClientes = new System.Windows.Forms.Button();
+            this.btnPets = new System.Windows.Forms.Button();
+            this.btnProdutos = new System.Windows.Forms.Button();
+            this.lblSoftware = new System.Windows.Forms.Label();
+            this.btnFuncionarios = new System.Windows.Forms.Button();
+            this.btnVendas = new System.Windows.Forms.Button();
+            this.pnlEsquerda = new System.Windows.Forms.Panel();
             this.pnlConteudo.SuspendLayout();
-            this.pnlHome.SuspendLayout();
             this.pnlCadCli.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgBairro)).BeginInit();
@@ -146,171 +145,26 @@
             this.pnlProdutos.SuspendLayout();
             this.pnlFuncionarios.SuspendLayout();
             this.pnlVendas.SuspendLayout();
-            this.pnlCima.SuspendLayout();
+            this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogoPetSupHome)).BeginInit();
-            this.panel8.SuspendLayout();
+            this.pnlCima.SuspendLayout();
+            this.pnlAba.SuspendLayout();
+            this.pnlEsquerda.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlEsquerda
-            // 
-            this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.pnlEsquerda.Controls.Add(this.btnVendas);
-            this.pnlEsquerda.Controls.Add(this.btnFuncionarios);
-            this.pnlEsquerda.Controls.Add(this.lblSoftware);
-            this.pnlEsquerda.Controls.Add(this.btnProdutos);
-            this.pnlEsquerda.Controls.Add(this.btnPets);
-            this.pnlEsquerda.Controls.Add(this.btnClientes);
-            this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlEsquerda.Location = new System.Drawing.Point(0, 100);
-            this.pnlEsquerda.Name = "pnlEsquerda";
-            this.pnlEsquerda.Size = new System.Drawing.Size(194, 581);
-            this.pnlEsquerda.TabIndex = 0;
-            // 
-            // btnVendas
-            // 
-            this.btnVendas.BackColor = System.Drawing.Color.Transparent;
-            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendas.FlatAppearance.BorderSize = 0;
-            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
-            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnVendas.ForeColor = System.Drawing.Color.White;
-            this.btnVendas.Image = ((System.Drawing.Image)(resources.GetObject("btnVendas.Image")));
-            this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 272);
-            this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnVendas.Size = new System.Drawing.Size(194, 68);
-            this.btnVendas.TabIndex = 12;
-            this.btnVendas.Text = "   Vendas";
-            this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnVendas.UseVisualStyleBackColor = false;
-            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
-            // 
-            // btnFuncionarios
-            // 
-            this.btnFuncionarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFuncionarios.FlatAppearance.BorderSize = 0;
-            this.btnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
-            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
-            this.btnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionarios.Image")));
-            this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFuncionarios.Location = new System.Drawing.Point(0, 204);
-            this.btnFuncionarios.Name = "btnFuncionarios";
-            this.btnFuncionarios.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnFuncionarios.Size = new System.Drawing.Size(194, 68);
-            this.btnFuncionarios.TabIndex = 11;
-            this.btnFuncionarios.Text = "   Funcionários";
-            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnFuncionarios.UseVisualStyleBackColor = false;
-            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
-            // 
-            // lblSoftware
-            // 
-            this.lblSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblSoftware.AutoSize = true;
-            this.lblSoftware.BackColor = System.Drawing.Color.Transparent;
-            this.lblSoftware.ForeColor = System.Drawing.Color.White;
-            this.lblSoftware.Location = new System.Drawing.Point(12, 557);
-            this.lblSoftware.Name = "lblSoftware";
-            this.lblSoftware.Size = new System.Drawing.Size(59, 15);
-            this.lblSoftware.TabIndex = 16;
-            this.lblSoftware.Text = "Versão 1.0";
-            // 
-            // btnProdutos
-            // 
-            this.btnProdutos.BackColor = System.Drawing.Color.Transparent;
-            this.btnProdutos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnProdutos.FlatAppearance.BorderSize = 0;
-            this.btnProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(24)))), ((int)(((byte)(96)))));
-            this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProdutos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnProdutos.ForeColor = System.Drawing.Color.White;
-            this.btnProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnProdutos.Image")));
-            this.btnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdutos.Location = new System.Drawing.Point(0, 136);
-            this.btnProdutos.Name = "btnProdutos";
-            this.btnProdutos.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnProdutos.Size = new System.Drawing.Size(194, 68);
-            this.btnProdutos.TabIndex = 10;
-            this.btnProdutos.Text = "   Produtos";
-            this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnProdutos.UseVisualStyleBackColor = false;
-            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
-            // 
-            // btnPets
-            // 
-            this.btnPets.BackColor = System.Drawing.Color.Transparent;
-            this.btnPets.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPets.FlatAppearance.BorderSize = 0;
-            this.btnPets.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
-            this.btnPets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPets.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnPets.ForeColor = System.Drawing.Color.White;
-            this.btnPets.Image = ((System.Drawing.Image)(resources.GetObject("btnPets.Image")));
-            this.btnPets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPets.Location = new System.Drawing.Point(0, 68);
-            this.btnPets.Name = "btnPets";
-            this.btnPets.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnPets.Size = new System.Drawing.Size(194, 68);
-            this.btnPets.TabIndex = 9;
-            this.btnPets.Text = "   Pets";
-            this.btnPets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPets.UseVisualStyleBackColor = false;
-            this.btnPets.Click += new System.EventHandler(this.btnPets_Click);
-            // 
-            // btnClientes
-            // 
-            this.btnClientes.BackColor = System.Drawing.Color.Transparent;
-            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnClientes.FlatAppearance.BorderSize = 0;
-            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnClientes.ForeColor = System.Drawing.Color.White;
-            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
-            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(0, 0);
-            this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btnClientes.Size = new System.Drawing.Size(194, 68);
-            this.btnClientes.TabIndex = 8;
-            this.btnClientes.Text = "   Clientes";
-            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClientes.UseVisualStyleBackColor = false;
-            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.pnlHome);
             this.pnlConteudo.Controls.Add(this.pnlCadCli);
             this.pnlConteudo.Controls.Add(this.pnlCadPet);
             this.pnlConteudo.Controls.Add(this.pnlProdutos);
             this.pnlConteudo.Controls.Add(this.pnlFuncionarios);
             this.pnlConteudo.Controls.Add(this.pnlVendas);
+            this.pnlConteudo.Controls.Add(this.pnlHome);
             this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudo.Location = new System.Drawing.Point(194, 100);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(990, 581);
             this.pnlConteudo.TabIndex = 2;
-            // 
-            // pnlHome
-            // 
-            this.pnlHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnlHome.Controls.Add(this.imgLogoPetSupHome);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlHome.Location = new System.Drawing.Point(0, 0);
-            this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(990, 581);
-            this.pnlHome.TabIndex = 2;
             // 
             // pnlCadCli
             // 
@@ -376,7 +230,7 @@
             this.btnRemoverCli.FlatAppearance.BorderSize = 0;
             this.btnRemoverCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverCli.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverCli.Location = new System.Drawing.Point(763, 486);
+            this.btnRemoverCli.Location = new System.Drawing.Point(747, 486);
             this.btnRemoverCli.Name = "btnRemoverCli";
             this.btnRemoverCli.Size = new System.Drawing.Size(98, 40);
             this.btnRemoverCli.TabIndex = 82;
@@ -568,7 +422,7 @@
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Location = new System.Drawing.Point(867, 532);
+            this.panel2.Location = new System.Drawing.Point(851, 532);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(98, 3);
             this.panel2.TabIndex = 67;
@@ -577,7 +431,7 @@
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Black;
-            this.panel3.Location = new System.Drawing.Point(763, 532);
+            this.panel3.Location = new System.Drawing.Point(747, 532);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(98, 3);
             this.panel3.TabIndex = 66;
@@ -667,6 +521,7 @@
             this.txtBairroCli.PlaceholderText = "Bairro";
             this.txtBairroCli.Size = new System.Drawing.Size(200, 16);
             this.txtBairroCli.TabIndex = 63;
+            this.txtBairroCli.TextChanged += new System.EventHandler(this.txtBairroCli_TextChanged);
             // 
             // label2
             // 
@@ -696,7 +551,7 @@
             this.btnAlterarCli.FlatAppearance.BorderSize = 0;
             this.btnAlterarCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarCli.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarCli.Location = new System.Drawing.Point(867, 486);
+            this.btnAlterarCli.Location = new System.Drawing.Point(851, 486);
             this.btnAlterarCli.Name = "btnAlterarCli";
             this.btnAlterarCli.Size = new System.Drawing.Size(98, 40);
             this.btnAlterarCli.TabIndex = 53;
@@ -726,16 +581,12 @@
             this.dgClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.dgClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgClientes.Location = new System.Drawing.Point(378, 142);
             this.dgClientes.Name = "dgClientes";
             this.dgClientes.RowTemplate.Height = 25;
-            this.dgClientes.Size = new System.Drawing.Size(587, 338);
+            this.dgClientes.Size = new System.Drawing.Size(571, 338);
             this.dgClientes.TabIndex = 52;
             // 
             // lblHeaderCli
@@ -851,7 +702,7 @@
             this.btnRemoverPet.FlatAppearance.BorderSize = 0;
             this.btnRemoverPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemoverPet.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverPet.Location = new System.Drawing.Point(763, 486);
+            this.btnRemoverPet.Location = new System.Drawing.Point(747, 486);
             this.btnRemoverPet.Name = "btnRemoverPet";
             this.btnRemoverPet.Size = new System.Drawing.Size(98, 40);
             this.btnRemoverPet.TabIndex = 160;
@@ -869,7 +720,7 @@
             this.btnAlterarPet.FlatAppearance.BorderSize = 0;
             this.btnAlterarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterarPet.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarPet.Location = new System.Drawing.Point(867, 486);
+            this.btnAlterarPet.Location = new System.Drawing.Point(851, 486);
             this.btnAlterarPet.Name = "btnAlterarPet";
             this.btnAlterarPet.Size = new System.Drawing.Size(98, 40);
             this.btnAlterarPet.TabIndex = 159;
@@ -1136,7 +987,7 @@
             // 
             this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSAlterar.BackColor = System.Drawing.Color.Black;
-            this.pnlSAlterar.Location = new System.Drawing.Point(867, 532);
+            this.pnlSAlterar.Location = new System.Drawing.Point(851, 532);
             this.pnlSAlterar.Name = "pnlSAlterar";
             this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
             this.pnlSAlterar.TabIndex = 138;
@@ -1145,7 +996,7 @@
             // 
             this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSRemover.BackColor = System.Drawing.Color.Black;
-            this.pnlSRemover.Location = new System.Drawing.Point(763, 532);
+            this.pnlSRemover.Location = new System.Drawing.Point(747, 532);
             this.pnlSRemover.Name = "pnlSRemover";
             this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
             this.pnlSRemover.TabIndex = 137;
@@ -1155,15 +1006,12 @@
             this.dgPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPets.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgPets.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgPets.BackgroundColor = System.Drawing.Color.White;
             this.dgPets.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgPets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPets.Location = new System.Drawing.Point(378, 142);
             this.dgPets.Name = "dgPets";
             this.dgPets.RowTemplate.Height = 25;
-            this.dgPets.Size = new System.Drawing.Size(587, 338);
+            this.dgPets.Size = new System.Drawing.Size(571, 338);
             this.dgPets.TabIndex = 139;
             // 
             // pnlProdutos
@@ -1223,6 +1071,27 @@
             this.lblVendas.TabIndex = 0;
             this.lblVendas.Text = "vendas";
             // 
+            // pnlHome
+            // 
+            this.pnlHome.BackColor = System.Drawing.Color.White;
+            this.pnlHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlHome.Controls.Add(this.imgLogoPetSupHome);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
+            this.pnlHome.Name = "pnlHome";
+            this.pnlHome.Size = new System.Drawing.Size(990, 581);
+            this.pnlHome.TabIndex = 2;
+            // 
+            // imgLogoPetSupHome
+            // 
+            this.imgLogoPetSupHome.Image = ((System.Drawing.Image)(resources.GetObject("imgLogoPetSupHome.Image")));
+            this.imgLogoPetSupHome.Location = new System.Drawing.Point(157, 45);
+            this.imgLogoPetSupHome.Name = "imgLogoPetSupHome";
+            this.imgLogoPetSupHome.Size = new System.Drawing.Size(670, 487);
+            this.imgLogoPetSupHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogoPetSupHome.TabIndex = 0;
+            this.imgLogoPetSupHome.TabStop = false;
+            // 
             // btnLogo
             // 
             this.btnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -1259,87 +1128,93 @@
             // pnlCima
             // 
             this.pnlCima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.pnlCima.Controls.Add(this.button3);
-            this.pnlCima.Controls.Add(this.button2);
-            this.pnlCima.Controls.Add(this.button1);
+            this.pnlCima.Controls.Add(this.btnEntrar);
+            this.pnlCima.Controls.Add(this.btnSobre);
+            this.pnlCima.Controls.Add(this.btnContatos);
             this.pnlCima.Controls.Add(this.btnHome);
             this.pnlCima.Controls.Add(this.btnLogo);
-            this.pnlCima.Controls.Add(this.panel8);
+            this.pnlCima.Controls.Add(this.pnlAba);
             this.pnlCima.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlCima.Location = new System.Drawing.Point(0, 0);
             this.pnlCima.Name = "pnlCima";
             this.pnlCima.Size = new System.Drawing.Size(1184, 100);
             this.pnlCima.TabIndex = 1;
             // 
-            // button3
+            // btnEntrar
             // 
-            this.button3.AutoSize = true;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(1003, 37);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(181, 63);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "Entrar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEntrar.AutoSize = true;
+            this.btnEntrar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEntrar.FlatAppearance.BorderSize = 0;
+            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnEntrar.ForeColor = System.Drawing.Color.White;
+            this.btnEntrar.Location = new System.Drawing.Point(1091, 37);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Size = new System.Drawing.Size(93, 63);
+            this.btnEntrar.TabIndex = 22;
+            this.btnEntrar.Text = "Entrar";
+            this.btnEntrar.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSobre
             // 
-            this.button2.AutoSize = true;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(556, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(181, 63);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Sobre Nós";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSobre.AutoSize = true;
+            this.btnSobre.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnSobre.FlatAppearance.BorderSize = 0;
+            this.btnSobre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSobre.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSobre.ForeColor = System.Drawing.Color.White;
+            this.btnSobre.Location = new System.Drawing.Point(556, 37);
+            this.btnSobre.Name = "btnSobre";
+            this.btnSobre.Size = new System.Drawing.Size(181, 63);
+            this.btnSobre.TabIndex = 21;
+            this.btnSobre.Text = "Sobre Nós";
+            this.btnSobre.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnContatos
             // 
-            this.button1.AutoSize = true;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(375, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(181, 63);
-            this.button1.TabIndex = 20;
-            this.button1.Text = "Contatos";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnContatos.AutoSize = true;
+            this.btnContatos.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnContatos.FlatAppearance.BorderSize = 0;
+            this.btnContatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContatos.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnContatos.ForeColor = System.Drawing.Color.White;
+            this.btnContatos.Location = new System.Drawing.Point(375, 37);
+            this.btnContatos.Name = "btnContatos";
+            this.btnContatos.Size = new System.Drawing.Size(181, 63);
+            this.btnContatos.TabIndex = 20;
+            this.btnContatos.Text = "Contatos";
+            this.btnContatos.UseVisualStyleBackColor = true;
             // 
-            // imgLogoPetSupHome
+            // pnlAba
             // 
-            this.imgLogoPetSupHome.Image = ((System.Drawing.Image)(resources.GetObject("imgLogoPetSupHome.Image")));
-            this.imgLogoPetSupHome.Location = new System.Drawing.Point(157, 45);
-            this.imgLogoPetSupHome.Name = "imgLogoPetSupHome";
-            this.imgLogoPetSupHome.Size = new System.Drawing.Size(670, 487);
-            this.imgLogoPetSupHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgLogoPetSupHome.TabIndex = 0;
-            this.imgLogoPetSupHome.TabStop = false;
+            this.pnlAba.BackColor = System.Drawing.Color.DimGray;
+            this.pnlAba.Controls.Add(this.btnMinimizar);
+            this.pnlAba.Controls.Add(this.btnClose);
+            this.pnlAba.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlAba.Location = new System.Drawing.Point(0, 0);
+            this.pnlAba.Name = "pnlAba";
+            this.pnlAba.Size = new System.Drawing.Size(1184, 37);
+            this.pnlAba.TabIndex = 23;
+            this.pnlAba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAba_Paint);
             // 
-            // panel8
+            // btnMinimizar
             // 
-            this.panel8.BackColor = System.Drawing.Color.Olive;
-            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Controls.Add(this.btnClose);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1184, 37);
-            this.panel8.TabIndex = 23;
+            this.btnMinimizar.BackColor = System.Drawing.Color.DarkGray;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.ForeColor = System.Drawing.Color.White;
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1111, 2);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(32, 32);
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Black;
+            this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClose.BackgroundImage")));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -1349,6 +1224,143 @@
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnClientes
+            // 
+            this.btnClientes.BackColor = System.Drawing.Color.Transparent;
+            this.btnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnClientes.FlatAppearance.BorderSize = 0;
+            this.btnClientes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnClientes.ForeColor = System.Drawing.Color.White;
+            this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
+            this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.Location = new System.Drawing.Point(0, 0);
+            this.btnClientes.Name = "btnClientes";
+            this.btnClientes.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnClientes.Size = new System.Drawing.Size(194, 68);
+            this.btnClientes.TabIndex = 8;
+            this.btnClientes.Text = "   Clientes";
+            this.btnClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClientes.UseVisualStyleBackColor = false;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
+            // 
+            // btnPets
+            // 
+            this.btnPets.BackColor = System.Drawing.Color.Transparent;
+            this.btnPets.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPets.FlatAppearance.BorderSize = 0;
+            this.btnPets.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Firebrick;
+            this.btnPets.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPets.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnPets.ForeColor = System.Drawing.Color.White;
+            this.btnPets.Image = ((System.Drawing.Image)(resources.GetObject("btnPets.Image")));
+            this.btnPets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPets.Location = new System.Drawing.Point(0, 68);
+            this.btnPets.Name = "btnPets";
+            this.btnPets.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnPets.Size = new System.Drawing.Size(194, 68);
+            this.btnPets.TabIndex = 9;
+            this.btnPets.Text = "   Pets";
+            this.btnPets.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPets.UseVisualStyleBackColor = false;
+            this.btnPets.Click += new System.EventHandler(this.btnPets_Click);
+            // 
+            // btnProdutos
+            // 
+            this.btnProdutos.BackColor = System.Drawing.Color.Transparent;
+            this.btnProdutos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProdutos.FlatAppearance.BorderSize = 0;
+            this.btnProdutos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(24)))), ((int)(((byte)(96)))));
+            this.btnProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProdutos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnProdutos.ForeColor = System.Drawing.Color.White;
+            this.btnProdutos.Image = ((System.Drawing.Image)(resources.GetObject("btnProdutos.Image")));
+            this.btnProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProdutos.Location = new System.Drawing.Point(0, 136);
+            this.btnProdutos.Name = "btnProdutos";
+            this.btnProdutos.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnProdutos.Size = new System.Drawing.Size(194, 68);
+            this.btnProdutos.TabIndex = 10;
+            this.btnProdutos.Text = "   Produtos";
+            this.btnProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProdutos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnProdutos.UseVisualStyleBackColor = false;
+            this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
+            // 
+            // lblSoftware
+            // 
+            this.lblSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblSoftware.AutoSize = true;
+            this.lblSoftware.BackColor = System.Drawing.Color.Transparent;
+            this.lblSoftware.ForeColor = System.Drawing.Color.White;
+            this.lblSoftware.Location = new System.Drawing.Point(12, 557);
+            this.lblSoftware.Name = "lblSoftware";
+            this.lblSoftware.Size = new System.Drawing.Size(59, 15);
+            this.lblSoftware.TabIndex = 16;
+            this.lblSoftware.Text = "Versão 1.0";
+            // 
+            // btnFuncionarios
+            // 
+            this.btnFuncionarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnFuncionarios.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFuncionarios.FlatAppearance.BorderSize = 0;
+            this.btnFuncionarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkCyan;
+            this.btnFuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFuncionarios.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFuncionarios.ForeColor = System.Drawing.Color.White;
+            this.btnFuncionarios.Image = ((System.Drawing.Image)(resources.GetObject("btnFuncionarios.Image")));
+            this.btnFuncionarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.Location = new System.Drawing.Point(0, 204);
+            this.btnFuncionarios.Name = "btnFuncionarios";
+            this.btnFuncionarios.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnFuncionarios.Size = new System.Drawing.Size(194, 68);
+            this.btnFuncionarios.TabIndex = 11;
+            this.btnFuncionarios.Text = "   Funcionários";
+            this.btnFuncionarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFuncionarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnFuncionarios.UseVisualStyleBackColor = false;
+            this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
+            // 
+            // btnVendas
+            // 
+            this.btnVendas.BackColor = System.Drawing.Color.Transparent;
+            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendas.FlatAppearance.BorderSize = 0;
+            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnVendas.ForeColor = System.Drawing.Color.White;
+            this.btnVendas.Image = ((System.Drawing.Image)(resources.GetObject("btnVendas.Image")));
+            this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendas.Location = new System.Drawing.Point(0, 272);
+            this.btnVendas.Name = "btnVendas";
+            this.btnVendas.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btnVendas.Size = new System.Drawing.Size(194, 68);
+            this.btnVendas.TabIndex = 12;
+            this.btnVendas.Text = "   Vendas";
+            this.btnVendas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVendas.UseVisualStyleBackColor = false;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
+            // 
+            // pnlEsquerda
+            // 
+            this.pnlEsquerda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pnlEsquerda.Controls.Add(this.btnVendas);
+            this.pnlEsquerda.Controls.Add(this.btnFuncionarios);
+            this.pnlEsquerda.Controls.Add(this.lblSoftware);
+            this.pnlEsquerda.Controls.Add(this.btnProdutos);
+            this.pnlEsquerda.Controls.Add(this.btnPets);
+            this.pnlEsquerda.Controls.Add(this.btnClientes);
+            this.pnlEsquerda.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlEsquerda.Location = new System.Drawing.Point(0, 100);
+            this.pnlEsquerda.Name = "pnlEsquerda";
+            this.pnlEsquerda.Size = new System.Drawing.Size(194, 581);
+            this.pnlEsquerda.TabIndex = 0;
             // 
             // PetShop
             // 
@@ -1365,10 +1377,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PetSupSoftware";
             this.Load += new System.EventHandler(this.PetShop_Load);
-            this.pnlEsquerda.ResumeLayout(false);
-            this.pnlEsquerda.PerformLayout();
             this.pnlConteudo.ResumeLayout(false);
-            this.pnlHome.ResumeLayout(false);
             this.pnlCadCli.ResumeLayout(false);
             this.pnlCadCli.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
@@ -1393,22 +1402,18 @@
             this.pnlFuncionarios.PerformLayout();
             this.pnlVendas.ResumeLayout(false);
             this.pnlVendas.PerformLayout();
+            this.pnlHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogoPetSupHome)).EndInit();
             this.pnlCima.ResumeLayout(false);
             this.pnlCima.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgLogoPetSupHome)).EndInit();
-            this.panel8.ResumeLayout(false);
+            this.pnlAba.ResumeLayout(false);
+            this.pnlEsquerda.ResumeLayout(false);
+            this.pnlEsquerda.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Panel pnlEsquerda;
-        private Button btnVendas;
-        private Button btnFuncionarios;
-        private Button btnProdutos;
-        private Button btnPets;
-        private Label lblSoftware; 
         private Panel pnlConteudo;
         private Panel pnlCadCli;
         private Panel pnlLinhaBairro;
@@ -1446,7 +1451,6 @@
         private Label lblHeaderCli;
         private Button btnLimparCli;
         private Button btnRemoverCli;
-        private Button btnClientes;
         private Panel pnlCadPet;
         private Label lblMsgError;
         private Button btnConcluirPet;
@@ -1485,9 +1489,9 @@
         private Button btnLogo;
         private Button btnHome;
         private Panel pnlCima;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button btnEntrar;
+        private Button btnSobre;
+        private Button btnContatos;
         private Panel pnlFuncionarios;
         private Panel pnlProdutos;
         private Panel pnlVendas;
@@ -1496,7 +1500,15 @@
         private Label lblFuncionarios;
         private Label lblVendas;
         private PictureBox imgLogoPetSupHome;
-        private Panel panel8;
+        private Panel pnlAba;
         private Button btnClose;
+        private Button btnClientes;
+        private Button btnPets;
+        private Button btnProdutos;
+        private Label lblSoftware;
+        private Button btnFuncionarios;
+        private Button btnVendas;
+        private Panel pnlEsquerda;
+        private Button btnMinimizar;
     }
 }
