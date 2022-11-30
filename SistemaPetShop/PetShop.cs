@@ -1,4 +1,5 @@
 using System.Data;
+using System.Runtime.InteropServices;
 using System.Runtime.InteropServices.ObjectiveC;
 
 namespace SistemaPetShop
@@ -405,6 +406,30 @@ namespace SistemaPetShop
         private void pnlAba_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        //arrastar pela barra de titulo
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void pnlAba_MouseDown(object sender, MouseEventArgs e)
+        {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Login sair = new Login();
+            this.Hide();
+            sair.ShowDialog();
+            this.Close();
         }
     }
 }

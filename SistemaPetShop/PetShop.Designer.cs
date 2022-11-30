@@ -112,7 +112,7 @@
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCima = new System.Windows.Forms.Panel();
-            this.btnEntrar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.btnSobre = new System.Windows.Forms.Button();
             this.btnContatos = new System.Windows.Forms.Button();
             this.pnlAba = new System.Windows.Forms.Panel();
@@ -168,6 +168,7 @@
             // 
             // pnlCadCli
             // 
+            this.pnlCadCli.BackColor = System.Drawing.Color.White;
             this.pnlCadCli.Controls.Add(this.label3);
             this.pnlCadCli.Controls.Add(this.btnRemoverCli);
             this.pnlCadCli.Controls.Add(this.btnLimparCli);
@@ -1128,7 +1129,7 @@
             // pnlCima
             // 
             this.pnlCima.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.pnlCima.Controls.Add(this.btnEntrar);
+            this.pnlCima.Controls.Add(this.btnSair);
             this.pnlCima.Controls.Add(this.btnSobre);
             this.pnlCima.Controls.Add(this.btnContatos);
             this.pnlCima.Controls.Add(this.btnHome);
@@ -1140,20 +1141,21 @@
             this.pnlCima.Size = new System.Drawing.Size(1184, 100);
             this.pnlCima.TabIndex = 1;
             // 
-            // btnEntrar
+            // btnSair
             // 
-            this.btnEntrar.AutoSize = true;
-            this.btnEntrar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnEntrar.FlatAppearance.BorderSize = 0;
-            this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnEntrar.ForeColor = System.Drawing.Color.White;
-            this.btnEntrar.Location = new System.Drawing.Point(1091, 37);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(93, 63);
-            this.btnEntrar.TabIndex = 22;
-            this.btnEntrar.Text = "Entrar";
-            this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnSair.AutoSize = true;
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSair.FlatAppearance.BorderSize = 0;
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSair.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSair.ForeColor = System.Drawing.Color.White;
+            this.btnSair.Location = new System.Drawing.Point(1091, 37);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(93, 63);
+            this.btnSair.TabIndex = 22;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnSobre
             // 
@@ -1187,7 +1189,7 @@
             // 
             // pnlAba
             // 
-            this.pnlAba.BackColor = System.Drawing.Color.DimGray;
+            this.pnlAba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.pnlAba.Controls.Add(this.btnMinimizar);
             this.pnlAba.Controls.Add(this.btnClose);
             this.pnlAba.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1196,6 +1198,7 @@
             this.pnlAba.Size = new System.Drawing.Size(1184, 37);
             this.pnlAba.TabIndex = 23;
             this.pnlAba.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlAba_Paint);
+            this.pnlAba.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlAba_MouseDown);
             // 
             // btnMinimizar
             // 
@@ -1489,7 +1492,7 @@
         private Button btnLogo;
         private Button btnHome;
         private Panel pnlCima;
-        private Button btnEntrar;
+        private Button btnSair;
         private Button btnSobre;
         private Button btnContatos;
         private Panel pnlFuncionarios;

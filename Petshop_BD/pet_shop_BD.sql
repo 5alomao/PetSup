@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.1.35-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win32
--- HeidiSQL Versão:              11.0.0.5919
+-- Versão do servidor:           10.4.10-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win64
+-- HeidiSQL Versão:              10.3.0.5771
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -28,17 +28,15 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `emailCliente` varchar(150) DEFAULT NULL,
   `bairroCliente` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.cliente: ~6 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.cliente: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
 INSERT INTO `cliente` (`codCliente`, `nomeCliente`, `cpfCliente`, `enderecoCliente`, `telefoneCliente`, `emailCliente`, `bairroCliente`) VALUES
 	(6, 'Salomão Ferreira', '174.133.196-08', 'Rua São Lucas', '(35)99769-5915', 'salomao@gmail.com', 'Jardim das Oliveiras'),
 	(7, 'Miguel Silva Ferreira', '123.456.789-10', 'Rua São Lucas', '(35)91234-5678', 'miguel@gmail.com', 'Jardim das Oliveiras'),
 	(8, 'Paulo Emanuel Silva Ferreira', '123.123.123-12', 'Rua São Lucas', '(35)91234-5678', 'paulo@gmail.com', 'Jardim das Oliveiras'),
-	(9, 'Lilian Cristina Silva Ferreira', '123.444.123-44', 'Rua São Lucas', '(35)91234-5678', 'lilian@gmail.com', 'Jardim das Oliveiras'),
-	(11, 'Erick de Bem Campos', '333.444.555-66', 'Rua São Matheus', '(35)99778-2211', 'erick@gmail.com', 'Jardim das Oliveiras'),
-	(12, 'Mateus Eloy', '123.123.123-12', 'Centro', '3295-2020', 'mateus@gmail.com', 'Centro');
+	(9, 'Lilian Cristina Silva Ferreira', '123.444.123-44', 'Rua São Lucas', '(35)91234-5678', 'lilian@gmail.com', 'Jardim das Oliveiras');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.pet
@@ -54,17 +52,16 @@ CREATE TABLE IF NOT EXISTS `pet` (
   PRIMARY KEY (`codPet`),
   KEY `fk_PET_CLIENTE_idx` (`CLIENTE_codCliente`),
   CONSTRAINT `fk_PET_CLIENTE` FOREIGN KEY (`CLIENTE_codCliente`) REFERENCES `cliente` (`codCliente`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.pet: ~6 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.pet: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `pet` DISABLE KEYS */;
 INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIENTE_codCliente`, `corPet`) VALUES
 	(4, 'Jade', 'Shi-tsu', 'Cachorro', 'Pequeno', 7, 'Branco'),
 	(5, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Rajado'),
 	(6, 'Kiara', 'Labrado', 'Cachorro', 'Grande', 9, 'Preto'),
 	(7, 'Thor', 'Labrador', 'Cachorro', 'Grande', 8, 'Preto'),
-	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel'),
-	(9, 'Yank', 'Fila Brasileiro', 'Cachorro', 'Grande', 11, 'Marrom Claro');
+	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel');
 /*!40000 ALTER TABLE `pet` ENABLE KEYS */;
 
 -- Copiando estrutura para procedure pet_shop.proc_alteraCliente
@@ -82,6 +79,15 @@ DELIMITER //
 CREATE PROCEDURE `proc_alteraPet`(in nome varchar (150), in raca varchar (100), in porte varchar (50), in tipo varchar(100), in cor varchar(100), in codCli int, in codP int)
 BEGIN
 	update pet set nomePet = nome, tipoPet = tipo, corPet = cor, racaPet = raca, portePet = porte, CLIENTE_codCliente = codCli where codPet = codP;
+END//
+DELIMITER ;
+
+-- Copiando estrutura para procedure pet_shop.proc_consultaLogin
+DROP PROCEDURE IF EXISTS `proc_consultaLogin`;
+DELIMITER //
+CREATE PROCEDURE `proc_consultaLogin`(in nomeU varchar(100), in senhaU varchar(100))
+BEGIN
+	select * from usuario where usuario.nomeUser = nomeU and usuario.senhaUser = senhaU;
 END//
 DELIMITER ;
 
@@ -121,6 +127,15 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Copiando estrutura para procedure pet_shop.proc_insereUser
+DROP PROCEDURE IF EXISTS `proc_insereUser`;
+DELIMITER //
+CREATE PROCEDURE `proc_insereUser`(in nomeU varchar (100), in senhaU varchar (100))
+BEGIN
+	insert into usuario (nomeUser,senhaUser) values (nomeU, senhaU);
+END//
+DELIMITER ;
+
 -- Copiando estrutura para procedure pet_shop.proc_listaCliente
 DROP PROCEDURE IF EXISTS `proc_listaCliente`;
 DELIMITER //
@@ -154,6 +169,21 @@ BEGIN
     from pet inner join cliente where codCliente = CLIENTE_codCliente;
 END//
 DELIMITER ;
+
+-- Copiando estrutura para tabela pet_shop.usuario
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `codUser` int(11) NOT NULL AUTO_INCREMENT,
+  `nomeUser` varchar(150) NOT NULL,
+  `senhaUser` varchar(150) NOT NULL,
+  PRIMARY KEY (`codUser`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- Copiando dados para a tabela pet_shop.usuario: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` (`codUser`, `nomeUser`, `senhaUser`) VALUES
+	(1, 'adm', '123');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
