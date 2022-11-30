@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.10-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              10.3.0.5771
+-- Versão do servidor:           10.1.35-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              11.0.0.5919
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -130,9 +130,9 @@ DELIMITER ;
 -- Copiando estrutura para procedure pet_shop.proc_insereUser
 DROP PROCEDURE IF EXISTS `proc_insereUser`;
 DELIMITER //
-CREATE PROCEDURE `proc_insereUser`(in nomeU varchar (100), in senhaU varchar (100))
+CREATE PROCEDURE `proc_insereUser`(in nomeU varchar (100), in senhaU varchar (100), emailU varchar (150))
 BEGIN
-	insert into usuario (nomeUser,senhaUser) values (nomeU, senhaU);
+	insert into usuario (nomeUser,senhaUser,emailUser) values (nomeU, senhaU, emailU);
 END//
 DELIMITER ;
 
@@ -176,13 +176,17 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `codUser` int(11) NOT NULL AUTO_INCREMENT,
   `nomeUser` varchar(150) NOT NULL,
   `senhaUser` varchar(150) NOT NULL,
+  `emailUser` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`codUser`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.usuario: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.usuario: ~4 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` (`codUser`, `nomeUser`, `senhaUser`) VALUES
-	(1, 'adm', '123');
+INSERT INTO `usuario` (`codUser`, `nomeUser`, `senhaUser`, `emailUser`) VALUES
+	(1, 'adm', 'A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3', NULL),
+	(2, '5alomao', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'salomao@gmail.com'),
+	(3, 'Gineapple', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'geovana@gmail.com'),
+	(4, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'admin@gmail.com');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
