@@ -40,15 +40,16 @@
             this.imgSenha = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblLogin = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.imgLogo = new System.Windows.Forms.PictureBox();
+            this.btnCriarConta = new System.Windows.Forms.Button();
             this.pnlAba.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAba
@@ -63,6 +64,7 @@
             this.pnlAba.Name = "pnlAba";
             this.pnlAba.Size = new System.Drawing.Size(383, 37);
             this.pnlAba.TabIndex = 24;
+            this.pnlAba.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlAba_MouseDown);
             // 
             // btnMin
             // 
@@ -179,15 +181,15 @@
             this.panel2.Size = new System.Drawing.Size(240, 1);
             this.panel2.TabIndex = 77;
             // 
-            // panel3
+            // pnlHeader
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.panel3.Controls.Add(this.lblLogin);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 37);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(383, 49);
-            this.panel3.TabIndex = 78;
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.pnlHeader.Controls.Add(this.lblLogin);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 37);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(383, 49);
+            this.pnlHeader.TabIndex = 78;
             // 
             // lblLogin
             // 
@@ -212,19 +214,35 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(95, 25);
             this.btnLogin.TabIndex = 80;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Entrar";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBox3
+            // imgLogo
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(0, 110);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(382, 107);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 82;
-            this.pictureBox3.TabStop = false;
+            this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
+            this.imgLogo.Location = new System.Drawing.Point(0, 110);
+            this.imgLogo.Name = "imgLogo";
+            this.imgLogo.Size = new System.Drawing.Size(382, 107);
+            this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLogo.TabIndex = 82;
+            this.imgLogo.TabStop = false;
+            // 
+            // btnCriarConta
+            // 
+            this.btnCriarConta.AutoSize = true;
+            this.btnCriarConta.BackColor = System.Drawing.Color.Black;
+            this.btnCriarConta.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCriarConta.FlatAppearance.BorderSize = 0;
+            this.btnCriarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCriarConta.ForeColor = System.Drawing.Color.White;
+            this.btnCriarConta.Location = new System.Drawing.Point(45, 352);
+            this.btnCriarConta.Name = "btnCriarConta";
+            this.btnCriarConta.Size = new System.Drawing.Size(77, 25);
+            this.btnCriarConta.TabIndex = 83;
+            this.btnCriarConta.Text = "Criar Conta";
+            this.btnCriarConta.UseVisualStyleBackColor = false;
+            this.btnCriarConta.Click += new System.EventHandler(this.btnCriarConta_Click);
             // 
             // Login
             // 
@@ -232,8 +250,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(383, 450);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.btnCriarConta);
+            this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.imgLogo);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -249,9 +268,9 @@
             this.pnlAba.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,9 +289,10 @@
         private PictureBox imgSenha;
         private Panel panel1;
         private Panel panel2;
-        private Panel panel3;
+        private Panel pnlHeader;
         private Button btnLogin;
-        private PictureBox pictureBox3;
+        private PictureBox imgLogo;
         private Label lblLogin;
+        private Button btnCriarConta;
     }
 }

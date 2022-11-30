@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace SistemaPetShop
 {
-    public partial class Login : Form
+    public partial class Register : Form
     {
-        public Login()
+        public Register()
         {
             InitializeComponent();
         }
@@ -23,30 +23,48 @@ namespace SistemaPetShop
             this.Close();
         }
 
+        void limpaCampo()
+        {
+            txtSenha.Text = "";
+            txtEmailUser.Text = "";
+            txtUser.Text = "";
+        }
+
         private void btnMin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnFazerLogin_Click(object sender, EventArgs e)
         {
-            ConectaBanco conecta = new ConectaBanco();
-            if (conecta.verifica(txtUser.Text, txtSenha.Text) == true)
-            {
-                PetShop petsup = new PetShop();
-                this.Hide();
-                petsup.ShowDialog();
-                this.Close();
-            }
-            else
-                MessageBox.Show("Usuário ou Senha Incorretos !" + conecta.mensagem);
+            Login fazer = new Login();
+            this.Hide();
+            fazer.ShowDialog();
+            this.Close();
         }
 
         private void btnCriarConta_Click(object sender, EventArgs e)
         {
-            Register criar = new Register();
+            Usuario u = new Usuario();
+            string senhaHash = Hash.makeHash(txtSenha.Text);
+            u.NomeUser = txtUser.Text;
+            u.EmailUser = txtEmailUser.Text;
+            u.SenhaUser = senhaHash;
+                
+
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.insereUsuarios(u);
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados Inseridos com Sucesso :)");
+            }
+            else
+            MessageBox.Show("Erro :(" + conecta.mensagem);
+
+            limpaCampo();
+            Login fazer = new Login();
             this.Hide();
-            criar.ShowDialog();
+            fazer.ShowDialog();
             this.Close();
         }
 
@@ -59,6 +77,11 @@ namespace SistemaPetShop
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

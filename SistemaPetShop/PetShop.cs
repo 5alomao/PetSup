@@ -419,17 +419,17 @@ namespace SistemaPetShop
                 SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Login sair = new Login();
             this.Hide();
             sair.ShowDialog();
             this.Close();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -213,6 +213,30 @@ namespace SistemaPetShop
             }
         }// fim altera cliente
 
+        public bool insereUsuarios(Usuario u)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_insereUser", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nomeU", u.NomeUser);
+            cmd.Parameters.AddWithValue("senhaU", u.SenhaUser);
+            cmd.Parameters.AddWithValue("emailU", u.EmailUser);
+            
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
         public bool verifica(string user, string pass)
         {
             string senhaHash = Hash.makeHash(pass);
