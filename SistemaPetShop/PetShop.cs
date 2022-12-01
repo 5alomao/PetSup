@@ -427,7 +427,7 @@ namespace SistemaPetShop
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void pnlProdutos_Paint(object sender, PaintEventArgs e)
         {
 
         }
