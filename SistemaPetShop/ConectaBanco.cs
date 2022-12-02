@@ -18,7 +18,7 @@ namespace SistemaPetShop
         public DataTable listaPets()
         {
             MySqlCommand cmd = new MySqlCommand("proc_listaPet", conectaBD);
-            cmd.CommandType = CommandType.StoredProcedure; 
+            cmd.CommandType = CommandType.StoredProcedure;
             try
             {
                 conectaBD.Open();
@@ -220,7 +220,7 @@ namespace SistemaPetShop
             cmd.Parameters.AddWithValue("nomeU", u.NomeUser);
             cmd.Parameters.AddWithValue("senhaU", u.SenhaUser);
             cmd.Parameters.AddWithValue("emailU", u.EmailUser);
-            
+
             try
             {
                 conectaBD.Open();
@@ -266,7 +266,103 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }
+        public bool insereProdutos(Produto pr)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_insereProduto", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nome", pr.NomeProduto);
+            cmd.Parameters.AddWithValue("codCat", pr.CategoriaProduto);
+            cmd.Parameters.AddWithValue("codMar", pr.MarcaProduto);
+            cmd.Parameters.AddWithValue("precoC", pr.PrecoCusto);
+            cmd.Parameters.AddWithValue("precoV", pr.PrecoVenda);
+            cmd.Parameters.AddWithValue("estoque", pr.QntEstoque);
 
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+        public DataTable listaCategorias()
+        {
+            // comentario
+            MySqlCommand cmd = new MySqlCommand("proc_listaCategoria", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conectaBD.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable tabela = new DataTable();
+                da.Fill(tabela);
+                return tabela;
+            }// fim try
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return null;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
 
+        public DataTable listaMarcas()
+        {
+            // comentario
+            MySqlCommand cmd = new MySqlCommand("proc_listaMarca", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conectaBD.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable tabela = new DataTable();
+                da.Fill(tabela);
+                return tabela;
+            }// fim try
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return null;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+        public DataTable listaProdutos()
+        {
+            // comentario
+            MySqlCommand cmd = new MySqlCommand("proc_listaProduto", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                conectaBD.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable tabela = new DataTable();
+                da.Fill(tabela);
+                return tabela;
+            }// fim try
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return null;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+
+        }
     }
 }

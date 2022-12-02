@@ -18,19 +18,6 @@ namespace SistemaPetShop
             listaCliente();
             listaPet();
         }
-    
-        private void btnProdutos_Click(object sender, EventArgs e)
-        {
-            DesativaCL();
-            DesativaButton();
-            DesativaPnl();
-            pnlProdutos.Visible = true;
-            btnProdutos.BackColor = Color.FromArgb(97,24,96);
-            pnlCima.BackColor = Color.FromArgb(97,24,96);
-            btnLogo.BackColor = Color.FromArgb(80,02,80);
-            
-        }
-
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
             DesativaCL();
@@ -39,7 +26,7 @@ namespace SistemaPetShop
             pnlFuncionarios.Visible = true;
             btnFuncionarios.BackColor = Color.DarkCyan;
             pnlCima.BackColor = Color.DarkCyan;
-            btnLogo.BackColor = Color.Teal; 
+            btnLogo.BackColor = Color.Teal;
         }
 
         private void btnVendas_Click(object sender, EventArgs e)
@@ -101,10 +88,20 @@ namespace SistemaPetShop
             txtCorPet.Text = "";
             txtNomePet.Focus();
         }
+        void limpaCampoProd()
+        {
+            txtNomeProd.Text = "";
+            cbCategoriaProd.Text = "";
+            cbMarcaProd.Text = "";
+            txtVendaProd.Text = "";
+            txtCustoProd.Text = "";
+            txtQntdEstoque.Text = "";
+            txtNomeProd.Focus();
+        }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-           
+
             DesativaButton();
             DesativaCL();
             DesativaPnl();
@@ -199,7 +196,7 @@ namespace SistemaPetShop
             btnConcluirCli.Visible = false;
             btnConfirmarCli.Visible = true;
             lblHeaderCli.Text = "Cadastrar Cliente";
-            
+
         }
 
         //Remover Cliente
@@ -250,7 +247,7 @@ namespace SistemaPetShop
         {
             ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBuscaPet.Text);
         }
-        
+
         //----------------
 
         //COMANDOS PETS
@@ -265,6 +262,7 @@ namespace SistemaPetShop
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
             btnLogo.BackColor = Color.Maroon;
+
         }
 
         //Variável codAlterar
@@ -336,7 +334,7 @@ namespace SistemaPetShop
             btnConcluirPet.Visible = false;
             btnConfirmarPet.Visible = true;
             lblHeaderPet.Text = "Cadastrar Pet";
-            
+
         }
 
         //Remover Pet
@@ -368,7 +366,7 @@ namespace SistemaPetShop
         private void btnAlterarPet_Click(object sender, EventArgs e)
         {
             lblHeaderPet.Text = "Alterar Cliente";
-            
+
             btnConfirmarPet.Visible = false;
             btnConcluirPet.Visible = true;
 
@@ -399,15 +397,6 @@ namespace SistemaPetShop
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void txtBairroCli_TextChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void pnlAba_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //arrastar pela barra de titulo
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -415,8 +404,8 @@ namespace SistemaPetShop
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void pnlAba_MouseDown(object sender, MouseEventArgs e)
         {
-                ReleaseCapture();
-                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -427,9 +416,78 @@ namespace SistemaPetShop
             this.Close();
         }
 
-        private void pnlProdutos_Paint(object sender, PaintEventArgs e)
-        {
+        //COMANDOS PRODUTOS
 
+        //Botão NavBar Produtos
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            DesativaCL();
+            DesativaButton();
+            DesativaPnl();
+            pnlProdutos.Visible = true;
+            btnProdutos.BackColor = Color.FromArgb(97, 24, 96);
+            pnlCima.BackColor = Color.FromArgb(97, 24, 96);
+            btnLogo.BackColor = Color.FromArgb(80, 02, 80);
+            listaCategoria();
+            listaMarca();
+            listaProduto();
+
+        }
+
+        //lista Categorias
+        void listaCategoria()
+        {
+            ConectaBanco con = new ConectaBanco();
+            DataTable tabelaDados = new DataTable();
+            tabelaDados = con.listaCategorias();
+            cbCategoriaProd.DataSource = tabelaDados;
+            cbCategoriaProd.DisplayMember = "nomeCategoria";
+            cbCategoriaProd.ValueMember = "codCategoria";
+            cbCategoriaProd.Text = "Selecione uma categoria";
+            lblMsgError.Text = con.mensagem;
+        }
+
+        //lista Marcas
+        void listaMarca()
+        {
+            ConectaBanco con = new ConectaBanco();
+            DataTable tabelaDados = new DataTable();
+            tabelaDados = con.listaMarcas();
+            cbMarcaProd.DataSource = tabelaDados;
+            cbMarcaProd.DisplayMember = "nomeMarca";
+            cbMarcaProd.ValueMember = "codMarca";
+            cbMarcaProd.Text = "Selecione uma marca";
+            lblMsgError.Text = con.mensagem;
+        }
+        //lista Produtos
+        void listaProduto()
+        {
+            ConectaBanco con = new ConectaBanco();
+            dgProdutos.DataSource = con.listaProdutos();
+        }
+        //Confirmar Inserção Produto
+        private void btnConfirmarProd_Click(object sender, EventArgs e)
+        {
+            Produto pr = new Produto();
+            pr.NomeProduto = txtNomeProd.Text;
+            pr.MarcaProduto = Convert.ToInt32(cbMarcaProd.SelectedValue.ToString());
+            pr.CategoriaProduto = Convert.ToInt32(cbCategoriaProd.SelectedValue.ToString());
+            pr.PrecoVenda = txtVendaProd.Text;
+            pr.PrecoCusto = txtCustoProd.Text;
+            pr.QntEstoque = txtQntdEstoque.Text;
+
+
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.insereProdutos(pr);
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados Inseridos com Sucesso :)");
+            }
+            else
+                lblMsgError.Text = conecta.mensagem;
+
+            listaProduto();
+            limpaCampoProd();
         }
     }
 }
