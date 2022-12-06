@@ -246,7 +246,7 @@ namespace SistemaPetShop
         //Buscar Cliente por Nome
         private void txtBuscaCli_TextChanged(object sender, EventArgs e)
         {
-            ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBuscaPet.Text);
+            ((DataTable)dgClientes.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBuscaCli.Text);
         }
 
         //----------------
@@ -586,6 +586,11 @@ namespace SistemaPetShop
         {
             btnClientes_Click(sender, e);
             txtNomeCli.Focus();
+        }
+
+        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
