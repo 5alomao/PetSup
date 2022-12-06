@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
             this.pnlConteudo = new System.Windows.Forms.Panel();
             this.pnlProdutos = new System.Windows.Forms.Panel();
+            this.btnConfirmarProd = new System.Windows.Forms.Button();
             this.cbMarcaProd = new System.Windows.Forms.ComboBox();
             this.cbCategoriaProd = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.btnAlteraProd = new System.Windows.Forms.Button();
             this.dgProdutos = new System.Windows.Forms.DataGridView();
             this.lblCadProd = new System.Windows.Forms.Label();
-            this.btnConfirmarProd = new System.Windows.Forms.Button();
             this.btnConcluirProd = new System.Windows.Forms.Button();
             this.pnlFuncionarios = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -96,7 +96,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label17 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnConfirmarFun = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pnlVendas = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
@@ -184,6 +184,7 @@
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.lblHeaderCli = new System.Windows.Forms.Label();
             this.pnlCadPet = new System.Windows.Forms.Panel();
+            this.cbClientes = new System.Windows.Forms.ComboBox();
             this.lblMsgError = new System.Windows.Forms.Label();
             this.btnConcluirPet = new System.Windows.Forms.Button();
             this.imgCorPet = new System.Windows.Forms.PictureBox();
@@ -202,7 +203,6 @@
             this.pnlSLimpar = new System.Windows.Forms.Panel();
             this.pnlSConfirmar = new System.Windows.Forms.Panel();
             this.txtCorPet = new System.Windows.Forms.TextBox();
-            this.pnlLinhaDono = new System.Windows.Forms.Panel();
             this.pnlLinhaPorte = new System.Windows.Forms.Panel();
             this.pnlLinhaRaca = new System.Windows.Forms.Panel();
             this.pnlLinhaCor = new System.Windows.Forms.Panel();
@@ -212,7 +212,6 @@
             this.txtTipoPet = new System.Windows.Forms.TextBox();
             this.txtRacaPet = new System.Windows.Forms.TextBox();
             this.txtPortePet = new System.Windows.Forms.TextBox();
-            this.txtDonoPet = new System.Windows.Forms.TextBox();
             this.pnlMarcador2 = new System.Windows.Forms.Panel();
             this.pnlMarcador = new System.Windows.Forms.Panel();
             this.pnlSAlterar = new System.Windows.Forms.Panel();
@@ -300,6 +299,7 @@
             // 
             // pnlProdutos
             // 
+            this.pnlProdutos.Controls.Add(this.btnConfirmarProd);
             this.pnlProdutos.Controls.Add(this.cbMarcaProd);
             this.pnlProdutos.Controls.Add(this.cbCategoriaProd);
             this.pnlProdutos.Controls.Add(this.label12);
@@ -331,7 +331,6 @@
             this.pnlProdutos.Controls.Add(this.btnAlteraProd);
             this.pnlProdutos.Controls.Add(this.dgProdutos);
             this.pnlProdutos.Controls.Add(this.lblCadProd);
-            this.pnlProdutos.Controls.Add(this.btnConfirmarProd);
             this.pnlProdutos.Controls.Add(this.btnConcluirProd);
             this.pnlProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlProdutos.Location = new System.Drawing.Point(0, 0);
@@ -339,6 +338,22 @@
             this.pnlProdutos.Size = new System.Drawing.Size(990, 581);
             this.pnlProdutos.TabIndex = 4;
             this.pnlProdutos.Visible = false;
+            // 
+            // btnConfirmarProd
+            // 
+            this.btnConfirmarProd.AutoSize = true;
+            this.btnConfirmarProd.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarProd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarProd.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarProd.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarProd.Location = new System.Drawing.Point(194, 421);
+            this.btnConfirmarProd.Name = "btnConfirmarProd";
+            this.btnConfirmarProd.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarProd.TabIndex = 92;
+            this.btnConfirmarProd.Text = "Confirmar";
+            this.btnConfirmarProd.UseVisualStyleBackColor = false;
+            this.btnConfirmarProd.Click += new System.EventHandler(this.btnConfirmarProd_Click);
             // 
             // cbMarcaProd
             // 
@@ -389,6 +404,7 @@
             this.btnRemoverProd.Text = "Remover";
             this.btnRemoverProd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnRemoverProd.UseVisualStyleBackColor = false;
+            this.btnRemoverProd.Click += new System.EventHandler(this.btnRemoverProd_Click);
             // 
             // btnLimparProd
             // 
@@ -404,6 +420,7 @@
             this.btnLimparProd.TabIndex = 116;
             this.btnLimparProd.Text = "Limpar";
             this.btnLimparProd.UseVisualStyleBackColor = false;
+            this.btnLimparProd.Click += new System.EventHandler(this.btnLimparProd_Click);
             // 
             // txtBuscaProd
             // 
@@ -650,6 +667,7 @@
             this.btnAlteraProd.Text = "Alterar";
             this.btnAlteraProd.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnAlteraProd.UseVisualStyleBackColor = false;
+            this.btnAlteraProd.Click += new System.EventHandler(this.btnAlteraProd_Click);
             // 
             // dgProdutos
             // 
@@ -677,22 +695,6 @@
             this.lblCadProd.TabIndex = 84;
             this.lblCadProd.Text = "Cadastrar Produto";
             // 
-            // btnConfirmarProd
-            // 
-            this.btnConfirmarProd.AutoSize = true;
-            this.btnConfirmarProd.BackColor = System.Drawing.Color.Black;
-            this.btnConfirmarProd.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmarProd.FlatAppearance.BorderSize = 0;
-            this.btnConfirmarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarProd.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarProd.Location = new System.Drawing.Point(193, 421);
-            this.btnConfirmarProd.Name = "btnConfirmarProd";
-            this.btnConfirmarProd.Size = new System.Drawing.Size(95, 40);
-            this.btnConfirmarProd.TabIndex = 92;
-            this.btnConfirmarProd.Text = "Confirmar";
-            this.btnConfirmarProd.UseVisualStyleBackColor = false;
-            this.btnConfirmarProd.Click += new System.EventHandler(this.btnConfirmarProd_Click);
-            // 
             // btnConcluirProd
             // 
             this.btnConcluirProd.AutoSize = true;
@@ -701,13 +703,14 @@
             this.btnConcluirProd.FlatAppearance.BorderSize = 0;
             this.btnConcluirProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConcluirProd.ForeColor = System.Drawing.Color.White;
-            this.btnConcluirProd.Location = new System.Drawing.Point(193, 421);
+            this.btnConcluirProd.Location = new System.Drawing.Point(194, 421);
             this.btnConcluirProd.Name = "btnConcluirProd";
             this.btnConcluirProd.Size = new System.Drawing.Size(95, 40);
             this.btnConcluirProd.TabIndex = 109;
             this.btnConcluirProd.Text = "Concluir";
             this.btnConcluirProd.UseVisualStyleBackColor = false;
             this.btnConcluirProd.Visible = false;
+            this.btnConcluirProd.Click += new System.EventHandler(this.btnConcluirProd_Click);
             // 
             // pnlFuncionarios
             // 
@@ -742,7 +745,7 @@
             this.pnlFuncionarios.Controls.Add(this.button3);
             this.pnlFuncionarios.Controls.Add(this.dataGridView1);
             this.pnlFuncionarios.Controls.Add(this.label17);
-            this.pnlFuncionarios.Controls.Add(this.button4);
+            this.pnlFuncionarios.Controls.Add(this.btnConfirmarFun);
             this.pnlFuncionarios.Controls.Add(this.button5);
             this.pnlFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFuncionarios.Location = new System.Drawing.Point(0, 0);
@@ -1081,20 +1084,20 @@
             this.label17.TabIndex = 121;
             this.label17.Text = "Cadastrar Funcionários";
             // 
-            // button4
+            // btnConfirmarFun
             // 
-            this.button4.AutoSize = true;
-            this.button4.BackColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(193, 421);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 40);
-            this.button4.TabIndex = 127;
-            this.button4.Text = "Confirmar";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnConfirmarFun.AutoSize = true;
+            this.btnConfirmarFun.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarFun.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarFun.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarFun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarFun.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarFun.Location = new System.Drawing.Point(193, 421);
+            this.btnConfirmarFun.Name = "btnConfirmarFun";
+            this.btnConfirmarFun.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarFun.TabIndex = 127;
+            this.btnConfirmarFun.Text = "Confirmar";
+            this.btnConfirmarFun.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -2124,6 +2127,7 @@
             // 
             // pnlCadPet
             // 
+            this.pnlCadPet.Controls.Add(this.cbClientes);
             this.pnlCadPet.Controls.Add(this.lblMsgError);
             this.pnlCadPet.Controls.Add(this.btnConcluirPet);
             this.pnlCadPet.Controls.Add(this.imgCorPet);
@@ -2142,7 +2146,6 @@
             this.pnlCadPet.Controls.Add(this.pnlSLimpar);
             this.pnlCadPet.Controls.Add(this.pnlSConfirmar);
             this.pnlCadPet.Controls.Add(this.txtCorPet);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaDono);
             this.pnlCadPet.Controls.Add(this.pnlLinhaPorte);
             this.pnlCadPet.Controls.Add(this.pnlLinhaRaca);
             this.pnlCadPet.Controls.Add(this.pnlLinhaCor);
@@ -2152,7 +2155,6 @@
             this.pnlCadPet.Controls.Add(this.txtTipoPet);
             this.pnlCadPet.Controls.Add(this.txtRacaPet);
             this.pnlCadPet.Controls.Add(this.txtPortePet);
-            this.pnlCadPet.Controls.Add(this.txtDonoPet);
             this.pnlCadPet.Controls.Add(this.pnlMarcador2);
             this.pnlCadPet.Controls.Add(this.pnlMarcador);
             this.pnlCadPet.Controls.Add(this.pnlSAlterar);
@@ -2164,6 +2166,14 @@
             this.pnlCadPet.Size = new System.Drawing.Size(990, 581);
             this.pnlCadPet.TabIndex = 0;
             this.pnlCadPet.Visible = false;
+            // 
+            // cbClientes
+            // 
+            this.cbClientes.FormattingEnabled = true;
+            this.cbClientes.Location = new System.Drawing.Point(85, 362);
+            this.cbClientes.Name = "cbClientes";
+            this.cbClientes.Size = new System.Drawing.Size(200, 23);
+            this.cbClientes.TabIndex = 171;
             // 
             // lblMsgError
             // 
@@ -2379,16 +2389,6 @@
             this.txtCorPet.Size = new System.Drawing.Size(200, 16);
             this.txtCorPet.TabIndex = 168;
             // 
-            // pnlLinhaDono
-            // 
-            this.pnlLinhaDono.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaDono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaDono.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaDono.Location = new System.Drawing.Point(85, 383);
-            this.pnlLinhaDono.Name = "pnlLinhaDono";
-            this.pnlLinhaDono.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaDono.TabIndex = 167;
-            // 
             // pnlLinhaPorte
             // 
             this.pnlLinhaPorte.BackColor = System.Drawing.Color.Black;
@@ -2434,7 +2434,7 @@
             this.pnlLinhaNome.BackColor = System.Drawing.Color.Black;
             this.pnlLinhaNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlLinhaNome.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaNome.Location = new System.Drawing.Point(88, 133);
+            this.pnlLinhaNome.Location = new System.Drawing.Point(85, 133);
             this.pnlLinhaNome.Name = "pnlLinhaNome";
             this.pnlLinhaNome.Size = new System.Drawing.Size(200, 1);
             this.pnlLinhaNome.TabIndex = 161;
@@ -2442,7 +2442,7 @@
             // txtNomePet
             // 
             this.txtNomePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomePet.Location = new System.Drawing.Point(88, 115);
+            this.txtNomePet.Location = new System.Drawing.Point(85, 115);
             this.txtNomePet.Name = "txtNomePet";
             this.txtNomePet.PlaceholderText = "Nome";
             this.txtNomePet.Size = new System.Drawing.Size(200, 16);
@@ -2474,15 +2474,6 @@
             this.txtPortePet.PlaceholderText = "Porte";
             this.txtPortePet.Size = new System.Drawing.Size(200, 16);
             this.txtPortePet.TabIndex = 142;
-            // 
-            // txtDonoPet
-            // 
-            this.txtDonoPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDonoPet.Location = new System.Drawing.Point(85, 365);
-            this.txtDonoPet.Name = "txtDonoPet";
-            this.txtDonoPet.PlaceholderText = "Código do Dono";
-            this.txtDonoPet.Size = new System.Drawing.Size(200, 16);
-            this.txtDonoPet.TabIndex = 144;
             // 
             // pnlMarcador2
             // 
@@ -2959,7 +2950,6 @@
         private Panel pnlSLimpar;
         private Panel pnlSConfirmar;
         private TextBox txtCorPet;
-        private Panel pnlLinhaDono;
         private Panel pnlLinhaPorte;
         private Panel pnlLinhaRaca;
         private Panel pnlLinhaCor;
@@ -2969,7 +2959,6 @@
         private TextBox txtTipoPet;
         private TextBox txtRacaPet;
         private TextBox txtPortePet;
-        private TextBox txtDonoPet;
         private Panel pnlMarcador2;
         private Panel pnlMarcador;
         private Panel pnlSAlterar;
@@ -3072,7 +3061,7 @@
         private Button button3;
         private DataGridView dataGridView1;
         private Label label17;
-        private Button button4;
+        private Button btnConfirmarFun;
         private Button button5;
         private Label label18;
         private Button button6;
@@ -3109,5 +3098,6 @@
         private Button button10;
         private DataGridView dataGridView2;
         private Label label21;
+        private ComboBox cbClientes;
     }
 }

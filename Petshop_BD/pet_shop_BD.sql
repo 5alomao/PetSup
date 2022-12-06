@@ -44,15 +44,15 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `emailCliente` varchar(150) DEFAULT NULL,
   `bairroCliente` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`codCliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.cliente: ~4 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.cliente: ~5 rows (aproximadamente)
 INSERT INTO `cliente` (`codCliente`, `nomeCliente`, `cpfCliente`, `enderecoCliente`, `telefoneCliente`, `emailCliente`, `bairroCliente`) VALUES
 	(6, 'Salomão Ferreira', '174.133.196-08', 'Rua São Lucas', '(35)99769-5915', 'salomao@gmail.com', 'Jardim das Oliveiras'),
 	(7, 'Miguel Silva Ferreira', '123.456.789-10', 'Rua São Lucas', '(35)91234-5678', 'miguel@gmail.com', 'Jardim das Oliveiras'),
 	(8, 'Paulo Emanuel Silva Ferreira', '123.123.123-12', 'Rua São Lucas', '(35)91234-5678', 'paulo@gmail.com', 'Jardim das Oliveiras'),
 	(9, 'Lilian Cristina Silva Ferreira', '123.444.123-44', 'Rua São Lucas', '(35)91234-5678', 'lilian@gmail.com', 'Jardim das Oliveiras'),
-	(11, 'Juliana Machado Mendonça de Mello', '123.234.546-00', 'Rio de Janeiro', '(21)99766-0874', 'juh@gmail.com', 'Centro');
+	(12, 'Pedro Franco', '123.123.999-99', '', '3295-1234', 'pedro@gmail.com', '');
 
 -- Copiando estrutura para tabela pet_shop.marca
 DROP TABLE IF EXISTS `marca`;
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `marca` (
   PRIMARY KEY (`codMarca`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.marca: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.marca: ~1 rows (aproximadamente)
 INSERT INTO `marca` (`codMarca`, `nomeMarca`) VALUES
 	(1, 'SpecialDog');
 
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `pet` (
   PRIMARY KEY (`codPet`),
   KEY `fk_PET_CLIENTE_idx` (`CLIENTE_codCliente`),
   CONSTRAINT `fk_PET_CLIENTE` FOREIGN KEY (`CLIENTE_codCliente`) REFERENCES `cliente` (`codCliente`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.pet: ~5 rows (aproximadamente)
 INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIENTE_codCliente`, `corPet`) VALUES
@@ -87,8 +87,16 @@ INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIEN
 	(5, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Rajado'),
 	(6, 'Kiara', 'Labrado', 'Cachorro', 'Grande', 9, 'Preto'),
 	(7, 'Thor', 'Labrador', 'Cachorro', 'Grande', 8, 'Preto'),
-	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel'),
-	(9, 'Akira', 'Pelo curto brasileiro', 'Gato', 'Médio', 11, 'Manchado');
+	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel');
+
+-- Copiando estrutura para procedure pet_shop.proc_alteraCategoria
+DROP PROCEDURE IF EXISTS `proc_alteraCategoria`;
+DELIMITER //
+CREATE PROCEDURE `proc_alteraCategoria`(in nome varchar(100), in codCat int)
+BEGIN
+	update categoria set nomeCategoria = nome where codCat = codCategoria;
+END//
+DELIMITER ;
 
 -- Copiando estrutura para procedure pet_shop.proc_alteraCliente
 DROP PROCEDURE IF EXISTS `proc_alteraCliente`;
@@ -96,6 +104,15 @@ DELIMITER //
 CREATE PROCEDURE `proc_alteraCliente`(in nome varchar(200), in cpf varchar(14), in email varchar(150), in telefone varchar(45), in endereco varchar(150), in bairro varchar (100), in codCli int)
 BEGIN
 	update cliente set nomeCliente = nome, cpfCliente = cpf, emailCliente = email, telefoneCliente = telefone, enderecoCliente = endereco, bairroCliente = bairro where codCliente = codCli;
+END//
+DELIMITER ;
+
+-- Copiando estrutura para procedure pet_shop.proc_alteraMarca
+DROP PROCEDURE IF EXISTS `proc_alteraMarca`;
+DELIMITER //
+CREATE PROCEDURE `proc_alteraMarca`(in nome varchar(150), in codMar int)
+BEGIN
+ update marca set nomeMarca = nome where codMar = codMarca;
 END//
 DELIMITER ;
 
@@ -108,12 +125,37 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Copiando estrutura para procedure pet_shop.proc_alteraProduto
+DROP PROCEDURE IF EXISTS `proc_alteraProduto`;
+DELIMITER //
+CREATE PROCEDURE `proc_alteraProduto`(in nome varchar(150), in codMar int, in codCat int, in precoC decimal(5,2), in precoV decimal(5,2), in estoque int, in codProd int)
+BEGIN
+	update produto set
+    nomeProduto = nome, 
+    CATEGORIA_codCategoria = codCat,
+    MARCA_codMarca = codMar,
+    precoCusto = precoc,
+    precoVenda = precoV,
+    qntEstoque = estoque
+    where codProd = codProduto;
+END//
+DELIMITER ;
+
 -- Copiando estrutura para procedure pet_shop.proc_consultaLogin
 DROP PROCEDURE IF EXISTS `proc_consultaLogin`;
 DELIMITER //
 CREATE PROCEDURE `proc_consultaLogin`(in nomeU varchar(100), in senhaU varchar(100))
 BEGIN
 	select * from usuario where usuario.nomeUser = nomeU and usuario.senhaUser = senhaU;
+END//
+DELIMITER ;
+
+-- Copiando estrutura para procedure pet_shop.proc_deletaCategoria
+DROP PROCEDURE IF EXISTS `proc_deletaCategoria`;
+DELIMITER //
+CREATE PROCEDURE `proc_deletaCategoria`(in codCat int)
+BEGIN
+	delete from categoria where codCat = codCategoria;
 END//
 DELIMITER ;
 
@@ -126,12 +168,30 @@ BEGIN
 END//
 DELIMITER ;
 
+-- Copiando estrutura para procedure pet_shop.proc_deletaMarca
+DROP PROCEDURE IF EXISTS `proc_deletaMarca`;
+DELIMITER //
+CREATE PROCEDURE `proc_deletaMarca`(in codMar int)
+BEGIN
+	delete from marca where codMar = codMarca;
+END//
+DELIMITER ;
+
 -- Copiando estrutura para procedure pet_shop.proc_deletaPet
 DROP PROCEDURE IF EXISTS `proc_deletaPet`;
 DELIMITER //
 CREATE PROCEDURE `proc_deletaPet`(in codP int)
 BEGIN
 	delete from pet where codPet = codP;
+END//
+DELIMITER ;
+
+-- Copiando estrutura para procedure pet_shop.proc_deletaProduto
+DROP PROCEDURE IF EXISTS `proc_deletaProduto`;
+DELIMITER //
+CREATE PROCEDURE `proc_deletaProduto`(in codProd int)
+BEGIN
+	delete from produto where codProd = codProduto;
 END//
 DELIMITER ;
 
@@ -212,7 +272,7 @@ select
     emailCliente as Email,
     enderecoCliente as Endereco,
 	bairroCliente as Bairro
-    from cliente;
+    from cliente order by nomeCliente ASC;
 END//
 DELIMITER ;
 
@@ -273,12 +333,13 @@ CREATE TABLE IF NOT EXISTS `produto` (
   KEY `fk_produto_categoria1_idx` (`categoria_codCategoria`),
   CONSTRAINT `fk_produto_categoria1` FOREIGN KEY (`categoria_codCategoria`) REFERENCES `categoria` (`codCategoria`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_produto_marca1` FOREIGN KEY (`marca_codMarca`) REFERENCES `marca` (`codMarca`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.produto: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.produto: ~3 rows (aproximadamente)
 INSERT INTO `produto` (`codProduto`, `nomeProduto`, `precoCusto`, `precoVenda`, `qntEstoque`, `marca_codMarca`, `categoria_codCategoria`) VALUES
 	(1, 'Ração p/ Filhotes', 40.00, 69.00, 5, 1, 2),
-	(9, 'Ração p/ Adultos', 34.00, 55.00, 10, 1, 2);
+	(9, 'Ração p/ Adultos', 34.00, 55.00, 10, 1, 2),
+	(10, 'Bolinha de Borracha', 1.00, 6.00, 15, 1, 2);
 
 -- Copiando estrutura para tabela pet_shop.usuario
 DROP TABLE IF EXISTS `usuario`;

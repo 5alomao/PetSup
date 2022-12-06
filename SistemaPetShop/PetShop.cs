@@ -17,6 +17,7 @@ namespace SistemaPetShop
             pnlHome.Visible = true;
             listaCliente();
             listaPet();
+            listaProduto();
         }
         private void btnFuncionarios_Click(object sender, EventArgs e)
         {
@@ -84,15 +85,15 @@ namespace SistemaPetShop
             txtTipoPet.Text = "";
             txtPortePet.Text = "";
             txtRacaPet.Text = "";
-            txtDonoPet.Text = "";
+            cbClientes.Text = "Selecione um Cliente";
             txtCorPet.Text = "";
             txtNomePet.Focus();
         }
         void limpaCampoProd()
         {
             txtNomeProd.Text = "";
-            cbCategoriaProd.Text = "";
-            cbMarcaProd.Text = "";
+            cbCategoriaProd.Text = "Selecione uma Categoria";
+            cbMarcaProd.Text = "Selecione uma Marca";
             txtVendaProd.Text = "";
             txtCustoProd.Text = "";
             txtQntdEstoque.Text = "";
@@ -262,6 +263,7 @@ namespace SistemaPetShop
             btnPets.BackColor = Color.Firebrick;
             pnlCima.BackColor = Color.Firebrick;
             btnLogo.BackColor = Color.Maroon;
+            listaClienteCB();
 
         }
 
@@ -273,6 +275,17 @@ namespace SistemaPetShop
         {
             ConectaBanco con = new ConectaBanco();
             dgPets.DataSource = con.listaPets();
+        }
+        void listaClienteCB()
+        {
+            ConectaBanco con = new ConectaBanco();
+            DataTable tabelaDados = new DataTable();
+            tabelaDados = con.listaClientes();
+            cbClientes.DataSource = tabelaDados;
+            cbClientes.DisplayMember = "Nome";
+            cbClientes.ValueMember = "Codigo";
+            cbClientes.Text = "Selecione um Cliente";
+            lblMsgError.Text = con.mensagem;
         }
 
         //Limpar Campos Pet
@@ -290,7 +303,7 @@ namespace SistemaPetShop
             p.CorPet = txtCorPet.Text;
             p.RacaPet = txtRacaPet.Text;
             p.PortePet = txtPortePet.Text;
-            p.DonoPet = txtDonoPet.Text;
+            p.DonoPet = Convert.ToInt32(cbClientes.SelectedValue.ToString());
 
             ConectaBanco conecta = new ConectaBanco();
             bool retorno = conecta.inserePet(p);
@@ -314,7 +327,8 @@ namespace SistemaPetShop
             p.CorPet = txtCorPet.Text;
             p.RacaPet = txtRacaPet.Text;
             p.PortePet = txtPortePet.Text;
-            p.DonoPet = txtDonoPet.Text;
+            p.DonoPet = Convert.ToInt32(cbClientes.SelectedValue.ToString());
+
 
             //Enviar dados para alterar
             ConectaBanco conecta = new ConectaBanco();
@@ -365,7 +379,7 @@ namespace SistemaPetShop
         //Alterar Pet
         private void btnAlterarPet_Click(object sender, EventArgs e)
         {
-            lblHeaderPet.Text = "Alterar Cliente";
+            lblHeaderPet.Text = "Alterar Pet";
 
             btnConfirmarPet.Visible = false;
             btnConcluirPet.Visible = true;
@@ -378,7 +392,7 @@ namespace SistemaPetShop
             txtCorPet.Text = dgPets.Rows[linha].Cells["Cor"].Value.ToString();
             txtRacaPet.Text = dgPets.Rows[linha].Cells["Raca"].Value.ToString();
             txtPortePet.Text = dgPets.Rows[linha].Cells["Porte"].Value.ToString();
-            txtDonoPet.Text = dgPets.Rows[linha].Cells["Dono"].Value.ToString();
+            cbClientes.Text = dgPets.Rows[linha].Cells["Dono"].Value.ToString();
         }
 
         //Buscar Pet por Nome
@@ -418,6 +432,7 @@ namespace SistemaPetShop
 
         //COMANDOS PRODUTOS
 
+        int codAlterarProd;
         //Botão NavBar Produtos
         private void btnProdutos_Click(object sender, EventArgs e)
         {
@@ -430,7 +445,6 @@ namespace SistemaPetShop
             btnLogo.BackColor = Color.FromArgb(80, 02, 80);
             listaCategoria();
             listaMarca();
-            listaProduto();
 
         }
 
@@ -489,6 +503,86 @@ namespace SistemaPetShop
             listaProduto();
             limpaCampoProd();
         }
+
+        private void btnAlteraProd_Click(object sender, EventArgs e)
+        {
+            lblHeaderCli.Text = "Alterar Produto";
+
+            btnConfirmarProd.Visible = false;
+            btnConcluirProd.Visible = true;
+
+            int linha = dgProdutos.CurrentRow.Index; //pegar linha selecionada
+            codAlterarProd = Convert.ToInt32(dgProdutos.Rows[linha].Cells["Codigo"].Value.ToString());
+            txtNomeProd.Text = dgProdutos.Rows[linha].Cells["Nome"].Value.ToString();
+            txtCustoProd.Text = dgProdutos.Rows[linha].Cells["Custo"].Value.ToString();
+            txtVendaProd.Text = dgProdutos.Rows[linha].Cells["Venda"].Value.ToString();
+            cbMarcaProd.Text = dgProdutos.Rows[linha].Cells["Marca"].Value.ToString();
+            cbCategoriaProd.Text = dgProdutos.Rows[linha].Cells["Categoria"].Value.ToString();
+            txtQntdEstoque.Text = dgProdutos.Rows[linha].Cells["Estoque"].Value.ToString();
+        }
+
+        private void btnConcluirProd_Click(object sender, EventArgs e)
+        {
+            Produto pr = new Produto();
+            pr.NomeProduto = txtNomeProd.Text;
+            pr.PrecoVenda = txtVendaProd.Text;
+            pr.PrecoCusto = txtCustoProd.Text;
+            pr.MarcaProduto = Convert.ToInt32(cbMarcaProd.SelectedValue.ToString());
+            pr.CategoriaProduto = Convert.ToInt32(cbCategoriaProd.SelectedValue.ToString());
+            pr.QntEstoque = txtQntdEstoque.Text;
+
+
+            //Enviar dados para alterar
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.alteraProdutos(pr, codAlterarProd);
+
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados alterados com sucesso !");
+                limpaCampoProd();
+            }
+            else
+            {
+                lblMsgError.Text = conecta.mensagem;
+            }
+
+            listaProduto();
+            btnConcluirProd.Visible = false;
+            btnConfirmarProd.Visible = true;
+            lblHeaderPet.Text = "Cadastrar Produto";
+
+        }
+       
+        private void btnLimparProd_Click(object sender, EventArgs e)
+        {
+            limpaCampoProd();
+        }
+
+        private void btnRemoverProd_Click(object sender, EventArgs e)
+        {
+            int linha = dgProdutos.CurrentRow.Index; //pegar linha selecionada
+            int codRemover = Convert.ToInt32(dgProdutos.Rows[linha].Cells["Codigo"].Value.ToString());
+
+            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Deletar Produto", MessageBoxButtons.YesNo);
+
+            if (resposta == DialogResult.Yes)
+            {
+                ConectaBanco conecta = new ConectaBanco();
+                bool retorno = conecta.deletaPet(codRemover);
+                if (retorno == true)
+                {
+                    MessageBox.Show("Produto Removido !");
+                }
+                else
+                    lblMsgError.Text = conecta.mensagem;
+            } // final if YES
+            else
+                MessageBox.Show("Operação Cancelada");
+
+            listaProduto();
+        }
     }
 }
+
+
     

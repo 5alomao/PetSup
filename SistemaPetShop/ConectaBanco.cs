@@ -134,7 +134,27 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }// fim deleta Cliente
-
+        public bool deletaProduto(int codProd)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_deletaProduto", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codProd", codProd);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
         public bool alteraCliente(Cliente c, int codCliente)
         {
             MySqlCommand cmd = new MySqlCommand("proc_alteraCliente", conectaBD);
@@ -270,6 +290,34 @@ namespace SistemaPetShop
         {
             MySqlCommand cmd = new MySqlCommand("proc_insereProduto", conectaBD);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nome", pr.NomeProduto);
+            cmd.Parameters.AddWithValue("codCat", pr.CategoriaProduto);
+            cmd.Parameters.AddWithValue("codMar", pr.MarcaProduto);
+            cmd.Parameters.AddWithValue("precoC", pr.PrecoCusto);
+            cmd.Parameters.AddWithValue("precoV", pr.PrecoVenda);
+            cmd.Parameters.AddWithValue("estoque", pr.QntEstoque);
+
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+        public bool alteraProdutos(Produto pr, int codProd)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_alteraProduto", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codProd",codProd);
             cmd.Parameters.AddWithValue("nome", pr.NomeProduto);
             cmd.Parameters.AddWithValue("codCat", pr.CategoriaProduto);
             cmd.Parameters.AddWithValue("codMar", pr.MarcaProduto);
