@@ -162,7 +162,7 @@ namespace SistemaPetShop
                 MessageBox.Show("Dados Inseridos com Sucesso :)");
             }
             else
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorCli.Text = conecta.mensagem;
 
             listaCliente();
             limpaCampoCli();
@@ -190,7 +190,7 @@ namespace SistemaPetShop
             }
             else
             {
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorCli.Text = conecta.mensagem;
             }
 
             listaCliente();
@@ -217,7 +217,7 @@ namespace SistemaPetShop
                     MessageBox.Show("Cliente Removido !");
                 }
                 else
-                    lblMsgError.Text = conecta.mensagem;
+                    lblMsgErrorCli.Text = conecta.mensagem;
             } // final if YES
             else
                 MessageBox.Show("Operação Cancelada");
@@ -285,7 +285,7 @@ namespace SistemaPetShop
             cbClientes.DisplayMember = "Nome";
             cbClientes.ValueMember = "Codigo";
             cbClientes.Text = "Selecione um Cliente";
-            lblMsgError.Text = con.mensagem;
+            lblMsgErrorPet.Text = con.mensagem;
         }
 
         //Limpar Campos Pet
@@ -312,7 +312,7 @@ namespace SistemaPetShop
                 MessageBox.Show("Dados Inseridos com Sucesso :)");
             }
             else
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorPet.Text = conecta.mensagem;
 
             listaPet();
             limpaCampoPet();
@@ -341,7 +341,7 @@ namespace SistemaPetShop
             }
             else
             {
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorPet.Text = conecta.mensagem;
             }
 
             listaPet();
@@ -368,7 +368,7 @@ namespace SistemaPetShop
                     MessageBox.Show("Pet Removido !");
                 }
                 else
-                    lblMsgError.Text = conecta.mensagem;
+                    lblMsgErrorPet.Text = conecta.mensagem;
             } // final if YES
             else
                 MessageBox.Show("Operação Cancelada");
@@ -458,7 +458,7 @@ namespace SistemaPetShop
             cbCategoriaProd.DisplayMember = "nomeCategoria";
             cbCategoriaProd.ValueMember = "codCategoria";
             cbCategoriaProd.Text = "Selecione uma categoria";
-            lblMsgError.Text = con.mensagem;
+            lblMsgErrorProd.Text = con.mensagem;
         }
 
         //lista Marcas
@@ -471,7 +471,7 @@ namespace SistemaPetShop
             cbMarcaProd.DisplayMember = "nomeMarca";
             cbMarcaProd.ValueMember = "codMarca";
             cbMarcaProd.Text = "Selecione uma marca";
-            lblMsgError.Text = con.mensagem;
+            lblMsgErrorProd.Text = con.mensagem;
         }
         //lista Produtos
         void listaProduto()
@@ -498,12 +498,12 @@ namespace SistemaPetShop
                 MessageBox.Show("Dados Inseridos com Sucesso :)");
             }
             else
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorProd.Text = conecta.mensagem;
 
             listaProduto();
             limpaCampoProd();
         }
-
+        //ALTERAR PROD
         private void btnAlteraProd_Click(object sender, EventArgs e)
         {
             lblHeaderCli.Text = "Alterar Produto";
@@ -520,7 +520,7 @@ namespace SistemaPetShop
             cbCategoriaProd.Text = dgProdutos.Rows[linha].Cells["Categoria"].Value.ToString();
             txtQntdEstoque.Text = dgProdutos.Rows[linha].Cells["Estoque"].Value.ToString();
         }
-
+        //CONCLUIR ALTERAÇÃO PROD
         private void btnConcluirProd_Click(object sender, EventArgs e)
         {
             Produto pr = new Produto();
@@ -543,7 +543,7 @@ namespace SistemaPetShop
             }
             else
             {
-                lblMsgError.Text = conecta.mensagem;
+                lblMsgErrorProd.Text = conecta.mensagem;
             }
 
             listaProduto();
@@ -552,12 +552,12 @@ namespace SistemaPetShop
             lblHeaderPet.Text = "Cadastrar Produto";
 
         }
-       
+       //LIMPAR CAMPOS PROD
         private void btnLimparProd_Click(object sender, EventArgs e)
         {
             limpaCampoProd();
         }
-
+        //REMOVER PRODUTO
         private void btnRemoverProd_Click(object sender, EventArgs e)
         {
             int linha = dgProdutos.CurrentRow.Index; //pegar linha selecionada
@@ -574,12 +574,18 @@ namespace SistemaPetShop
                     MessageBox.Show("Produto Removido !");
                 }
                 else
-                    lblMsgError.Text = conecta.mensagem;
+                    lblMsgErrorProd.Text = conecta.mensagem;
             } // final if YES
             else
                 MessageBox.Show("Operação Cancelada");
 
             listaProduto();
+        }
+
+        private void btnAddCli_Click(object sender, EventArgs e)
+        {
+            btnClientes_Click(sender, e);
+            txtNomeCli.Focus();
         }
     }
 }

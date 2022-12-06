@@ -1,18 +1,15 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.25-MariaDB - mariadb.org binary distribution
+-- Versão do servidor:           10.4.10-MariaDB - mariadb.org binary distribution
 -- OS do Servidor:               Win64
--- HeidiSQL Versão:              12.1.0.6537
+-- HeidiSQL Versão:              10.3.0.5771
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
 -- Copiando estrutura do banco de dados para pet_shop
@@ -26,12 +23,17 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `codCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `nomeCategoria` varchar(150) NOT NULL,
   PRIMARY KEY (`codCategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.categoria: ~2 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.categoria: ~5 rows (aproximadamente)
+/*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
 INSERT INTO `categoria` (`codCategoria`, `nomeCategoria`) VALUES
 	(1, 'Brinquedos'),
-	(2, 'Rações');
+	(2, 'Rações'),
+	(3, 'Higiene e Limpeza'),
+	(4, 'Vacinas'),
+	(5, 'Ossinhos e Petiscos');
+/*!40000 ALTER TABLE `categoria` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.cliente
 DROP TABLE IF EXISTS `cliente`;
@@ -47,12 +49,14 @@ CREATE TABLE IF NOT EXISTS `cliente` (
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.cliente: ~5 rows (aproximadamente)
+/*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
 INSERT INTO `cliente` (`codCliente`, `nomeCliente`, `cpfCliente`, `enderecoCliente`, `telefoneCliente`, `emailCliente`, `bairroCliente`) VALUES
 	(6, 'Salomão Ferreira', '174.133.196-08', 'Rua São Lucas', '(35)99769-5915', 'salomao@gmail.com', 'Jardim das Oliveiras'),
 	(7, 'Miguel Silva Ferreira', '123.456.789-10', 'Rua São Lucas', '(35)91234-5678', 'miguel@gmail.com', 'Jardim das Oliveiras'),
 	(8, 'Paulo Emanuel Silva Ferreira', '123.123.123-12', 'Rua São Lucas', '(35)91234-5678', 'paulo@gmail.com', 'Jardim das Oliveiras'),
 	(9, 'Lilian Cristina Silva Ferreira', '123.444.123-44', 'Rua São Lucas', '(35)91234-5678', 'lilian@gmail.com', 'Jardim das Oliveiras'),
 	(12, 'Pedro Franco', '123.123.999-99', '', '3295-1234', 'pedro@gmail.com', '');
+/*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.marca
 DROP TABLE IF EXISTS `marca`;
@@ -63,8 +67,10 @@ CREATE TABLE IF NOT EXISTS `marca` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.marca: ~1 rows (aproximadamente)
+/*!40000 ALTER TABLE `marca` DISABLE KEYS */;
 INSERT INTO `marca` (`codMarca`, `nomeMarca`) VALUES
 	(1, 'SpecialDog');
+/*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.pet
 DROP TABLE IF EXISTS `pet`;
@@ -82,12 +88,14 @@ CREATE TABLE IF NOT EXISTS `pet` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.pet: ~5 rows (aproximadamente)
+/*!40000 ALTER TABLE `pet` DISABLE KEYS */;
 INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIENTE_codCliente`, `corPet`) VALUES
 	(4, 'Jade', 'Shi-tsu', 'Cachorro', 'Pequeno', 7, 'Branco'),
 	(5, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Rajado'),
 	(6, 'Kiara', 'Labrado', 'Cachorro', 'Grande', 9, 'Preto'),
 	(7, 'Thor', 'Labrador', 'Cachorro', 'Grande', 8, 'Preto'),
 	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel');
+/*!40000 ALTER TABLE `pet` ENABLE KEYS */;
 
 -- Copiando estrutura para procedure pet_shop.proc_alteraCategoria
 DROP PROCEDURE IF EXISTS `proc_alteraCategoria`;
@@ -336,10 +344,12 @@ CREATE TABLE IF NOT EXISTS `produto` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.produto: ~3 rows (aproximadamente)
+/*!40000 ALTER TABLE `produto` DISABLE KEYS */;
 INSERT INTO `produto` (`codProduto`, `nomeProduto`, `precoCusto`, `precoVenda`, `qntEstoque`, `marca_codMarca`, `categoria_codCategoria`) VALUES
 	(1, 'Ração p/ Filhotes', 40.00, 69.00, 5, 1, 2),
-	(9, 'Ração p/ Adultos', 34.00, 55.00, 10, 1, 2),
+	(9, 'Ração p/ Adultos', 34.00, 55.00, 42, 1, 2),
 	(10, 'Bolinha de Borracha', 1.00, 6.00, 15, 1, 2);
+/*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.usuario
 DROP TABLE IF EXISTS `usuario`;
@@ -351,15 +361,13 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   PRIMARY KEY (`codUser`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.usuario: ~4 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.usuario: ~2 rows (aproximadamente)
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
 INSERT INTO `usuario` (`codUser`, `nomeUser`, `senhaUser`, `emailUser`) VALUES
-	(1, 'adm', 'A665A45920422F9D417E4867EFDC4FB8A04A1F3FFF1FA07E998E86F7F7A27AE3', NULL),
 	(2, '5alomao', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'salomao@gmail.com'),
-	(3, 'Gineapple', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'geovana@gmail.com'),
-	(4, 'admin', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'admin@gmail.com');
+	(3, 'Gineapple', '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5', 'geovana@gmail.com');
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;

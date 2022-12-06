@@ -30,11 +30,46 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
             this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.pnlCadPet = new System.Windows.Forms.Panel();
+            this.btnAddCli = new System.Windows.Forms.Button();
+            this.cbClientes = new System.Windows.Forms.ComboBox();
+            this.lblMsgErrorPet = new System.Windows.Forms.Label();
+            this.btnConcluirPet = new System.Windows.Forms.Button();
+            this.imgCorPet = new System.Windows.Forms.PictureBox();
+            this.imgPet = new System.Windows.Forms.PictureBox();
+            this.btnRemoverPet = new System.Windows.Forms.Button();
+            this.btnAlterarPet = new System.Windows.Forms.Button();
+            this.btnLimparPet = new System.Windows.Forms.Button();
+            this.btnConfirmarPet = new System.Windows.Forms.Button();
+            this.txtBuscaPet = new System.Windows.Forms.TextBox();
+            this.imgDono = new System.Windows.Forms.PictureBox();
+            this.lblViewCli = new System.Windows.Forms.Label();
+            this.imgPortePet = new System.Windows.Forms.PictureBox();
+            this.lblHeaderPet = new System.Windows.Forms.Label();
+            this.imgRacaPet = new System.Windows.Forms.PictureBox();
+            this.imgTipoPet = new System.Windows.Forms.PictureBox();
+            this.pnlSLimpar = new System.Windows.Forms.Panel();
+            this.pnlSConfirmar = new System.Windows.Forms.Panel();
+            this.txtCorPet = new System.Windows.Forms.TextBox();
+            this.pnlLinhaPorte = new System.Windows.Forms.Panel();
+            this.pnlLinhaRaca = new System.Windows.Forms.Panel();
+            this.pnlLinhaCor = new System.Windows.Forms.Panel();
+            this.pnlLinhaTipo = new System.Windows.Forms.Panel();
+            this.pnlLinhaNome = new System.Windows.Forms.Panel();
+            this.txtNomePet = new System.Windows.Forms.TextBox();
+            this.txtTipoPet = new System.Windows.Forms.TextBox();
+            this.txtRacaPet = new System.Windows.Forms.TextBox();
+            this.txtPortePet = new System.Windows.Forms.TextBox();
+            this.pnlMarcador2 = new System.Windows.Forms.Panel();
+            this.pnlMarcador = new System.Windows.Forms.Panel();
+            this.pnlSAlterar = new System.Windows.Forms.Panel();
+            this.pnlSRemover = new System.Windows.Forms.Panel();
+            this.dgPets = new System.Windows.Forms.DataGridView();
             this.pnlProdutos = new System.Windows.Forms.Panel();
             this.btnConfirmarProd = new System.Windows.Forms.Button();
             this.cbMarcaProd = new System.Windows.Forms.ComboBox();
             this.cbCategoriaProd = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblMsgErrorProd = new System.Windows.Forms.Label();
             this.btnRemoverProd = new System.Windows.Forms.Button();
             this.btnLimparProd = new System.Windows.Forms.Button();
             this.txtBuscaProd = new System.Windows.Forms.TextBox();
@@ -65,41 +100,45 @@
             this.lblCadProd = new System.Windows.Forms.Label();
             this.btnConcluirProd = new System.Windows.Forms.Button();
             this.pnlFuncionarios = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.imgTelefoneFunc = new System.Windows.Forms.PictureBox();
+            this.txtTelefoneFunc = new System.Windows.Forms.TextBox();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.txtCpfFunc = new System.Windows.Forms.TextBox();
+            this.cbCargo = new System.Windows.Forms.ComboBox();
+            this.lblMsgErrorFunc = new System.Windows.Forms.Label();
+            this.btnRemoveFunc = new System.Windows.Forms.Button();
+            this.btnLimparFunc = new System.Windows.Forms.Button();
+            this.txtBuscaFunc = new System.Windows.Forms.TextBox();
+            this.lblRegisterFunc = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.imgNascimento = new System.Windows.Forms.PictureBox();
+            this.imgEmailFunc = new System.Windows.Forms.PictureBox();
+            this.imgCTPS = new System.Windows.Forms.PictureBox();
+            this.imgCpfFunc = new System.Windows.Forms.PictureBox();
+            this.imgCargo = new System.Windows.Forms.PictureBox();
+            this.imgFunc = new System.Windows.Forms.PictureBox();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtNomeFunc = new System.Windows.Forms.TextBox();
+            this.txtNascimentoFunc = new System.Windows.Forms.TextBox();
+            this.txtCtpsFunc = new System.Windows.Forms.TextBox();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtEmailFunc = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.panel24 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
+            this.btnAlteraFunc = new System.Windows.Forms.Button();
+            this.dgFuncionarios = new System.Windows.Forms.DataGridView();
+            this.lblHeaderFunc = new System.Windows.Forms.Label();
             this.btnConfirmarFun = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnConcluirFunc = new System.Windows.Forms.Button();
             this.pnlVendas = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
+            this.lblMsgErrorVenda = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -148,7 +187,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.imgLogoPetSupHome = new System.Windows.Forms.PictureBox();
             this.pnlCadCli = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMsgErrorCli = new System.Windows.Forms.Label();
             this.btnRemoverCli = new System.Windows.Forms.Button();
             this.btnLimparCli = new System.Windows.Forms.Button();
             this.txtBuscaCli = new System.Windows.Forms.TextBox();
@@ -183,40 +222,6 @@
             this.btnConfirmarCli = new System.Windows.Forms.Button();
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.lblHeaderCli = new System.Windows.Forms.Label();
-            this.pnlCadPet = new System.Windows.Forms.Panel();
-            this.cbClientes = new System.Windows.Forms.ComboBox();
-            this.lblMsgError = new System.Windows.Forms.Label();
-            this.btnConcluirPet = new System.Windows.Forms.Button();
-            this.imgCorPet = new System.Windows.Forms.PictureBox();
-            this.imgPet = new System.Windows.Forms.PictureBox();
-            this.btnRemoverPet = new System.Windows.Forms.Button();
-            this.btnAlterarPet = new System.Windows.Forms.Button();
-            this.btnLimparPet = new System.Windows.Forms.Button();
-            this.btnConfirmarPet = new System.Windows.Forms.Button();
-            this.txtBuscaPet = new System.Windows.Forms.TextBox();
-            this.imgDono = new System.Windows.Forms.PictureBox();
-            this.lblViewCli = new System.Windows.Forms.Label();
-            this.imgPortePet = new System.Windows.Forms.PictureBox();
-            this.lblHeaderPet = new System.Windows.Forms.Label();
-            this.imgRacaPet = new System.Windows.Forms.PictureBox();
-            this.imgTipoPet = new System.Windows.Forms.PictureBox();
-            this.pnlSLimpar = new System.Windows.Forms.Panel();
-            this.pnlSConfirmar = new System.Windows.Forms.Panel();
-            this.txtCorPet = new System.Windows.Forms.TextBox();
-            this.pnlLinhaPorte = new System.Windows.Forms.Panel();
-            this.pnlLinhaRaca = new System.Windows.Forms.Panel();
-            this.pnlLinhaCor = new System.Windows.Forms.Panel();
-            this.pnlLinhaTipo = new System.Windows.Forms.Panel();
-            this.pnlLinhaNome = new System.Windows.Forms.Panel();
-            this.txtNomePet = new System.Windows.Forms.TextBox();
-            this.txtTipoPet = new System.Windows.Forms.TextBox();
-            this.txtRacaPet = new System.Windows.Forms.TextBox();
-            this.txtPortePet = new System.Windows.Forms.TextBox();
-            this.pnlMarcador2 = new System.Windows.Forms.Panel();
-            this.pnlMarcador = new System.Windows.Forms.Panel();
-            this.pnlSAlterar = new System.Windows.Forms.Panel();
-            this.pnlSRemover = new System.Windows.Forms.Panel();
-            this.dgPets = new System.Windows.Forms.DataGridView();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCima = new System.Windows.Forms.Panel();
@@ -236,6 +241,14 @@
             this.lblTarefas = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnlConteudo.SuspendLayout();
+            this.pnlCadPet.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCorPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPets)).BeginInit();
             this.pnlProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEstoque)).BeginInit();
@@ -245,13 +258,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).BeginInit();
             this.pnlFuncionarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefoneFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNascimento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEmailFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCTPS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpfFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCargo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFunc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionarios)).BeginInit();
             this.pnlVendas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -270,14 +284,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).BeginInit();
-            this.pnlCadPet.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCorPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPets)).BeginInit();
             this.pnlCima.SuspendLayout();
             this.pnlAba.SuspendLayout();
             this.pnlEsquerda.SuspendLayout();
@@ -285,24 +291,437 @@
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.pnlProdutos);
-            this.pnlConteudo.Controls.Add(this.pnlFuncionarios);
-            this.pnlConteudo.Controls.Add(this.pnlVendas);
             this.pnlConteudo.Controls.Add(this.pnlHome);
             this.pnlConteudo.Controls.Add(this.pnlCadCli);
             this.pnlConteudo.Controls.Add(this.pnlCadPet);
+            this.pnlConteudo.Controls.Add(this.pnlProdutos);
+            this.pnlConteudo.Controls.Add(this.pnlFuncionarios);
+            this.pnlConteudo.Controls.Add(this.pnlVendas);
             this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudo.Location = new System.Drawing.Point(194, 100);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(990, 581);
             this.pnlConteudo.TabIndex = 2;
             // 
+            // pnlCadPet
+            // 
+            this.pnlCadPet.Controls.Add(this.btnAddCli);
+            this.pnlCadPet.Controls.Add(this.cbClientes);
+            this.pnlCadPet.Controls.Add(this.lblMsgErrorPet);
+            this.pnlCadPet.Controls.Add(this.btnConcluirPet);
+            this.pnlCadPet.Controls.Add(this.imgCorPet);
+            this.pnlCadPet.Controls.Add(this.imgPet);
+            this.pnlCadPet.Controls.Add(this.btnRemoverPet);
+            this.pnlCadPet.Controls.Add(this.btnAlterarPet);
+            this.pnlCadPet.Controls.Add(this.btnLimparPet);
+            this.pnlCadPet.Controls.Add(this.btnConfirmarPet);
+            this.pnlCadPet.Controls.Add(this.txtBuscaPet);
+            this.pnlCadPet.Controls.Add(this.imgDono);
+            this.pnlCadPet.Controls.Add(this.lblViewCli);
+            this.pnlCadPet.Controls.Add(this.imgPortePet);
+            this.pnlCadPet.Controls.Add(this.lblHeaderPet);
+            this.pnlCadPet.Controls.Add(this.imgRacaPet);
+            this.pnlCadPet.Controls.Add(this.imgTipoPet);
+            this.pnlCadPet.Controls.Add(this.pnlSLimpar);
+            this.pnlCadPet.Controls.Add(this.pnlSConfirmar);
+            this.pnlCadPet.Controls.Add(this.txtCorPet);
+            this.pnlCadPet.Controls.Add(this.pnlLinhaPorte);
+            this.pnlCadPet.Controls.Add(this.pnlLinhaRaca);
+            this.pnlCadPet.Controls.Add(this.pnlLinhaCor);
+            this.pnlCadPet.Controls.Add(this.pnlLinhaTipo);
+            this.pnlCadPet.Controls.Add(this.pnlLinhaNome);
+            this.pnlCadPet.Controls.Add(this.txtNomePet);
+            this.pnlCadPet.Controls.Add(this.txtTipoPet);
+            this.pnlCadPet.Controls.Add(this.txtRacaPet);
+            this.pnlCadPet.Controls.Add(this.txtPortePet);
+            this.pnlCadPet.Controls.Add(this.pnlMarcador2);
+            this.pnlCadPet.Controls.Add(this.pnlMarcador);
+            this.pnlCadPet.Controls.Add(this.pnlSAlterar);
+            this.pnlCadPet.Controls.Add(this.pnlSRemover);
+            this.pnlCadPet.Controls.Add(this.dgPets);
+            this.pnlCadPet.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCadPet.Location = new System.Drawing.Point(0, 0);
+            this.pnlCadPet.Name = "pnlCadPet";
+            this.pnlCadPet.Size = new System.Drawing.Size(990, 581);
+            this.pnlCadPet.TabIndex = 0;
+            this.pnlCadPet.Visible = false;
+            // 
+            // btnAddCli
+            // 
+            this.btnAddCli.FlatAppearance.BorderSize = 0;
+            this.btnAddCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCli.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCli.Image")));
+            this.btnAddCli.Location = new System.Drawing.Point(290, 365);
+            this.btnAddCli.Name = "btnAddCli";
+            this.btnAddCli.Size = new System.Drawing.Size(24, 19);
+            this.btnAddCli.TabIndex = 172;
+            this.btnAddCli.UseVisualStyleBackColor = true;
+            this.btnAddCli.Click += new System.EventHandler(this.btnAddCli_Click);
+            // 
+            // cbClientes
+            // 
+            this.cbClientes.FormattingEnabled = true;
+            this.cbClientes.Location = new System.Drawing.Point(85, 362);
+            this.cbClientes.Name = "cbClientes";
+            this.cbClientes.Size = new System.Drawing.Size(200, 23);
+            this.cbClientes.TabIndex = 171;
+            // 
+            // lblMsgErrorPet
+            // 
+            this.lblMsgErrorPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorPet.AutoSize = true;
+            this.lblMsgErrorPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorPet.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorPet.Name = "lblMsgErrorPet";
+            this.lblMsgErrorPet.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorPet.TabIndex = 170;
+            this.lblMsgErrorPet.Text = "*";
+            // 
+            // btnConcluirPet
+            // 
+            this.btnConcluirPet.AutoSize = true;
+            this.btnConcluirPet.BackColor = System.Drawing.Color.Black;
+            this.btnConcluirPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConcluirPet.FlatAppearance.BorderSize = 0;
+            this.btnConcluirPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcluirPet.ForeColor = System.Drawing.Color.White;
+            this.btnConcluirPet.Location = new System.Drawing.Point(193, 421);
+            this.btnConcluirPet.Name = "btnConcluirPet";
+            this.btnConcluirPet.Size = new System.Drawing.Size(95, 40);
+            this.btnConcluirPet.TabIndex = 169;
+            this.btnConcluirPet.Text = "Concluir";
+            this.btnConcluirPet.UseVisualStyleBackColor = false;
+            this.btnConcluirPet.Visible = false;
+            this.btnConcluirPet.Click += new System.EventHandler(this.btnConcluirPet_Click);
+            // 
+            // imgCorPet
+            // 
+            this.imgCorPet.Image = ((System.Drawing.Image)(resources.GetObject("imgCorPet.Image")));
+            this.imgCorPet.Location = new System.Drawing.Point(50, 203);
+            this.imgCorPet.Name = "imgCorPet";
+            this.imgCorPet.Size = new System.Drawing.Size(32, 32);
+            this.imgCorPet.TabIndex = 162;
+            this.imgCorPet.TabStop = false;
+            // 
+            // imgPet
+            // 
+            this.imgPet.BackColor = System.Drawing.Color.Transparent;
+            this.imgPet.Image = ((System.Drawing.Image)(resources.GetObject("imgPet.Image")));
+            this.imgPet.Location = new System.Drawing.Point(50, 103);
+            this.imgPet.Name = "imgPet";
+            this.imgPet.Size = new System.Drawing.Size(32, 32);
+            this.imgPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgPet.TabIndex = 145;
+            this.imgPet.TabStop = false;
+            // 
+            // btnRemoverPet
+            // 
+            this.btnRemoverPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoverPet.AutoSize = true;
+            this.btnRemoverPet.BackColor = System.Drawing.Color.Black;
+            this.btnRemoverPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoverPet.FlatAppearance.BorderSize = 0;
+            this.btnRemoverPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverPet.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverPet.Location = new System.Drawing.Point(747, 486);
+            this.btnRemoverPet.Name = "btnRemoverPet";
+            this.btnRemoverPet.Size = new System.Drawing.Size(98, 40);
+            this.btnRemoverPet.TabIndex = 160;
+            this.btnRemoverPet.Text = "Remover";
+            this.btnRemoverPet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemoverPet.UseVisualStyleBackColor = false;
+            this.btnRemoverPet.Click += new System.EventHandler(this.btnRemoverPet_Click);
+            // 
+            // btnAlterarPet
+            // 
+            this.btnAlterarPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarPet.AutoSize = true;
+            this.btnAlterarPet.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarPet.FlatAppearance.BorderSize = 0;
+            this.btnAlterarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarPet.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarPet.Location = new System.Drawing.Point(851, 486);
+            this.btnAlterarPet.Name = "btnAlterarPet";
+            this.btnAlterarPet.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterarPet.TabIndex = 159;
+            this.btnAlterarPet.Text = "Alterar";
+            this.btnAlterarPet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlterarPet.UseVisualStyleBackColor = false;
+            this.btnAlterarPet.Click += new System.EventHandler(this.btnAlterarPet_Click);
+            // 
+            // btnLimparPet
+            // 
+            this.btnLimparPet.AutoSize = true;
+            this.btnLimparPet.BackColor = System.Drawing.Color.Black;
+            this.btnLimparPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimparPet.FlatAppearance.BorderSize = 0;
+            this.btnLimparPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparPet.ForeColor = System.Drawing.Color.White;
+            this.btnLimparPet.Location = new System.Drawing.Point(50, 421);
+            this.btnLimparPet.Name = "btnLimparPet";
+            this.btnLimparPet.Size = new System.Drawing.Size(77, 40);
+            this.btnLimparPet.TabIndex = 155;
+            this.btnLimparPet.Text = "Limpar";
+            this.btnLimparPet.UseVisualStyleBackColor = false;
+            this.btnLimparPet.Click += new System.EventHandler(this.btnLimparPet_Click);
+            // 
+            // btnConfirmarPet
+            // 
+            this.btnConfirmarPet.AutoSize = true;
+            this.btnConfirmarPet.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarPet.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarPet.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarPet.Location = new System.Drawing.Point(193, 421);
+            this.btnConfirmarPet.Name = "btnConfirmarPet";
+            this.btnConfirmarPet.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarPet.TabIndex = 156;
+            this.btnConfirmarPet.Text = "Confirmar";
+            this.btnConfirmarPet.UseVisualStyleBackColor = false;
+            this.btnConfirmarPet.Click += new System.EventHandler(this.btnConfirmarPet_Click);
+            // 
+            // txtBuscaPet
+            // 
+            this.txtBuscaPet.BackColor = System.Drawing.Color.White;
+            this.txtBuscaPet.Location = new System.Drawing.Point(378, 112);
+            this.txtBuscaPet.Name = "txtBuscaPet";
+            this.txtBuscaPet.PlaceholderText = "Digite aqui para buscar";
+            this.txtBuscaPet.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscaPet.Size = new System.Drawing.Size(218, 23);
+            this.txtBuscaPet.TabIndex = 146;
+            this.txtBuscaPet.TextChanged += new System.EventHandler(this.txtBuscaPet_TextChanged);
+            // 
+            // imgDono
+            // 
+            this.imgDono.Image = ((System.Drawing.Image)(resources.GetObject("imgDono.Image")));
+            this.imgDono.Location = new System.Drawing.Point(50, 353);
+            this.imgDono.Name = "imgDono";
+            this.imgDono.Size = new System.Drawing.Size(32, 32);
+            this.imgDono.TabIndex = 154;
+            this.imgDono.TabStop = false;
+            // 
+            // lblViewCli
+            // 
+            this.lblViewCli.AutoSize = true;
+            this.lblViewCli.BackColor = System.Drawing.Color.Transparent;
+            this.lblViewCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblViewCli.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblViewCli.ForeColor = System.Drawing.Color.Black;
+            this.lblViewCli.Location = new System.Drawing.Point(378, 46);
+            this.lblViewCli.Name = "lblViewCli";
+            this.lblViewCli.Size = new System.Drawing.Size(157, 25);
+            this.lblViewCli.TabIndex = 150;
+            this.lblViewCli.Text = "Pets Registrados";
+            // 
+            // imgPortePet
+            // 
+            this.imgPortePet.Image = ((System.Drawing.Image)(resources.GetObject("imgPortePet.Image")));
+            this.imgPortePet.Location = new System.Drawing.Point(50, 303);
+            this.imgPortePet.Name = "imgPortePet";
+            this.imgPortePet.Size = new System.Drawing.Size(32, 32);
+            this.imgPortePet.TabIndex = 153;
+            this.imgPortePet.TabStop = false;
+            // 
+            // lblHeaderPet
+            // 
+            this.lblHeaderPet.AutoSize = true;
+            this.lblHeaderPet.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderPet.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderPet.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderPet.Location = new System.Drawing.Point(50, 46);
+            this.lblHeaderPet.Name = "lblHeaderPet";
+            this.lblHeaderPet.Size = new System.Drawing.Size(130, 25);
+            this.lblHeaderPet.TabIndex = 147;
+            this.lblHeaderPet.Text = "Cadastrar Pet";
+            // 
+            // imgRacaPet
+            // 
+            this.imgRacaPet.Image = ((System.Drawing.Image)(resources.GetObject("imgRacaPet.Image")));
+            this.imgRacaPet.Location = new System.Drawing.Point(50, 253);
+            this.imgRacaPet.Name = "imgRacaPet";
+            this.imgRacaPet.Size = new System.Drawing.Size(32, 32);
+            this.imgRacaPet.TabIndex = 152;
+            this.imgRacaPet.TabStop = false;
+            // 
+            // imgTipoPet
+            // 
+            this.imgTipoPet.Image = ((System.Drawing.Image)(resources.GetObject("imgTipoPet.Image")));
+            this.imgTipoPet.Location = new System.Drawing.Point(50, 153);
+            this.imgTipoPet.Name = "imgTipoPet";
+            this.imgTipoPet.Size = new System.Drawing.Size(32, 32);
+            this.imgTipoPet.TabIndex = 151;
+            this.imgTipoPet.TabStop = false;
+            // 
+            // pnlSLimpar
+            // 
+            this.pnlSLimpar.BackColor = System.Drawing.Color.Black;
+            this.pnlSLimpar.Location = new System.Drawing.Point(50, 467);
+            this.pnlSLimpar.Name = "pnlSLimpar";
+            this.pnlSLimpar.Size = new System.Drawing.Size(77, 3);
+            this.pnlSLimpar.TabIndex = 158;
+            // 
+            // pnlSConfirmar
+            // 
+            this.pnlSConfirmar.BackColor = System.Drawing.Color.Black;
+            this.pnlSConfirmar.Location = new System.Drawing.Point(193, 467);
+            this.pnlSConfirmar.Name = "pnlSConfirmar";
+            this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
+            this.pnlSConfirmar.TabIndex = 157;
+            // 
+            // txtCorPet
+            // 
+            this.txtCorPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCorPet.Location = new System.Drawing.Point(85, 215);
+            this.txtCorPet.Name = "txtCorPet";
+            this.txtCorPet.PlaceholderText = "Cor";
+            this.txtCorPet.Size = new System.Drawing.Size(200, 16);
+            this.txtCorPet.TabIndex = 168;
+            // 
+            // pnlLinhaPorte
+            // 
+            this.pnlLinhaPorte.BackColor = System.Drawing.Color.Black;
+            this.pnlLinhaPorte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLinhaPorte.ForeColor = System.Drawing.Color.Black;
+            this.pnlLinhaPorte.Location = new System.Drawing.Point(85, 333);
+            this.pnlLinhaPorte.Name = "pnlLinhaPorte";
+            this.pnlLinhaPorte.Size = new System.Drawing.Size(200, 1);
+            this.pnlLinhaPorte.TabIndex = 166;
+            // 
+            // pnlLinhaRaca
+            // 
+            this.pnlLinhaRaca.BackColor = System.Drawing.Color.Black;
+            this.pnlLinhaRaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLinhaRaca.ForeColor = System.Drawing.Color.Black;
+            this.pnlLinhaRaca.Location = new System.Drawing.Point(85, 283);
+            this.pnlLinhaRaca.Name = "pnlLinhaRaca";
+            this.pnlLinhaRaca.Size = new System.Drawing.Size(200, 1);
+            this.pnlLinhaRaca.TabIndex = 165;
+            // 
+            // pnlLinhaCor
+            // 
+            this.pnlLinhaCor.BackColor = System.Drawing.Color.Black;
+            this.pnlLinhaCor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLinhaCor.ForeColor = System.Drawing.Color.Black;
+            this.pnlLinhaCor.Location = new System.Drawing.Point(85, 233);
+            this.pnlLinhaCor.Name = "pnlLinhaCor";
+            this.pnlLinhaCor.Size = new System.Drawing.Size(200, 1);
+            this.pnlLinhaCor.TabIndex = 164;
+            // 
+            // pnlLinhaTipo
+            // 
+            this.pnlLinhaTipo.BackColor = System.Drawing.Color.Black;
+            this.pnlLinhaTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLinhaTipo.ForeColor = System.Drawing.Color.Black;
+            this.pnlLinhaTipo.Location = new System.Drawing.Point(85, 183);
+            this.pnlLinhaTipo.Name = "pnlLinhaTipo";
+            this.pnlLinhaTipo.Size = new System.Drawing.Size(200, 1);
+            this.pnlLinhaTipo.TabIndex = 163;
+            // 
+            // pnlLinhaNome
+            // 
+            this.pnlLinhaNome.BackColor = System.Drawing.Color.Black;
+            this.pnlLinhaNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlLinhaNome.ForeColor = System.Drawing.Color.Black;
+            this.pnlLinhaNome.Location = new System.Drawing.Point(85, 133);
+            this.pnlLinhaNome.Name = "pnlLinhaNome";
+            this.pnlLinhaNome.Size = new System.Drawing.Size(200, 1);
+            this.pnlLinhaNome.TabIndex = 161;
+            // 
+            // txtNomePet
+            // 
+            this.txtNomePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomePet.Location = new System.Drawing.Point(85, 115);
+            this.txtNomePet.Name = "txtNomePet";
+            this.txtNomePet.PlaceholderText = "Nome";
+            this.txtNomePet.Size = new System.Drawing.Size(200, 16);
+            this.txtNomePet.TabIndex = 140;
+            // 
+            // txtTipoPet
+            // 
+            this.txtTipoPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTipoPet.Location = new System.Drawing.Point(85, 165);
+            this.txtTipoPet.Name = "txtTipoPet";
+            this.txtTipoPet.PlaceholderText = "Tipo";
+            this.txtTipoPet.Size = new System.Drawing.Size(200, 16);
+            this.txtTipoPet.TabIndex = 141;
+            // 
+            // txtRacaPet
+            // 
+            this.txtRacaPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRacaPet.Location = new System.Drawing.Point(85, 265);
+            this.txtRacaPet.Name = "txtRacaPet";
+            this.txtRacaPet.PlaceholderText = "Raça";
+            this.txtRacaPet.Size = new System.Drawing.Size(200, 16);
+            this.txtRacaPet.TabIndex = 143;
+            // 
+            // txtPortePet
+            // 
+            this.txtPortePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPortePet.Location = new System.Drawing.Point(85, 315);
+            this.txtPortePet.Name = "txtPortePet";
+            this.txtPortePet.PlaceholderText = "Porte";
+            this.txtPortePet.Size = new System.Drawing.Size(200, 16);
+            this.txtPortePet.TabIndex = 142;
+            // 
+            // pnlMarcador2
+            // 
+            this.pnlMarcador2.BackColor = System.Drawing.Color.Black;
+            this.pnlMarcador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMarcador2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.pnlMarcador2.Location = new System.Drawing.Point(378, 72);
+            this.pnlMarcador2.Name = "pnlMarcador2";
+            this.pnlMarcador2.Size = new System.Drawing.Size(413, 3);
+            this.pnlMarcador2.TabIndex = 149;
+            // 
+            // pnlMarcador
+            // 
+            this.pnlMarcador.BackColor = System.Drawing.Color.Black;
+            this.pnlMarcador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlMarcador.Location = new System.Drawing.Point(50, 72);
+            this.pnlMarcador.Name = "pnlMarcador";
+            this.pnlMarcador.Size = new System.Drawing.Size(238, 3);
+            this.pnlMarcador.TabIndex = 148;
+            // 
+            // pnlSAlterar
+            // 
+            this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSAlterar.BackColor = System.Drawing.Color.Black;
+            this.pnlSAlterar.Location = new System.Drawing.Point(851, 532);
+            this.pnlSAlterar.Name = "pnlSAlterar";
+            this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
+            this.pnlSAlterar.TabIndex = 138;
+            // 
+            // pnlSRemover
+            // 
+            this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSRemover.BackColor = System.Drawing.Color.Black;
+            this.pnlSRemover.Location = new System.Drawing.Point(747, 532);
+            this.pnlSRemover.Name = "pnlSRemover";
+            this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
+            this.pnlSRemover.TabIndex = 137;
+            // 
+            // dgPets
+            // 
+            this.dgPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgPets.BackgroundColor = System.Drawing.Color.White;
+            this.dgPets.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgPets.Location = new System.Drawing.Point(378, 142);
+            this.dgPets.Name = "dgPets";
+            this.dgPets.RowTemplate.Height = 25;
+            this.dgPets.Size = new System.Drawing.Size(571, 338);
+            this.dgPets.TabIndex = 139;
+            // 
             // pnlProdutos
             // 
             this.pnlProdutos.Controls.Add(this.btnConfirmarProd);
             this.pnlProdutos.Controls.Add(this.cbMarcaProd);
             this.pnlProdutos.Controls.Add(this.cbCategoriaProd);
-            this.pnlProdutos.Controls.Add(this.label12);
+            this.pnlProdutos.Controls.Add(this.lblMsgErrorProd);
             this.pnlProdutos.Controls.Add(this.btnRemoverProd);
             this.pnlProdutos.Controls.Add(this.btnLimparProd);
             this.pnlProdutos.Controls.Add(this.txtBuscaProd);
@@ -377,16 +796,16 @@
             this.cbCategoriaProd.TabIndex = 118;
             this.cbCategoriaProd.Text = "Escolha uma Categoria";
             // 
-            // label12
+            // lblMsgErrorProd
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label12.AutoSize = true;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Location = new System.Drawing.Point(6, 557);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(12, 15);
-            this.label12.TabIndex = 96;
-            this.label12.Text = "*";
+            this.lblMsgErrorProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorProd.AutoSize = true;
+            this.lblMsgErrorProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorProd.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorProd.Name = "lblMsgErrorProd";
+            this.lblMsgErrorProd.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorProd.TabIndex = 96;
+            this.lblMsgErrorProd.Text = "*";
             // 
             // btnRemoverProd
             // 
@@ -714,39 +1133,43 @@
             // 
             // pnlFuncionarios
             // 
-            this.pnlFuncionarios.Controls.Add(this.comboBox1);
-            this.pnlFuncionarios.Controls.Add(this.comboBox2);
-            this.pnlFuncionarios.Controls.Add(this.label13);
-            this.pnlFuncionarios.Controls.Add(this.button1);
-            this.pnlFuncionarios.Controls.Add(this.button2);
-            this.pnlFuncionarios.Controls.Add(this.textBox2);
-            this.pnlFuncionarios.Controls.Add(this.label15);
+            this.pnlFuncionarios.Controls.Add(this.panel38);
+            this.pnlFuncionarios.Controls.Add(this.imgTelefoneFunc);
+            this.pnlFuncionarios.Controls.Add(this.txtTelefoneFunc);
+            this.pnlFuncionarios.Controls.Add(this.panel37);
+            this.pnlFuncionarios.Controls.Add(this.txtCpfFunc);
+            this.pnlFuncionarios.Controls.Add(this.cbCargo);
+            this.pnlFuncionarios.Controls.Add(this.lblMsgErrorFunc);
+            this.pnlFuncionarios.Controls.Add(this.btnRemoveFunc);
+            this.pnlFuncionarios.Controls.Add(this.btnLimparFunc);
+            this.pnlFuncionarios.Controls.Add(this.txtBuscaFunc);
+            this.pnlFuncionarios.Controls.Add(this.lblRegisterFunc);
             this.pnlFuncionarios.Controls.Add(this.panel12);
             this.pnlFuncionarios.Controls.Add(this.panel13);
             this.pnlFuncionarios.Controls.Add(this.panel15);
             this.pnlFuncionarios.Controls.Add(this.panel16);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox1);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox2);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox3);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox4);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox5);
-            this.pnlFuncionarios.Controls.Add(this.pictureBox6);
+            this.pnlFuncionarios.Controls.Add(this.imgNascimento);
+            this.pnlFuncionarios.Controls.Add(this.imgEmailFunc);
+            this.pnlFuncionarios.Controls.Add(this.imgCTPS);
+            this.pnlFuncionarios.Controls.Add(this.imgCpfFunc);
+            this.pnlFuncionarios.Controls.Add(this.imgCargo);
+            this.pnlFuncionarios.Controls.Add(this.imgFunc);
             this.pnlFuncionarios.Controls.Add(this.panel17);
             this.pnlFuncionarios.Controls.Add(this.panel18);
             this.pnlFuncionarios.Controls.Add(this.panel21);
             this.pnlFuncionarios.Controls.Add(this.panel22);
-            this.pnlFuncionarios.Controls.Add(this.textBox3);
-            this.pnlFuncionarios.Controls.Add(this.textBox4);
-            this.pnlFuncionarios.Controls.Add(this.textBox5);
+            this.pnlFuncionarios.Controls.Add(this.txtNomeFunc);
+            this.pnlFuncionarios.Controls.Add(this.txtNascimentoFunc);
+            this.pnlFuncionarios.Controls.Add(this.txtCtpsFunc);
             this.pnlFuncionarios.Controls.Add(this.panel23);
-            this.pnlFuncionarios.Controls.Add(this.textBox6);
+            this.pnlFuncionarios.Controls.Add(this.txtEmailFunc);
             this.pnlFuncionarios.Controls.Add(this.label16);
             this.pnlFuncionarios.Controls.Add(this.panel24);
-            this.pnlFuncionarios.Controls.Add(this.button3);
-            this.pnlFuncionarios.Controls.Add(this.dataGridView1);
-            this.pnlFuncionarios.Controls.Add(this.label17);
+            this.pnlFuncionarios.Controls.Add(this.btnAlteraFunc);
+            this.pnlFuncionarios.Controls.Add(this.dgFuncionarios);
+            this.pnlFuncionarios.Controls.Add(this.lblHeaderFunc);
             this.pnlFuncionarios.Controls.Add(this.btnConfirmarFun);
-            this.pnlFuncionarios.Controls.Add(this.button5);
+            this.pnlFuncionarios.Controls.Add(this.btnConcluirFunc);
             this.pnlFuncionarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFuncionarios.Location = new System.Drawing.Point(0, 0);
             this.pnlFuncionarios.Name = "pnlFuncionarios";
@@ -754,93 +1177,132 @@
             this.pnlFuncionarios.TabIndex = 5;
             this.pnlFuncionarios.Visible = false;
             // 
-            // comboBox1
+            // panel38
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.White;
-            this.comboBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(88, 212);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 23);
-            this.comboBox1.TabIndex = 152;
-            this.comboBox1.Text = "Escolha uma Marca";
+            this.panel38.BackColor = System.Drawing.Color.Black;
+            this.panel38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel38.ForeColor = System.Drawing.Color.Black;
+            this.panel38.Location = new System.Drawing.Point(88, 433);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(200, 1);
+            this.panel38.TabIndex = 156;
             // 
-            // comboBox2
+            // imgTelefoneFunc
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.White;
-            this.comboBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(88, 162);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 23);
-            this.comboBox2.TabIndex = 151;
-            this.comboBox2.Text = "Escolha uma Categoria";
+            this.imgTelefoneFunc.BackColor = System.Drawing.Color.Transparent;
+            this.imgTelefoneFunc.Image = ((System.Drawing.Image)(resources.GetObject("imgTelefoneFunc.Image")));
+            this.imgTelefoneFunc.Location = new System.Drawing.Point(50, 403);
+            this.imgTelefoneFunc.Name = "imgTelefoneFunc";
+            this.imgTelefoneFunc.Size = new System.Drawing.Size(32, 32);
+            this.imgTelefoneFunc.TabIndex = 155;
+            this.imgTelefoneFunc.TabStop = false;
             // 
-            // label13
+            // txtTelefoneFunc
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label13.AutoSize = true;
-            this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label13.Location = new System.Drawing.Point(6, 557);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(12, 15);
-            this.label13.TabIndex = 131;
-            this.label13.Text = "*";
+            this.txtTelefoneFunc.BackColor = System.Drawing.Color.White;
+            this.txtTelefoneFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefoneFunc.Location = new System.Drawing.Point(88, 415);
+            this.txtTelefoneFunc.Name = "txtTelefoneFunc";
+            this.txtTelefoneFunc.PlaceholderText = "Telefone";
+            this.txtTelefoneFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtTelefoneFunc.TabIndex = 154;
             // 
-            // button1
+            // panel37
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(747, 486);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 40);
-            this.button1.TabIndex = 150;
-            this.button1.Text = "Remover";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button1.UseVisualStyleBackColor = false;
+            this.panel37.BackColor = System.Drawing.Color.Black;
+            this.panel37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel37.ForeColor = System.Drawing.Color.Black;
+            this.panel37.Location = new System.Drawing.Point(88, 234);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(200, 1);
+            this.panel37.TabIndex = 153;
             // 
-            // button2
+            // txtCpfFunc
             // 
-            this.button2.AutoSize = true;
-            this.button2.BackColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(50, 421);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 40);
-            this.button2.TabIndex = 149;
-            this.button2.Text = "Limpar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.txtCpfFunc.BackColor = System.Drawing.Color.White;
+            this.txtCpfFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCpfFunc.Location = new System.Drawing.Point(88, 216);
+            this.txtCpfFunc.Name = "txtCpfFunc";
+            this.txtCpfFunc.PlaceholderText = "CPF";
+            this.txtCpfFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtCpfFunc.TabIndex = 152;
             // 
-            // textBox2
+            // cbCargo
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(378, 112);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Digite aqui para buscar";
-            this.textBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox2.Size = new System.Drawing.Size(218, 23);
-            this.textBox2.TabIndex = 126;
+            this.cbCargo.BackColor = System.Drawing.Color.White;
+            this.cbCargo.ForeColor = System.Drawing.Color.DimGray;
+            this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Location = new System.Drawing.Point(88, 162);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.Size = new System.Drawing.Size(200, 23);
+            this.cbCargo.TabIndex = 151;
+            this.cbCargo.Text = "Escolha um cargo";
             // 
-            // label15
+            // lblMsgErrorFunc
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(378, 46);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(236, 25);
-            this.label15.TabIndex = 130;
-            this.label15.Text = "Funcionarios Registrados";
+            this.lblMsgErrorFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorFunc.AutoSize = true;
+            this.lblMsgErrorFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorFunc.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorFunc.Name = "lblMsgErrorFunc";
+            this.lblMsgErrorFunc.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorFunc.TabIndex = 131;
+            this.lblMsgErrorFunc.Text = "*";
+            // 
+            // btnRemoveFunc
+            // 
+            this.btnRemoveFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoveFunc.AutoSize = true;
+            this.btnRemoveFunc.BackColor = System.Drawing.Color.Black;
+            this.btnRemoveFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoveFunc.FlatAppearance.BorderSize = 0;
+            this.btnRemoveFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoveFunc.ForeColor = System.Drawing.Color.White;
+            this.btnRemoveFunc.Location = new System.Drawing.Point(747, 486);
+            this.btnRemoveFunc.Name = "btnRemoveFunc";
+            this.btnRemoveFunc.Size = new System.Drawing.Size(98, 40);
+            this.btnRemoveFunc.TabIndex = 150;
+            this.btnRemoveFunc.Text = "Remover";
+            this.btnRemoveFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemoveFunc.UseVisualStyleBackColor = false;
+            // 
+            // btnLimparFunc
+            // 
+            this.btnLimparFunc.AutoSize = true;
+            this.btnLimparFunc.BackColor = System.Drawing.Color.Black;
+            this.btnLimparFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnLimparFunc.FlatAppearance.BorderSize = 0;
+            this.btnLimparFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimparFunc.ForeColor = System.Drawing.Color.White;
+            this.btnLimparFunc.Location = new System.Drawing.Point(50, 486);
+            this.btnLimparFunc.Name = "btnLimparFunc";
+            this.btnLimparFunc.Size = new System.Drawing.Size(77, 40);
+            this.btnLimparFunc.TabIndex = 149;
+            this.btnLimparFunc.Text = "Limpar";
+            this.btnLimparFunc.UseVisualStyleBackColor = false;
+            // 
+            // txtBuscaFunc
+            // 
+            this.txtBuscaFunc.BackColor = System.Drawing.Color.White;
+            this.txtBuscaFunc.Location = new System.Drawing.Point(378, 112);
+            this.txtBuscaFunc.Name = "txtBuscaFunc";
+            this.txtBuscaFunc.PlaceholderText = "Digite aqui para buscar";
+            this.txtBuscaFunc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscaFunc.Size = new System.Drawing.Size(218, 23);
+            this.txtBuscaFunc.TabIndex = 126;
+            // 
+            // lblRegisterFunc
+            // 
+            this.lblRegisterFunc.AutoSize = true;
+            this.lblRegisterFunc.BackColor = System.Drawing.Color.Transparent;
+            this.lblRegisterFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblRegisterFunc.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblRegisterFunc.ForeColor = System.Drawing.Color.Black;
+            this.lblRegisterFunc.Location = new System.Drawing.Point(378, 46);
+            this.lblRegisterFunc.Name = "lblRegisterFunc";
+            this.lblRegisterFunc.Size = new System.Drawing.Size(236, 25);
+            this.lblRegisterFunc.TabIndex = 130;
+            this.lblRegisterFunc.Text = "Funcionarios Registrados";
             // 
             // panel12
             // 
@@ -882,61 +1344,64 @@
             this.panel16.Size = new System.Drawing.Size(200, 1);
             this.panel16.TabIndex = 145;
             // 
-            // pictureBox1
+            // imgNascimento
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(50, 253);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.TabIndex = 143;
-            this.pictureBox1.TabStop = false;
+            this.imgNascimento.BackColor = System.Drawing.Color.Transparent;
+            this.imgNascimento.Location = new System.Drawing.Point(50, 253);
+            this.imgNascimento.Name = "imgNascimento";
+            this.imgNascimento.Size = new System.Drawing.Size(32, 32);
+            this.imgNascimento.TabIndex = 143;
+            this.imgNascimento.TabStop = false;
             // 
-            // pictureBox2
+            // imgEmailFunc
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Location = new System.Drawing.Point(50, 353);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.TabIndex = 142;
-            this.pictureBox2.TabStop = false;
+            this.imgEmailFunc.BackColor = System.Drawing.Color.Transparent;
+            this.imgEmailFunc.Image = ((System.Drawing.Image)(resources.GetObject("imgEmailFunc.Image")));
+            this.imgEmailFunc.Location = new System.Drawing.Point(50, 353);
+            this.imgEmailFunc.Name = "imgEmailFunc";
+            this.imgEmailFunc.Size = new System.Drawing.Size(32, 32);
+            this.imgEmailFunc.TabIndex = 142;
+            this.imgEmailFunc.TabStop = false;
             // 
-            // pictureBox3
+            // imgCTPS
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Location = new System.Drawing.Point(50, 303);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.TabIndex = 141;
-            this.pictureBox3.TabStop = false;
+            this.imgCTPS.BackColor = System.Drawing.Color.Transparent;
+            this.imgCTPS.Location = new System.Drawing.Point(50, 303);
+            this.imgCTPS.Name = "imgCTPS";
+            this.imgCTPS.Size = new System.Drawing.Size(32, 32);
+            this.imgCTPS.TabIndex = 141;
+            this.imgCTPS.TabStop = false;
             // 
-            // pictureBox4
+            // imgCpfFunc
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(50, 203);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox4.TabIndex = 140;
-            this.pictureBox4.TabStop = false;
+            this.imgCpfFunc.BackColor = System.Drawing.Color.Transparent;
+            this.imgCpfFunc.Image = ((System.Drawing.Image)(resources.GetObject("imgCpfFunc.Image")));
+            this.imgCpfFunc.Location = new System.Drawing.Point(50, 203);
+            this.imgCpfFunc.Name = "imgCpfFunc";
+            this.imgCpfFunc.Size = new System.Drawing.Size(32, 32);
+            this.imgCpfFunc.TabIndex = 140;
+            this.imgCpfFunc.TabStop = false;
             // 
-            // pictureBox5
+            // imgCargo
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Location = new System.Drawing.Point(50, 153);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox5.TabIndex = 139;
-            this.pictureBox5.TabStop = false;
+            this.imgCargo.BackColor = System.Drawing.Color.Transparent;
+            this.imgCargo.Location = new System.Drawing.Point(50, 153);
+            this.imgCargo.Name = "imgCargo";
+            this.imgCargo.Size = new System.Drawing.Size(32, 32);
+            this.imgCargo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCargo.TabIndex = 139;
+            this.imgCargo.TabStop = false;
             // 
-            // pictureBox6
+            // imgFunc
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Location = new System.Drawing.Point(50, 103);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox6.TabIndex = 138;
-            this.pictureBox6.TabStop = false;
+            this.imgFunc.BackColor = System.Drawing.Color.Transparent;
+            this.imgFunc.Image = ((System.Drawing.Image)(resources.GetObject("imgFunc.Image")));
+            this.imgFunc.Location = new System.Drawing.Point(50, 103);
+            this.imgFunc.Name = "imgFunc";
+            this.imgFunc.Size = new System.Drawing.Size(32, 32);
+            this.imgFunc.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgFunc.TabIndex = 138;
+            this.imgFunc.TabStop = false;
             // 
             // panel17
             // 
@@ -959,7 +1424,7 @@
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.Black;
-            this.panel21.Location = new System.Drawing.Point(50, 467);
+            this.panel21.Location = new System.Drawing.Point(50, 532);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(77, 3);
             this.panel21.TabIndex = 135;
@@ -967,40 +1432,40 @@
             // panel22
             // 
             this.panel22.BackColor = System.Drawing.Color.Black;
-            this.panel22.Location = new System.Drawing.Point(193, 467);
+            this.panel22.Location = new System.Drawing.Point(193, 532);
             this.panel22.Name = "panel22";
             this.panel22.Size = new System.Drawing.Size(95, 3);
             this.panel22.TabIndex = 134;
             // 
-            // textBox3
+            // txtNomeFunc
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Location = new System.Drawing.Point(88, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Nome do Produto";
-            this.textBox3.Size = new System.Drawing.Size(200, 16);
-            this.textBox3.TabIndex = 120;
+            this.txtNomeFunc.BackColor = System.Drawing.Color.White;
+            this.txtNomeFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeFunc.Location = new System.Drawing.Point(88, 115);
+            this.txtNomeFunc.Name = "txtNomeFunc";
+            this.txtNomeFunc.PlaceholderText = "Nome";
+            this.txtNomeFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtNomeFunc.TabIndex = 120;
             // 
-            // textBox4
+            // txtNascimentoFunc
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Location = new System.Drawing.Point(88, 265);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Preço de Custo";
-            this.textBox4.Size = new System.Drawing.Size(200, 16);
-            this.textBox4.TabIndex = 128;
+            this.txtNascimentoFunc.BackColor = System.Drawing.Color.White;
+            this.txtNascimentoFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNascimentoFunc.Location = new System.Drawing.Point(88, 265);
+            this.txtNascimentoFunc.Name = "txtNascimentoFunc";
+            this.txtNascimentoFunc.PlaceholderText = "Data de Nascimento";
+            this.txtNascimentoFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtNascimentoFunc.TabIndex = 128;
             // 
-            // textBox5
+            // txtCtpsFunc
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Location = new System.Drawing.Point(88, 315);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "Preço de Venda";
-            this.textBox5.Size = new System.Drawing.Size(200, 16);
-            this.textBox5.TabIndex = 122;
+            this.txtCtpsFunc.BackColor = System.Drawing.Color.White;
+            this.txtCtpsFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCtpsFunc.Location = new System.Drawing.Point(88, 315);
+            this.txtCtpsFunc.Name = "txtCtpsFunc";
+            this.txtCtpsFunc.PlaceholderText = "CTPS";
+            this.txtCtpsFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtCtpsFunc.TabIndex = 122;
             // 
             // panel23
             // 
@@ -1012,15 +1477,15 @@
             this.panel23.Size = new System.Drawing.Size(434, 3);
             this.panel23.TabIndex = 129;
             // 
-            // textBox6
+            // txtEmailFunc
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(88, 365);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PlaceholderText = "Quantidade";
-            this.textBox6.Size = new System.Drawing.Size(200, 16);
-            this.textBox6.TabIndex = 133;
+            this.txtEmailFunc.BackColor = System.Drawing.Color.White;
+            this.txtEmailFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmailFunc.Location = new System.Drawing.Point(88, 365);
+            this.txtEmailFunc.Name = "txtEmailFunc";
+            this.txtEmailFunc.PlaceholderText = "Email";
+            this.txtEmailFunc.Size = new System.Drawing.Size(200, 16);
+            this.txtEmailFunc.TabIndex = 133;
             // 
             // label16
             // 
@@ -1041,48 +1506,48 @@
             this.panel24.Size = new System.Drawing.Size(238, 3);
             this.panel24.TabIndex = 123;
             // 
-            // button3
+            // btnAlteraFunc
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(851, 486);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 40);
-            this.button3.TabIndex = 125;
-            this.button3.Text = "Alterar";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAlteraFunc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlteraFunc.AutoSize = true;
+            this.btnAlteraFunc.BackColor = System.Drawing.Color.Black;
+            this.btnAlteraFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlteraFunc.FlatAppearance.BorderSize = 0;
+            this.btnAlteraFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlteraFunc.ForeColor = System.Drawing.Color.White;
+            this.btnAlteraFunc.Location = new System.Drawing.Point(851, 486);
+            this.btnAlteraFunc.Name = "btnAlteraFunc";
+            this.btnAlteraFunc.Size = new System.Drawing.Size(98, 40);
+            this.btnAlteraFunc.TabIndex = 125;
+            this.btnAlteraFunc.Text = "Alterar";
+            this.btnAlteraFunc.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlteraFunc.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgFuncionarios
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgFuncionarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.Location = new System.Drawing.Point(378, 142);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 338);
-            this.dataGridView1.TabIndex = 124;
+            this.dgFuncionarios.BackgroundColor = System.Drawing.Color.White;
+            this.dgFuncionarios.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgFuncionarios.Location = new System.Drawing.Point(378, 142);
+            this.dgFuncionarios.Name = "dgFuncionarios";
+            this.dgFuncionarios.RowTemplate.Height = 25;
+            this.dgFuncionarios.Size = new System.Drawing.Size(571, 338);
+            this.dgFuncionarios.TabIndex = 124;
             // 
-            // label17
+            // lblHeaderFunc
             // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(50, 46);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(217, 25);
-            this.label17.TabIndex = 121;
-            this.label17.Text = "Cadastrar Funcionários";
+            this.lblHeaderFunc.AutoSize = true;
+            this.lblHeaderFunc.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderFunc.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderFunc.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderFunc.Location = new System.Drawing.Point(50, 46);
+            this.lblHeaderFunc.Name = "lblHeaderFunc";
+            this.lblHeaderFunc.Size = new System.Drawing.Size(217, 25);
+            this.lblHeaderFunc.TabIndex = 121;
+            this.lblHeaderFunc.Text = "Cadastrar Funcionários";
             // 
             // btnConfirmarFun
             // 
@@ -1092,32 +1557,32 @@
             this.btnConfirmarFun.FlatAppearance.BorderSize = 0;
             this.btnConfirmarFun.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmarFun.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarFun.Location = new System.Drawing.Point(193, 421);
+            this.btnConfirmarFun.Location = new System.Drawing.Point(193, 486);
             this.btnConfirmarFun.Name = "btnConfirmarFun";
             this.btnConfirmarFun.Size = new System.Drawing.Size(95, 40);
             this.btnConfirmarFun.TabIndex = 127;
             this.btnConfirmarFun.Text = "Confirmar";
             this.btnConfirmarFun.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnConcluirFunc
             // 
-            this.button5.AutoSize = true;
-            this.button5.BackColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(193, 421);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(95, 40);
-            this.button5.TabIndex = 144;
-            this.button5.Text = "Concluir";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Visible = false;
+            this.btnConcluirFunc.AutoSize = true;
+            this.btnConcluirFunc.BackColor = System.Drawing.Color.Black;
+            this.btnConcluirFunc.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConcluirFunc.FlatAppearance.BorderSize = 0;
+            this.btnConcluirFunc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcluirFunc.ForeColor = System.Drawing.Color.White;
+            this.btnConcluirFunc.Location = new System.Drawing.Point(193, 486);
+            this.btnConcluirFunc.Name = "btnConcluirFunc";
+            this.btnConcluirFunc.Size = new System.Drawing.Size(95, 40);
+            this.btnConcluirFunc.TabIndex = 144;
+            this.btnConcluirFunc.Text = "Concluir";
+            this.btnConcluirFunc.UseVisualStyleBackColor = false;
+            this.btnConcluirFunc.Visible = false;
             // 
             // pnlVendas
             // 
-            this.pnlVendas.Controls.Add(this.label18);
+            this.pnlVendas.Controls.Add(this.lblMsgErrorVenda);
             this.pnlVendas.Controls.Add(this.button6);
             this.pnlVendas.Controls.Add(this.button7);
             this.pnlVendas.Controls.Add(this.textBox8);
@@ -1159,16 +1624,16 @@
             this.pnlVendas.TabIndex = 3;
             this.pnlVendas.Visible = false;
             // 
-            // label18
+            // lblMsgErrorVenda
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label18.AutoSize = true;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label18.Location = new System.Drawing.Point(6, 557);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(12, 15);
-            this.label18.TabIndex = 96;
-            this.label18.Text = "*";
+            this.lblMsgErrorVenda.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorVenda.AutoSize = true;
+            this.lblMsgErrorVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorVenda.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorVenda.Name = "lblMsgErrorVenda";
+            this.lblMsgErrorVenda.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorVenda.TabIndex = 96;
+            this.lblMsgErrorVenda.Text = "*";
             // 
             // button6
             // 
@@ -1692,7 +2157,7 @@
             // pnlCadCli
             // 
             this.pnlCadCli.BackColor = System.Drawing.Color.White;
-            this.pnlCadCli.Controls.Add(this.label3);
+            this.pnlCadCli.Controls.Add(this.lblMsgErrorCli);
             this.pnlCadCli.Controls.Add(this.btnRemoverCli);
             this.pnlCadCli.Controls.Add(this.btnLimparCli);
             this.pnlCadCli.Controls.Add(this.txtBuscaCli);
@@ -1734,16 +2199,16 @@
             this.pnlCadCli.TabIndex = 1;
             this.pnlCadCli.Visible = false;
             // 
-            // label3
+            // lblMsgErrorCli
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Location = new System.Drawing.Point(6, 557);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(12, 15);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "*";
+            this.lblMsgErrorCli.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorCli.AutoSize = true;
+            this.lblMsgErrorCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorCli.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorCli.Name = "lblMsgErrorCli";
+            this.lblMsgErrorCli.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorCli.TabIndex = 61;
+            this.lblMsgErrorCli.Text = "*";
             // 
             // btnRemoverCli
             // 
@@ -2125,406 +2590,6 @@
             this.lblHeaderCli.TabIndex = 47;
             this.lblHeaderCli.Text = "Cadastrar Cliente";
             // 
-            // pnlCadPet
-            // 
-            this.pnlCadPet.Controls.Add(this.cbClientes);
-            this.pnlCadPet.Controls.Add(this.lblMsgError);
-            this.pnlCadPet.Controls.Add(this.btnConcluirPet);
-            this.pnlCadPet.Controls.Add(this.imgCorPet);
-            this.pnlCadPet.Controls.Add(this.imgPet);
-            this.pnlCadPet.Controls.Add(this.btnRemoverPet);
-            this.pnlCadPet.Controls.Add(this.btnAlterarPet);
-            this.pnlCadPet.Controls.Add(this.btnLimparPet);
-            this.pnlCadPet.Controls.Add(this.btnConfirmarPet);
-            this.pnlCadPet.Controls.Add(this.txtBuscaPet);
-            this.pnlCadPet.Controls.Add(this.imgDono);
-            this.pnlCadPet.Controls.Add(this.lblViewCli);
-            this.pnlCadPet.Controls.Add(this.imgPortePet);
-            this.pnlCadPet.Controls.Add(this.lblHeaderPet);
-            this.pnlCadPet.Controls.Add(this.imgRacaPet);
-            this.pnlCadPet.Controls.Add(this.imgTipoPet);
-            this.pnlCadPet.Controls.Add(this.pnlSLimpar);
-            this.pnlCadPet.Controls.Add(this.pnlSConfirmar);
-            this.pnlCadPet.Controls.Add(this.txtCorPet);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaPorte);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaRaca);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaCor);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaTipo);
-            this.pnlCadPet.Controls.Add(this.pnlLinhaNome);
-            this.pnlCadPet.Controls.Add(this.txtNomePet);
-            this.pnlCadPet.Controls.Add(this.txtTipoPet);
-            this.pnlCadPet.Controls.Add(this.txtRacaPet);
-            this.pnlCadPet.Controls.Add(this.txtPortePet);
-            this.pnlCadPet.Controls.Add(this.pnlMarcador2);
-            this.pnlCadPet.Controls.Add(this.pnlMarcador);
-            this.pnlCadPet.Controls.Add(this.pnlSAlterar);
-            this.pnlCadPet.Controls.Add(this.pnlSRemover);
-            this.pnlCadPet.Controls.Add(this.dgPets);
-            this.pnlCadPet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCadPet.Location = new System.Drawing.Point(0, 0);
-            this.pnlCadPet.Name = "pnlCadPet";
-            this.pnlCadPet.Size = new System.Drawing.Size(990, 581);
-            this.pnlCadPet.TabIndex = 0;
-            this.pnlCadPet.Visible = false;
-            // 
-            // cbClientes
-            // 
-            this.cbClientes.FormattingEnabled = true;
-            this.cbClientes.Location = new System.Drawing.Point(85, 362);
-            this.cbClientes.Name = "cbClientes";
-            this.cbClientes.Size = new System.Drawing.Size(200, 23);
-            this.cbClientes.TabIndex = 171;
-            // 
-            // lblMsgError
-            // 
-            this.lblMsgError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMsgError.AutoSize = true;
-            this.lblMsgError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgError.Location = new System.Drawing.Point(6, 557);
-            this.lblMsgError.Name = "lblMsgError";
-            this.lblMsgError.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgError.TabIndex = 170;
-            this.lblMsgError.Text = "*";
-            // 
-            // btnConcluirPet
-            // 
-            this.btnConcluirPet.AutoSize = true;
-            this.btnConcluirPet.BackColor = System.Drawing.Color.Black;
-            this.btnConcluirPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConcluirPet.FlatAppearance.BorderSize = 0;
-            this.btnConcluirPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConcluirPet.ForeColor = System.Drawing.Color.White;
-            this.btnConcluirPet.Location = new System.Drawing.Point(193, 421);
-            this.btnConcluirPet.Name = "btnConcluirPet";
-            this.btnConcluirPet.Size = new System.Drawing.Size(95, 40);
-            this.btnConcluirPet.TabIndex = 169;
-            this.btnConcluirPet.Text = "Concluir";
-            this.btnConcluirPet.UseVisualStyleBackColor = false;
-            this.btnConcluirPet.Visible = false;
-            this.btnConcluirPet.Click += new System.EventHandler(this.btnConcluirPet_Click);
-            // 
-            // imgCorPet
-            // 
-            this.imgCorPet.Image = ((System.Drawing.Image)(resources.GetObject("imgCorPet.Image")));
-            this.imgCorPet.Location = new System.Drawing.Point(50, 203);
-            this.imgCorPet.Name = "imgCorPet";
-            this.imgCorPet.Size = new System.Drawing.Size(32, 32);
-            this.imgCorPet.TabIndex = 162;
-            this.imgCorPet.TabStop = false;
-            // 
-            // imgPet
-            // 
-            this.imgPet.BackColor = System.Drawing.Color.Transparent;
-            this.imgPet.Image = ((System.Drawing.Image)(resources.GetObject("imgPet.Image")));
-            this.imgPet.Location = new System.Drawing.Point(50, 103);
-            this.imgPet.Name = "imgPet";
-            this.imgPet.Size = new System.Drawing.Size(32, 32);
-            this.imgPet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgPet.TabIndex = 145;
-            this.imgPet.TabStop = false;
-            // 
-            // btnRemoverPet
-            // 
-            this.btnRemoverPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoverPet.AutoSize = true;
-            this.btnRemoverPet.BackColor = System.Drawing.Color.Black;
-            this.btnRemoverPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRemoverPet.FlatAppearance.BorderSize = 0;
-            this.btnRemoverPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverPet.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverPet.Location = new System.Drawing.Point(747, 486);
-            this.btnRemoverPet.Name = "btnRemoverPet";
-            this.btnRemoverPet.Size = new System.Drawing.Size(98, 40);
-            this.btnRemoverPet.TabIndex = 160;
-            this.btnRemoverPet.Text = "Remover";
-            this.btnRemoverPet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRemoverPet.UseVisualStyleBackColor = false;
-            this.btnRemoverPet.Click += new System.EventHandler(this.btnRemoverPet_Click);
-            // 
-            // btnAlterarPet
-            // 
-            this.btnAlterarPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterarPet.AutoSize = true;
-            this.btnAlterarPet.BackColor = System.Drawing.Color.Black;
-            this.btnAlterarPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAlterarPet.FlatAppearance.BorderSize = 0;
-            this.btnAlterarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarPet.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarPet.Location = new System.Drawing.Point(851, 486);
-            this.btnAlterarPet.Name = "btnAlterarPet";
-            this.btnAlterarPet.Size = new System.Drawing.Size(98, 40);
-            this.btnAlterarPet.TabIndex = 159;
-            this.btnAlterarPet.Text = "Alterar";
-            this.btnAlterarPet.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAlterarPet.UseVisualStyleBackColor = false;
-            this.btnAlterarPet.Click += new System.EventHandler(this.btnAlterarPet_Click);
-            // 
-            // btnLimparPet
-            // 
-            this.btnLimparPet.AutoSize = true;
-            this.btnLimparPet.BackColor = System.Drawing.Color.Black;
-            this.btnLimparPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnLimparPet.FlatAppearance.BorderSize = 0;
-            this.btnLimparPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimparPet.ForeColor = System.Drawing.Color.White;
-            this.btnLimparPet.Location = new System.Drawing.Point(50, 421);
-            this.btnLimparPet.Name = "btnLimparPet";
-            this.btnLimparPet.Size = new System.Drawing.Size(77, 40);
-            this.btnLimparPet.TabIndex = 155;
-            this.btnLimparPet.Text = "Limpar";
-            this.btnLimparPet.UseVisualStyleBackColor = false;
-            this.btnLimparPet.Click += new System.EventHandler(this.btnLimparPet_Click);
-            // 
-            // btnConfirmarPet
-            // 
-            this.btnConfirmarPet.AutoSize = true;
-            this.btnConfirmarPet.BackColor = System.Drawing.Color.Black;
-            this.btnConfirmarPet.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmarPet.FlatAppearance.BorderSize = 0;
-            this.btnConfirmarPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarPet.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarPet.Location = new System.Drawing.Point(193, 421);
-            this.btnConfirmarPet.Name = "btnConfirmarPet";
-            this.btnConfirmarPet.Size = new System.Drawing.Size(95, 40);
-            this.btnConfirmarPet.TabIndex = 156;
-            this.btnConfirmarPet.Text = "Confirmar";
-            this.btnConfirmarPet.UseVisualStyleBackColor = false;
-            this.btnConfirmarPet.Click += new System.EventHandler(this.btnConfirmarPet_Click);
-            // 
-            // txtBuscaPet
-            // 
-            this.txtBuscaPet.BackColor = System.Drawing.Color.White;
-            this.txtBuscaPet.Location = new System.Drawing.Point(378, 112);
-            this.txtBuscaPet.Name = "txtBuscaPet";
-            this.txtBuscaPet.PlaceholderText = "Digite aqui para buscar";
-            this.txtBuscaPet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtBuscaPet.Size = new System.Drawing.Size(218, 23);
-            this.txtBuscaPet.TabIndex = 146;
-            this.txtBuscaPet.TextChanged += new System.EventHandler(this.txtBuscaPet_TextChanged);
-            // 
-            // imgDono
-            // 
-            this.imgDono.Image = ((System.Drawing.Image)(resources.GetObject("imgDono.Image")));
-            this.imgDono.Location = new System.Drawing.Point(50, 353);
-            this.imgDono.Name = "imgDono";
-            this.imgDono.Size = new System.Drawing.Size(32, 32);
-            this.imgDono.TabIndex = 154;
-            this.imgDono.TabStop = false;
-            // 
-            // lblViewCli
-            // 
-            this.lblViewCli.AutoSize = true;
-            this.lblViewCli.BackColor = System.Drawing.Color.Transparent;
-            this.lblViewCli.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblViewCli.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblViewCli.ForeColor = System.Drawing.Color.Black;
-            this.lblViewCli.Location = new System.Drawing.Point(378, 46);
-            this.lblViewCli.Name = "lblViewCli";
-            this.lblViewCli.Size = new System.Drawing.Size(157, 25);
-            this.lblViewCli.TabIndex = 150;
-            this.lblViewCli.Text = "Pets Registrados";
-            // 
-            // imgPortePet
-            // 
-            this.imgPortePet.Image = ((System.Drawing.Image)(resources.GetObject("imgPortePet.Image")));
-            this.imgPortePet.Location = new System.Drawing.Point(50, 303);
-            this.imgPortePet.Name = "imgPortePet";
-            this.imgPortePet.Size = new System.Drawing.Size(32, 32);
-            this.imgPortePet.TabIndex = 153;
-            this.imgPortePet.TabStop = false;
-            // 
-            // lblHeaderPet
-            // 
-            this.lblHeaderPet.AutoSize = true;
-            this.lblHeaderPet.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHeaderPet.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHeaderPet.ForeColor = System.Drawing.Color.Black;
-            this.lblHeaderPet.Location = new System.Drawing.Point(50, 46);
-            this.lblHeaderPet.Name = "lblHeaderPet";
-            this.lblHeaderPet.Size = new System.Drawing.Size(130, 25);
-            this.lblHeaderPet.TabIndex = 147;
-            this.lblHeaderPet.Text = "Cadastrar Pet";
-            // 
-            // imgRacaPet
-            // 
-            this.imgRacaPet.Image = ((System.Drawing.Image)(resources.GetObject("imgRacaPet.Image")));
-            this.imgRacaPet.Location = new System.Drawing.Point(50, 253);
-            this.imgRacaPet.Name = "imgRacaPet";
-            this.imgRacaPet.Size = new System.Drawing.Size(32, 32);
-            this.imgRacaPet.TabIndex = 152;
-            this.imgRacaPet.TabStop = false;
-            // 
-            // imgTipoPet
-            // 
-            this.imgTipoPet.Image = ((System.Drawing.Image)(resources.GetObject("imgTipoPet.Image")));
-            this.imgTipoPet.Location = new System.Drawing.Point(50, 153);
-            this.imgTipoPet.Name = "imgTipoPet";
-            this.imgTipoPet.Size = new System.Drawing.Size(32, 32);
-            this.imgTipoPet.TabIndex = 151;
-            this.imgTipoPet.TabStop = false;
-            // 
-            // pnlSLimpar
-            // 
-            this.pnlSLimpar.BackColor = System.Drawing.Color.Black;
-            this.pnlSLimpar.Location = new System.Drawing.Point(50, 467);
-            this.pnlSLimpar.Name = "pnlSLimpar";
-            this.pnlSLimpar.Size = new System.Drawing.Size(77, 3);
-            this.pnlSLimpar.TabIndex = 158;
-            // 
-            // pnlSConfirmar
-            // 
-            this.pnlSConfirmar.BackColor = System.Drawing.Color.Black;
-            this.pnlSConfirmar.Location = new System.Drawing.Point(193, 467);
-            this.pnlSConfirmar.Name = "pnlSConfirmar";
-            this.pnlSConfirmar.Size = new System.Drawing.Size(95, 3);
-            this.pnlSConfirmar.TabIndex = 157;
-            // 
-            // txtCorPet
-            // 
-            this.txtCorPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCorPet.Location = new System.Drawing.Point(85, 215);
-            this.txtCorPet.Name = "txtCorPet";
-            this.txtCorPet.PlaceholderText = "Cor";
-            this.txtCorPet.Size = new System.Drawing.Size(200, 16);
-            this.txtCorPet.TabIndex = 168;
-            // 
-            // pnlLinhaPorte
-            // 
-            this.pnlLinhaPorte.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaPorte.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaPorte.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaPorte.Location = new System.Drawing.Point(85, 333);
-            this.pnlLinhaPorte.Name = "pnlLinhaPorte";
-            this.pnlLinhaPorte.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaPorte.TabIndex = 166;
-            // 
-            // pnlLinhaRaca
-            // 
-            this.pnlLinhaRaca.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaRaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaRaca.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaRaca.Location = new System.Drawing.Point(85, 283);
-            this.pnlLinhaRaca.Name = "pnlLinhaRaca";
-            this.pnlLinhaRaca.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaRaca.TabIndex = 165;
-            // 
-            // pnlLinhaCor
-            // 
-            this.pnlLinhaCor.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaCor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaCor.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaCor.Location = new System.Drawing.Point(85, 233);
-            this.pnlLinhaCor.Name = "pnlLinhaCor";
-            this.pnlLinhaCor.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaCor.TabIndex = 164;
-            // 
-            // pnlLinhaTipo
-            // 
-            this.pnlLinhaTipo.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaTipo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaTipo.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaTipo.Location = new System.Drawing.Point(85, 183);
-            this.pnlLinhaTipo.Name = "pnlLinhaTipo";
-            this.pnlLinhaTipo.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaTipo.TabIndex = 163;
-            // 
-            // pnlLinhaNome
-            // 
-            this.pnlLinhaNome.BackColor = System.Drawing.Color.Black;
-            this.pnlLinhaNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlLinhaNome.ForeColor = System.Drawing.Color.Black;
-            this.pnlLinhaNome.Location = new System.Drawing.Point(85, 133);
-            this.pnlLinhaNome.Name = "pnlLinhaNome";
-            this.pnlLinhaNome.Size = new System.Drawing.Size(200, 1);
-            this.pnlLinhaNome.TabIndex = 161;
-            // 
-            // txtNomePet
-            // 
-            this.txtNomePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomePet.Location = new System.Drawing.Point(85, 115);
-            this.txtNomePet.Name = "txtNomePet";
-            this.txtNomePet.PlaceholderText = "Nome";
-            this.txtNomePet.Size = new System.Drawing.Size(200, 16);
-            this.txtNomePet.TabIndex = 140;
-            // 
-            // txtTipoPet
-            // 
-            this.txtTipoPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTipoPet.Location = new System.Drawing.Point(85, 165);
-            this.txtTipoPet.Name = "txtTipoPet";
-            this.txtTipoPet.PlaceholderText = "Tipo";
-            this.txtTipoPet.Size = new System.Drawing.Size(200, 16);
-            this.txtTipoPet.TabIndex = 141;
-            // 
-            // txtRacaPet
-            // 
-            this.txtRacaPet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtRacaPet.Location = new System.Drawing.Point(85, 265);
-            this.txtRacaPet.Name = "txtRacaPet";
-            this.txtRacaPet.PlaceholderText = "Raça";
-            this.txtRacaPet.Size = new System.Drawing.Size(200, 16);
-            this.txtRacaPet.TabIndex = 143;
-            // 
-            // txtPortePet
-            // 
-            this.txtPortePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPortePet.Location = new System.Drawing.Point(85, 315);
-            this.txtPortePet.Name = "txtPortePet";
-            this.txtPortePet.PlaceholderText = "Porte";
-            this.txtPortePet.Size = new System.Drawing.Size(200, 16);
-            this.txtPortePet.TabIndex = 142;
-            // 
-            // pnlMarcador2
-            // 
-            this.pnlMarcador2.BackColor = System.Drawing.Color.Black;
-            this.pnlMarcador2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMarcador2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pnlMarcador2.Location = new System.Drawing.Point(378, 72);
-            this.pnlMarcador2.Name = "pnlMarcador2";
-            this.pnlMarcador2.Size = new System.Drawing.Size(413, 3);
-            this.pnlMarcador2.TabIndex = 149;
-            // 
-            // pnlMarcador
-            // 
-            this.pnlMarcador.BackColor = System.Drawing.Color.Black;
-            this.pnlMarcador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlMarcador.Location = new System.Drawing.Point(50, 72);
-            this.pnlMarcador.Name = "pnlMarcador";
-            this.pnlMarcador.Size = new System.Drawing.Size(238, 3);
-            this.pnlMarcador.TabIndex = 148;
-            // 
-            // pnlSAlterar
-            // 
-            this.pnlSAlterar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSAlterar.BackColor = System.Drawing.Color.Black;
-            this.pnlSAlterar.Location = new System.Drawing.Point(851, 532);
-            this.pnlSAlterar.Name = "pnlSAlterar";
-            this.pnlSAlterar.Size = new System.Drawing.Size(98, 3);
-            this.pnlSAlterar.TabIndex = 138;
-            // 
-            // pnlSRemover
-            // 
-            this.pnlSRemover.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlSRemover.BackColor = System.Drawing.Color.Black;
-            this.pnlSRemover.Location = new System.Drawing.Point(747, 532);
-            this.pnlSRemover.Name = "pnlSRemover";
-            this.pnlSRemover.Size = new System.Drawing.Size(98, 3);
-            this.pnlSRemover.TabIndex = 137;
-            // 
-            // dgPets
-            // 
-            this.dgPets.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgPets.BackgroundColor = System.Drawing.Color.White;
-            this.dgPets.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgPets.Location = new System.Drawing.Point(378, 142);
-            this.dgPets.Name = "dgPets";
-            this.dgPets.RowTemplate.Height = 25;
-            this.dgPets.Size = new System.Drawing.Size(571, 338);
-            this.dgPets.TabIndex = 139;
-            // 
             // btnLogo
             // 
             this.btnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -2803,11 +2868,11 @@
             // 
             this.lblTarefas.AutoSize = true;
             this.lblTarefas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTarefas.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTarefas.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTarefas.ForeColor = System.Drawing.Color.White;
             this.lblTarefas.Location = new System.Drawing.Point(60, 23);
             this.lblTarefas.Name = "lblTarefas";
-            this.lblTarefas.Size = new System.Drawing.Size(71, 25);
+            this.lblTarefas.Size = new System.Drawing.Size(72, 25);
             this.lblTarefas.TabIndex = 0;
             this.lblTarefas.Text = "Tarefas";
             // 
@@ -2835,6 +2900,15 @@
             this.Text = "PetSupSoftware";
             this.Load += new System.EventHandler(this.PetShop_Load);
             this.pnlConteudo.ResumeLayout(false);
+            this.pnlCadPet.ResumeLayout(false);
+            this.pnlCadPet.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCorPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPets)).EndInit();
             this.pnlProdutos.ResumeLayout(false);
             this.pnlProdutos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).EndInit();
@@ -2846,13 +2920,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgProdutos)).EndInit();
             this.pnlFuncionarios.ResumeLayout(false);
             this.pnlFuncionarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgTelefoneFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgNascimento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEmailFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCTPS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCpfFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCargo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFunc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgFuncionarios)).EndInit();
             this.pnlVendas.ResumeLayout(false);
             this.pnlVendas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -2874,15 +2949,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgCpf)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgClientes)).EndInit();
-            this.pnlCadPet.ResumeLayout(false);
-            this.pnlCadPet.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCorPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgDono)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPortePet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPets)).EndInit();
             this.pnlCima.ResumeLayout(false);
             this.pnlCima.PerformLayout();
             this.pnlAba.ResumeLayout(false);
@@ -2922,7 +2988,7 @@
         private TextBox txtBuscaCli;
         private TextBox txtBairroCli;
         private Label label2;
-        private Label label3;
+        private Label lblMsgErrorCli;
         private Panel panel7;
         private Button btnAlterarCli;
         private Button btnConfirmarCli;
@@ -2931,7 +2997,7 @@
         private Button btnLimparCli;
         private Button btnRemoverCli;
         private Panel pnlCadPet;
-        private Label lblMsgError;
+        private Label lblMsgErrorPet;
         private Button btnConcluirPet;
         private PictureBox imgCorPet;
         private PictureBox imgPet;
@@ -2997,7 +3063,7 @@
         private Label label9;
         private Label label8;
         private Label label7;
-        private Label label12;
+        private Label lblMsgErrorProd;
         private Button btnRemoverProd;
         private Button btnLimparProd;
         private TextBox txtBuscaProd;
@@ -3030,40 +3096,39 @@
         private ComboBox cbMarcaProd;
         private Panel panel10;
         private TextBox txtVendaProd;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Label label13;
-        private Button button1;
-        private Button button2;
-        private TextBox textBox2;
-        private Label label15;
+        private ComboBox cbCargo;
+        private Label lblMsgErrorFunc;
+        private Button btnRemoveFunc;
+        private Button btnLimparFunc;
+        private TextBox txtBuscaFunc;
+        private Label lblRegisterFunc;
         private Panel panel12;
         private Panel panel13;
         private Panel panel15;
         private Panel panel16;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox6;
+        private PictureBox imgNascimento;
+        private PictureBox imgEmailFunc;
+        private PictureBox imgCTPS;
+        private PictureBox imgCpfFunc;
+        private PictureBox imgCargo;
+        private PictureBox imgFunc;
         private Panel panel17;
         private Panel panel18;
         private Panel panel21;
         private Panel panel22;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
+        private TextBox txtNomeFunc;
+        private TextBox txtNascimentoFunc;
+        private TextBox txtCtpsFunc;
         private Panel panel23;
-        private TextBox textBox6;
+        private TextBox txtEmailFunc;
         private Label label16;
         private Panel panel24;
-        private Button button3;
-        private DataGridView dataGridView1;
-        private Label label17;
+        private Button btnAlteraFunc;
+        private DataGridView dgFuncionarios;
+        private Label lblHeaderFunc;
         private Button btnConfirmarFun;
-        private Button button5;
-        private Label label18;
+        private Button btnConcluirFunc;
+        private Label lblMsgErrorVenda;
         private Button button6;
         private Button button7;
         private TextBox textBox8;
@@ -3099,5 +3164,11 @@
         private DataGridView dataGridView2;
         private Label label21;
         private ComboBox cbClientes;
+        private Panel panel37;
+        private TextBox txtCpfFunc;
+        private Panel panel38;
+        private PictureBox imgTelefoneFunc;
+        private TextBox txtTelefoneFunc;
+        private Button btnAddCli;
     }
 }
