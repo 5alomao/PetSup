@@ -2163,7 +2163,6 @@
             this.dgClientes.RowTemplate.Height = 25;
             this.dgClientes.Size = new System.Drawing.Size(571, 338);
             this.dgClientes.TabIndex = 52;
-            this.dgClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgClientes_CellContentClick);
             // 
             // lblHeaderCli
             // 

@@ -568,7 +568,7 @@ namespace SistemaPetShop
             if (resposta == DialogResult.Yes)
             {
                 ConectaBanco conecta = new ConectaBanco();
-                bool retorno = conecta.deletaPet(codRemover);
+                bool retorno = conecta.deletaProduto(codRemover);
                 if (retorno == true)
                 {
                     MessageBox.Show("Produto Removido !");
@@ -586,11 +586,6 @@ namespace SistemaPetShop
         {
             btnClientes_Click(sender, e);
             txtNomeCli.Focus();
-        }
-
-        private void dgClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
