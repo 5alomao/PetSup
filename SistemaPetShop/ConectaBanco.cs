@@ -108,6 +108,27 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }
+        public bool insereCategoria(Categoria cat)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_insereCategoria", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nome", cat.NomeCategoria);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
 
         public bool inserePet(Pet p)
         {
@@ -201,6 +222,27 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }
+        public bool deletaCategoria(int codCategoria)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_deletaCategoria", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codCat", codCategoria);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
 
         public bool alteraMarca(Marca m, int codMarca)
         {
@@ -209,6 +251,29 @@ namespace SistemaPetShop
             cmd.Parameters.AddWithValue("codMar", codMarca);
             cmd.Parameters.AddWithValue("nome", m.NomeMarca);
             
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+        public bool alteraCategoria(Categoria cat, int codCategoria)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_alteraCategoria", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codCat", codCategoria);
+            cmd.Parameters.AddWithValue("nome", cat.NomeCategoria);
+
             try
             {
                 conectaBD.Open();

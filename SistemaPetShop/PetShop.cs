@@ -89,6 +89,10 @@ namespace SistemaPetShop
             txtNomeMarca.Text = "";
         }
 
+        void limpaCampoCategoria()
+        {
+            txtNomeCategoria.Text = "";
+        }
         void limpaCampoPet()
         {
             txtNomePet.Text = "";
@@ -469,6 +473,7 @@ namespace SistemaPetShop
             cbCategoriaProd.ValueMember = "codCategoria";
             cbCategoriaProd.Text = "Selecione uma categoria";
             lblMsgErrorProd.Text = con.mensagem;
+            dgCategorias.DataSource = con.listaCategorias();
         }
 
         //lista Marcas
@@ -725,6 +730,104 @@ namespace SistemaPetShop
         {
             DesativaPnl();
             pnlProdutos.Visible = true;
+            lblHeaderAddMarca.Text = "Cadastrar Marca";
+            limpaCampoMarca();
+        }
+
+
+        int codAlterarCategoria;
+        private void btnConfirmarCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria cat = new Categoria();
+            cat.NomeCategoria = txtNomeCategoria.Text;
+
+
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.insereCategoria(cat);
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados Inseridos com Sucesso :)");
+            }
+            else
+                lblMsgErrorCategoria.Text = conecta.mensagem;
+            limpaCampoCategoria();
+            listaCategoria();
+        }
+
+        private void btnRemoverCategoria_Click(object sender, EventArgs e)
+        {
+            int linha = dgCategorias.CurrentRow.Index; //pegar linha selecionada
+            int codRemover = Convert.ToInt32(dgCategorias.Rows[linha].Cells["codCategoria"].Value.ToString());
+
+            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Deletar Categoria", MessageBoxButtons.YesNo);
+
+            if (resposta == DialogResult.Yes)
+            {
+                ConectaBanco conecta = new ConectaBanco();
+                bool retorno = conecta.deletaCategoria(codRemover);
+                if (retorno == true)
+                {
+                    MessageBox.Show("Categoria Removida !");
+                }
+                else
+                    lblMsgErrorPet.Text = conecta.mensagem;
+            } // final if YES
+            else
+                MessageBox.Show("Operação Cancelada");
+
+            limpaCampoCategoria();
+            listaCategoria();
+        }
+
+        private void btnAlterarCategoria_Click(object sender, EventArgs e)
+        {
+            lblHeaderAddCategoria.Text = "Alterar Categoria";
+
+            btnConfirmarCategoria.Visible = false;
+            btnConcluirCategoria.Visible = true;
+
+            int linha = dgCategorias.CurrentRow.Index; //pegar linha selecionada
+            codAlterarCategoria = Convert.ToInt32(dgCategorias.Rows[linha].Cells["codCategoria"].Value.ToString());
+            txtNomeCategoria.Text = dgCategorias.Rows[linha].Cells["nomeCategoria"].Value.ToString();
+        }
+
+        private void btnConcluirCategoria_Click(object sender, EventArgs e)
+        {
+            Categoria cat = new Categoria();
+            cat.NomeCategoria = txtNomeCategoria.Text;
+
+
+
+            //Enviar dados para alterar
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.alteraCategoria(cat, codAlterarCategoria);
+
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados alterados com sucesso !");
+                limpaCampoCategoria();
+            }
+            else
+            {
+                lblMsgErrorCategoria.Text = conecta.mensagem;
+            }
+            listaCategoria();
+            btnConfirmarCategoria.Visible = true;
+            btnConcluirCategoria.Visible = false;
+            lblHeaderAddCategoria.Text = "Cadastrar Categoria";
+        }
+
+        private void txtBuscaCategoria_TextChanged(object sender, EventArgs e)
+        {
+            ((DataTable)dgCategorias.DataSource).DefaultView.RowFilter = string.Format("nomeCategoria like '{0}%'", txtBuscaCategoria.Text);
+        }
+
+        private void btnVoltarCateg_Click(object sender, EventArgs e)
+        {
+            DesativaPnl();
+            pnlProdutos.Visible = true;
+            lblHeaderAddCategoria.Text = "Cadastrar Categoria";
+            limpaCampoCategoria();
         }
     }
 }

@@ -30,29 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
             this.pnlConteudo = new System.Windows.Forms.Panel();
-            this.pnlMarca = new System.Windows.Forms.Panel();
-            this.lblMsgErrorMarca = new System.Windows.Forms.Label();
-            this.btnConfirmarMarca = new System.Windows.Forms.Button();
-            this.btnRemoverMarca = new System.Windows.Forms.Button();
-            this.btnVoltar = new System.Windows.Forms.Button();
-            this.txtBuscaMarca = new System.Windows.Forms.TextBox();
-            this.lblMarcaRegistradas = new System.Windows.Forms.Label();
-            this.panel42 = new System.Windows.Forms.Panel();
-            this.imgCadMarca = new System.Windows.Forms.PictureBox();
-            this.panel43 = new System.Windows.Forms.Panel();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.panel45 = new System.Windows.Forms.Panel();
-            this.panel46 = new System.Windows.Forms.Panel();
-            this.txtNomeMarca = new System.Windows.Forms.TextBox();
-            this.panel47 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.panel48 = new System.Windows.Forms.Panel();
-            this.btnAlterarMarca = new System.Windows.Forms.Button();
-            this.dgMarcas = new System.Windows.Forms.DataGridView();
-            this.lblHeaderAddMarca = new System.Windows.Forms.Label();
-            this.btnConcluirMarca = new System.Windows.Forms.Button();
             this.pnlCategoria = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMsgErrorCategoria = new System.Windows.Forms.Label();
+            this.btnConfirmarCategoria = new System.Windows.Forms.Button();
+            this.btnRemoverCategoria = new System.Windows.Forms.Button();
+            this.btnVoltarCateg = new System.Windows.Forms.Button();
+            this.txtBuscaCategoria = new System.Windows.Forms.TextBox();
+            this.lblHeaderCatRegistradas = new System.Windows.Forms.Label();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
+            this.panel49 = new System.Windows.Forms.Panel();
+            this.panel50 = new System.Windows.Forms.Panel();
+            this.txtNomeCategoria = new System.Windows.Forms.TextBox();
+            this.panel51 = new System.Windows.Forms.Panel();
+            this.panel52 = new System.Windows.Forms.Panel();
+            this.btnAlterarCategoria = new System.Windows.Forms.Button();
+            this.dgCategorias = new System.Windows.Forms.DataGridView();
+            this.lblHeaderAddCategoria = new System.Windows.Forms.Label();
+            this.btnConcluirCategoria = new System.Windows.Forms.Button();
             this.pnlProdutos = new System.Windows.Forms.Panel();
             this.lblMsgErrorProd = new System.Windows.Forms.Label();
             this.btnAddMarca = new System.Windows.Forms.Button();
@@ -252,6 +249,26 @@
             this.label15 = new System.Windows.Forms.Label();
             this.pnlContatos = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
+            this.pnlMarca = new System.Windows.Forms.Panel();
+            this.lblMsgErrorMarca = new System.Windows.Forms.Label();
+            this.btnConfirmarMarca = new System.Windows.Forms.Button();
+            this.btnRemoverMarca = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.txtBuscaMarca = new System.Windows.Forms.TextBox();
+            this.lblMarcaRegistradas = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.imgCadMarca = new System.Windows.Forms.PictureBox();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.txtNomeMarca = new System.Windows.Forms.TextBox();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.btnAlterarMarca = new System.Windows.Forms.Button();
+            this.dgMarcas = new System.Windows.Forms.DataGridView();
+            this.lblHeaderAddMarca = new System.Windows.Forms.Label();
+            this.btnConcluirMarca = new System.Windows.Forms.Button();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCima = new System.Windows.Forms.Panel();
@@ -271,10 +288,9 @@
             this.lblTarefas = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnlConteudo.SuspendLayout();
-            this.pnlMarca.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).BeginInit();
             this.pnlCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategorias)).BeginInit();
             this.pnlProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEstoque)).BeginInit();
@@ -320,6 +336,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgPets)).BeginInit();
             this.pnlSobreNos.SuspendLayout();
             this.pnlContatos.SuspendLayout();
+            this.pnlMarca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).BeginInit();
             this.pnlCima.SuspendLayout();
             this.pnlAba.SuspendLayout();
             this.pnlEsquerda.SuspendLayout();
@@ -327,7 +346,6 @@
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.pnlMarca);
             this.pnlConteudo.Controls.Add(this.pnlCategoria);
             this.pnlConteudo.Controls.Add(this.pnlProdutos);
             this.pnlConteudo.Controls.Add(this.pnlFuncionarios);
@@ -337,297 +355,269 @@
             this.pnlConteudo.Controls.Add(this.pnlCadPet);
             this.pnlConteudo.Controls.Add(this.pnlSobreNos);
             this.pnlConteudo.Controls.Add(this.pnlContatos);
+            this.pnlConteudo.Controls.Add(this.pnlMarca);
             this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudo.Location = new System.Drawing.Point(194, 100);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(990, 581);
             this.pnlConteudo.TabIndex = 2;
             // 
-            // pnlMarca
-            // 
-            this.pnlMarca.Controls.Add(this.lblMsgErrorMarca);
-            this.pnlMarca.Controls.Add(this.btnConfirmarMarca);
-            this.pnlMarca.Controls.Add(this.btnRemoverMarca);
-            this.pnlMarca.Controls.Add(this.btnVoltar);
-            this.pnlMarca.Controls.Add(this.txtBuscaMarca);
-            this.pnlMarca.Controls.Add(this.lblMarcaRegistradas);
-            this.pnlMarca.Controls.Add(this.panel42);
-            this.pnlMarca.Controls.Add(this.imgCadMarca);
-            this.pnlMarca.Controls.Add(this.panel43);
-            this.pnlMarca.Controls.Add(this.panel44);
-            this.pnlMarca.Controls.Add(this.panel45);
-            this.pnlMarca.Controls.Add(this.panel46);
-            this.pnlMarca.Controls.Add(this.txtNomeMarca);
-            this.pnlMarca.Controls.Add(this.panel47);
-            this.pnlMarca.Controls.Add(this.label18);
-            this.pnlMarca.Controls.Add(this.panel48);
-            this.pnlMarca.Controls.Add(this.btnAlterarMarca);
-            this.pnlMarca.Controls.Add(this.dgMarcas);
-            this.pnlMarca.Controls.Add(this.lblHeaderAddMarca);
-            this.pnlMarca.Controls.Add(this.btnConcluirMarca);
-            this.pnlMarca.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMarca.Location = new System.Drawing.Point(0, 0);
-            this.pnlMarca.Name = "pnlMarca";
-            this.pnlMarca.Size = new System.Drawing.Size(990, 581);
-            this.pnlMarca.TabIndex = 7;
-            // 
-            // lblMsgErrorMarca
-            // 
-            this.lblMsgErrorMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMsgErrorMarca.AutoSize = true;
-            this.lblMsgErrorMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgErrorMarca.Location = new System.Drawing.Point(7, 559);
-            this.lblMsgErrorMarca.Name = "lblMsgErrorMarca";
-            this.lblMsgErrorMarca.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgErrorMarca.TabIndex = 186;
-            this.lblMsgErrorMarca.Text = "*";
-            // 
-            // btnConfirmarMarca
-            // 
-            this.btnConfirmarMarca.AutoSize = true;
-            this.btnConfirmarMarca.BackColor = System.Drawing.Color.Black;
-            this.btnConfirmarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConfirmarMarca.FlatAppearance.BorderSize = 0;
-            this.btnConfirmarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfirmarMarca.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmarMarca.Location = new System.Drawing.Point(195, 423);
-            this.btnConfirmarMarca.Name = "btnConfirmarMarca";
-            this.btnConfirmarMarca.Size = new System.Drawing.Size(95, 40);
-            this.btnConfirmarMarca.TabIndex = 182;
-            this.btnConfirmarMarca.Text = "Confirmar";
-            this.btnConfirmarMarca.UseVisualStyleBackColor = false;
-            this.btnConfirmarMarca.Click += new System.EventHandler(this.btnConfirmarMarca_Click);
-            // 
-            // btnRemoverMarca
-            // 
-            this.btnRemoverMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoverMarca.AutoSize = true;
-            this.btnRemoverMarca.BackColor = System.Drawing.Color.Black;
-            this.btnRemoverMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnRemoverMarca.FlatAppearance.BorderSize = 0;
-            this.btnRemoverMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoverMarca.ForeColor = System.Drawing.Color.White;
-            this.btnRemoverMarca.Location = new System.Drawing.Point(748, 488);
-            this.btnRemoverMarca.Name = "btnRemoverMarca";
-            this.btnRemoverMarca.Size = new System.Drawing.Size(98, 40);
-            this.btnRemoverMarca.TabIndex = 205;
-            this.btnRemoverMarca.Text = "Remover";
-            this.btnRemoverMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnRemoverMarca.UseVisualStyleBackColor = false;
-            this.btnRemoverMarca.Click += new System.EventHandler(this.btnRemoverMarca_Click);
-            // 
-            // btnVoltar
-            // 
-            this.btnVoltar.AutoSize = true;
-            this.btnVoltar.BackColor = System.Drawing.Color.Black;
-            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnVoltar.FlatAppearance.BorderSize = 0;
-            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.ForeColor = System.Drawing.Color.White;
-            this.btnVoltar.Location = new System.Drawing.Point(51, 423);
-            this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(77, 40);
-            this.btnVoltar.TabIndex = 204;
-            this.btnVoltar.Text = "Voltar";
-            this.btnVoltar.UseVisualStyleBackColor = false;
-            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
-            // 
-            // txtBuscaMarca
-            // 
-            this.txtBuscaMarca.BackColor = System.Drawing.Color.White;
-            this.txtBuscaMarca.Location = new System.Drawing.Point(379, 114);
-            this.txtBuscaMarca.Name = "txtBuscaMarca";
-            this.txtBuscaMarca.PlaceholderText = "Digite aqui para buscar";
-            this.txtBuscaMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtBuscaMarca.Size = new System.Drawing.Size(218, 23);
-            this.txtBuscaMarca.TabIndex = 181;
-            this.txtBuscaMarca.TextChanged += new System.EventHandler(this.txtBuscaMarca_TextChanged);
-            // 
-            // lblMarcaRegistradas
-            // 
-            this.lblMarcaRegistradas.AutoSize = true;
-            this.lblMarcaRegistradas.BackColor = System.Drawing.Color.Transparent;
-            this.lblMarcaRegistradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMarcaRegistradas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblMarcaRegistradas.ForeColor = System.Drawing.Color.Black;
-            this.lblMarcaRegistradas.Location = new System.Drawing.Point(379, 48);
-            this.lblMarcaRegistradas.Name = "lblMarcaRegistradas";
-            this.lblMarcaRegistradas.Size = new System.Drawing.Size(182, 25);
-            this.lblMarcaRegistradas.TabIndex = 185;
-            this.lblMarcaRegistradas.Text = "Marcas Registradas";
-            // 
-            // panel42
-            // 
-            this.panel42.BackColor = System.Drawing.Color.Black;
-            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel42.ForeColor = System.Drawing.Color.Black;
-            this.panel42.Location = new System.Drawing.Point(89, 246);
-            this.panel42.Name = "panel42";
-            this.panel42.Size = new System.Drawing.Size(200, 1);
-            this.panel42.TabIndex = 200;
-            // 
-            // imgCadMarca
-            // 
-            this.imgCadMarca.BackColor = System.Drawing.Color.Transparent;
-            this.imgCadMarca.Image = ((System.Drawing.Image)(resources.GetObject("imgCadMarca.Image")));
-            this.imgCadMarca.Location = new System.Drawing.Point(51, 216);
-            this.imgCadMarca.Name = "imgCadMarca";
-            this.imgCadMarca.Size = new System.Drawing.Size(32, 32);
-            this.imgCadMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.imgCadMarca.TabIndex = 193;
-            this.imgCadMarca.TabStop = false;
-            // 
-            // panel43
-            // 
-            this.panel43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel43.BackColor = System.Drawing.Color.Black;
-            this.panel43.Location = new System.Drawing.Point(852, 534);
-            this.panel43.Name = "panel43";
-            this.panel43.Size = new System.Drawing.Size(98, 3);
-            this.panel43.TabIndex = 192;
-            // 
-            // panel44
-            // 
-            this.panel44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel44.BackColor = System.Drawing.Color.Black;
-            this.panel44.Location = new System.Drawing.Point(748, 534);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(98, 3);
-            this.panel44.TabIndex = 191;
-            // 
-            // panel45
-            // 
-            this.panel45.BackColor = System.Drawing.Color.Black;
-            this.panel45.Location = new System.Drawing.Point(51, 469);
-            this.panel45.Name = "panel45";
-            this.panel45.Size = new System.Drawing.Size(77, 3);
-            this.panel45.TabIndex = 190;
-            // 
-            // panel46
-            // 
-            this.panel46.BackColor = System.Drawing.Color.Black;
-            this.panel46.Location = new System.Drawing.Point(195, 469);
-            this.panel46.Name = "panel46";
-            this.panel46.Size = new System.Drawing.Size(95, 3);
-            this.panel46.TabIndex = 189;
-            // 
-            // txtNomeMarca
-            // 
-            this.txtNomeMarca.BackColor = System.Drawing.Color.White;
-            this.txtNomeMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNomeMarca.Location = new System.Drawing.Point(89, 228);
-            this.txtNomeMarca.Name = "txtNomeMarca";
-            this.txtNomeMarca.PlaceholderText = "Nome da Marca";
-            this.txtNomeMarca.Size = new System.Drawing.Size(200, 16);
-            this.txtNomeMarca.TabIndex = 175;
-            // 
-            // panel47
-            // 
-            this.panel47.BackColor = System.Drawing.Color.Black;
-            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel47.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.panel47.Location = new System.Drawing.Point(379, 74);
-            this.panel47.Name = "panel47";
-            this.panel47.Size = new System.Drawing.Size(434, 3);
-            this.panel47.TabIndex = 184;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(39, 266);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 21);
-            this.label18.TabIndex = 187;
-            // 
-            // panel48
-            // 
-            this.panel48.BackColor = System.Drawing.Color.Black;
-            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel48.Location = new System.Drawing.Point(51, 74);
-            this.panel48.Name = "panel48";
-            this.panel48.Size = new System.Drawing.Size(238, 3);
-            this.panel48.TabIndex = 178;
-            // 
-            // btnAlterarMarca
-            // 
-            this.btnAlterarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAlterarMarca.AutoSize = true;
-            this.btnAlterarMarca.BackColor = System.Drawing.Color.Black;
-            this.btnAlterarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAlterarMarca.FlatAppearance.BorderSize = 0;
-            this.btnAlterarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarMarca.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarMarca.Location = new System.Drawing.Point(852, 488);
-            this.btnAlterarMarca.Name = "btnAlterarMarca";
-            this.btnAlterarMarca.Size = new System.Drawing.Size(98, 40);
-            this.btnAlterarMarca.TabIndex = 180;
-            this.btnAlterarMarca.Text = "Alterar";
-            this.btnAlterarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.btnAlterarMarca.UseVisualStyleBackColor = false;
-            this.btnAlterarMarca.Click += new System.EventHandler(this.btnAlterarMarca_Click);
-            // 
-            // dgMarcas
-            // 
-            this.dgMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgMarcas.BackgroundColor = System.Drawing.Color.White;
-            this.dgMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgMarcas.Location = new System.Drawing.Point(379, 144);
-            this.dgMarcas.Name = "dgMarcas";
-            this.dgMarcas.RowTemplate.Height = 25;
-            this.dgMarcas.Size = new System.Drawing.Size(571, 338);
-            this.dgMarcas.TabIndex = 179;
-            // 
-            // lblHeaderAddMarca
-            // 
-            this.lblHeaderAddMarca.AutoSize = true;
-            this.lblHeaderAddMarca.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderAddMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblHeaderAddMarca.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblHeaderAddMarca.ForeColor = System.Drawing.Color.Black;
-            this.lblHeaderAddMarca.Location = new System.Drawing.Point(51, 48);
-            this.lblHeaderAddMarca.Name = "lblHeaderAddMarca";
-            this.lblHeaderAddMarca.Size = new System.Drawing.Size(157, 25);
-            this.lblHeaderAddMarca.TabIndex = 176;
-            this.lblHeaderAddMarca.Text = "Cadastrar Marca";
-            // 
-            // btnConcluirMarca
-            // 
-            this.btnConcluirMarca.AutoSize = true;
-            this.btnConcluirMarca.BackColor = System.Drawing.Color.Black;
-            this.btnConcluirMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnConcluirMarca.FlatAppearance.BorderSize = 0;
-            this.btnConcluirMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConcluirMarca.ForeColor = System.Drawing.Color.White;
-            this.btnConcluirMarca.Location = new System.Drawing.Point(195, 423);
-            this.btnConcluirMarca.Name = "btnConcluirMarca";
-            this.btnConcluirMarca.Size = new System.Drawing.Size(95, 40);
-            this.btnConcluirMarca.TabIndex = 199;
-            this.btnConcluirMarca.Text = "Concluir";
-            this.btnConcluirMarca.UseVisualStyleBackColor = false;
-            this.btnConcluirMarca.Visible = false;
-            this.btnConcluirMarca.Click += new System.EventHandler(this.btnConcluirMarca_Click);
-            // 
             // pnlCategoria
             // 
-            this.pnlCategoria.Controls.Add(this.label3);
+            this.pnlCategoria.Controls.Add(this.lblMsgErrorCategoria);
+            this.pnlCategoria.Controls.Add(this.btnConfirmarCategoria);
+            this.pnlCategoria.Controls.Add(this.btnRemoverCategoria);
+            this.pnlCategoria.Controls.Add(this.btnVoltarCateg);
+            this.pnlCategoria.Controls.Add(this.txtBuscaCategoria);
+            this.pnlCategoria.Controls.Add(this.lblHeaderCatRegistradas);
+            this.pnlCategoria.Controls.Add(this.panel39);
+            this.pnlCategoria.Controls.Add(this.pictureBox1);
+            this.pnlCategoria.Controls.Add(this.panel40);
+            this.pnlCategoria.Controls.Add(this.panel41);
+            this.pnlCategoria.Controls.Add(this.panel49);
+            this.pnlCategoria.Controls.Add(this.panel50);
+            this.pnlCategoria.Controls.Add(this.txtNomeCategoria);
+            this.pnlCategoria.Controls.Add(this.panel51);
+            this.pnlCategoria.Controls.Add(this.panel52);
+            this.pnlCategoria.Controls.Add(this.btnAlterarCategoria);
+            this.pnlCategoria.Controls.Add(this.dgCategorias);
+            this.pnlCategoria.Controls.Add(this.lblHeaderAddCategoria);
+            this.pnlCategoria.Controls.Add(this.btnConcluirCategoria);
             this.pnlCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCategoria.Location = new System.Drawing.Point(0, 0);
             this.pnlCategoria.Name = "pnlCategoria";
             this.pnlCategoria.Size = new System.Drawing.Size(990, 581);
             this.pnlCategoria.TabIndex = 6;
             // 
-            // label3
+            // lblMsgErrorCategoria
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "categoria";
+            this.lblMsgErrorCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorCategoria.AutoSize = true;
+            this.lblMsgErrorCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorCategoria.Location = new System.Drawing.Point(7, 559);
+            this.lblMsgErrorCategoria.Name = "lblMsgErrorCategoria";
+            this.lblMsgErrorCategoria.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorCategoria.TabIndex = 215;
+            this.lblMsgErrorCategoria.Text = "*";
+            // 
+            // btnConfirmarCategoria
+            // 
+            this.btnConfirmarCategoria.AutoSize = true;
+            this.btnConfirmarCategoria.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarCategoria.Location = new System.Drawing.Point(195, 423);
+            this.btnConfirmarCategoria.Name = "btnConfirmarCategoria";
+            this.btnConfirmarCategoria.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarCategoria.TabIndex = 212;
+            this.btnConfirmarCategoria.Text = "Confirmar";
+            this.btnConfirmarCategoria.UseVisualStyleBackColor = false;
+            this.btnConfirmarCategoria.Click += new System.EventHandler(this.btnConfirmarCategoria_Click);
+            // 
+            // btnRemoverCategoria
+            // 
+            this.btnRemoverCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoverCategoria.AutoSize = true;
+            this.btnRemoverCategoria.BackColor = System.Drawing.Color.Black;
+            this.btnRemoverCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoverCategoria.FlatAppearance.BorderSize = 0;
+            this.btnRemoverCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverCategoria.Location = new System.Drawing.Point(747, 486);
+            this.btnRemoverCategoria.Name = "btnRemoverCategoria";
+            this.btnRemoverCategoria.Size = new System.Drawing.Size(98, 40);
+            this.btnRemoverCategoria.TabIndex = 224;
+            this.btnRemoverCategoria.Text = "Remover";
+            this.btnRemoverCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemoverCategoria.UseVisualStyleBackColor = false;
+            this.btnRemoverCategoria.Click += new System.EventHandler(this.btnRemoverCategoria_Click);
+            // 
+            // btnVoltarCateg
+            // 
+            this.btnVoltarCateg.AutoSize = true;
+            this.btnVoltarCateg.BackColor = System.Drawing.Color.Black;
+            this.btnVoltarCateg.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVoltarCateg.FlatAppearance.BorderSize = 0;
+            this.btnVoltarCateg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltarCateg.ForeColor = System.Drawing.Color.White;
+            this.btnVoltarCateg.Location = new System.Drawing.Point(50, 423);
+            this.btnVoltarCateg.Name = "btnVoltarCateg";
+            this.btnVoltarCateg.Size = new System.Drawing.Size(77, 40);
+            this.btnVoltarCateg.TabIndex = 223;
+            this.btnVoltarCateg.Text = "Voltar";
+            this.btnVoltarCateg.UseVisualStyleBackColor = false;
+            this.btnVoltarCateg.Click += new System.EventHandler(this.btnVoltarCateg_Click);
+            // 
+            // txtBuscaCategoria
+            // 
+            this.txtBuscaCategoria.BackColor = System.Drawing.Color.White;
+            this.txtBuscaCategoria.Location = new System.Drawing.Point(378, 112);
+            this.txtBuscaCategoria.Name = "txtBuscaCategoria";
+            this.txtBuscaCategoria.PlaceholderText = "Digite aqui para buscar";
+            this.txtBuscaCategoria.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscaCategoria.Size = new System.Drawing.Size(218, 23);
+            this.txtBuscaCategoria.TabIndex = 211;
+            this.txtBuscaCategoria.TextChanged += new System.EventHandler(this.txtBuscaCategoria_TextChanged);
+            // 
+            // lblHeaderCatRegistradas
+            // 
+            this.lblHeaderCatRegistradas.AutoSize = true;
+            this.lblHeaderCatRegistradas.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderCatRegistradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderCatRegistradas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderCatRegistradas.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderCatRegistradas.Location = new System.Drawing.Point(378, 46);
+            this.lblHeaderCatRegistradas.Name = "lblHeaderCatRegistradas";
+            this.lblHeaderCatRegistradas.Size = new System.Drawing.Size(213, 25);
+            this.lblHeaderCatRegistradas.TabIndex = 214;
+            this.lblHeaderCatRegistradas.Text = "Categorias Registradas";
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.Black;
+            this.panel39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel39.ForeColor = System.Drawing.Color.Black;
+            this.panel39.Location = new System.Drawing.Point(90, 246);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(200, 1);
+            this.panel39.TabIndex = 222;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(50, 215);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 220;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel40
+            // 
+            this.panel40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel40.BackColor = System.Drawing.Color.Black;
+            this.panel40.Location = new System.Drawing.Point(851, 532);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(98, 3);
+            this.panel40.TabIndex = 219;
+            // 
+            // panel41
+            // 
+            this.panel41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel41.BackColor = System.Drawing.Color.Black;
+            this.panel41.Location = new System.Drawing.Point(747, 532);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(98, 3);
+            this.panel41.TabIndex = 218;
+            // 
+            // panel49
+            // 
+            this.panel49.BackColor = System.Drawing.Color.Black;
+            this.panel49.Location = new System.Drawing.Point(50, 469);
+            this.panel49.Name = "panel49";
+            this.panel49.Size = new System.Drawing.Size(77, 3);
+            this.panel49.TabIndex = 217;
+            // 
+            // panel50
+            // 
+            this.panel50.BackColor = System.Drawing.Color.Black;
+            this.panel50.Location = new System.Drawing.Point(195, 469);
+            this.panel50.Name = "panel50";
+            this.panel50.Size = new System.Drawing.Size(95, 3);
+            this.panel50.TabIndex = 216;
+            // 
+            // txtNomeCategoria
+            // 
+            this.txtNomeCategoria.BackColor = System.Drawing.Color.White;
+            this.txtNomeCategoria.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeCategoria.Location = new System.Drawing.Point(90, 228);
+            this.txtNomeCategoria.Name = "txtNomeCategoria";
+            this.txtNomeCategoria.PlaceholderText = "Nome da Categoria";
+            this.txtNomeCategoria.Size = new System.Drawing.Size(200, 16);
+            this.txtNomeCategoria.TabIndex = 206;
+            // 
+            // panel51
+            // 
+            this.panel51.BackColor = System.Drawing.Color.Black;
+            this.panel51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel51.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.panel51.Location = new System.Drawing.Point(378, 72);
+            this.panel51.Name = "panel51";
+            this.panel51.Size = new System.Drawing.Size(434, 3);
+            this.panel51.TabIndex = 213;
+            // 
+            // panel52
+            // 
+            this.panel52.BackColor = System.Drawing.Color.Black;
+            this.panel52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel52.Location = new System.Drawing.Point(50, 72);
+            this.panel52.Name = "panel52";
+            this.panel52.Size = new System.Drawing.Size(238, 3);
+            this.panel52.TabIndex = 208;
+            // 
+            // btnAlterarCategoria
+            // 
+            this.btnAlterarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarCategoria.AutoSize = true;
+            this.btnAlterarCategoria.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAlterarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarCategoria.Location = new System.Drawing.Point(851, 486);
+            this.btnAlterarCategoria.Name = "btnAlterarCategoria";
+            this.btnAlterarCategoria.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterarCategoria.TabIndex = 210;
+            this.btnAlterarCategoria.Text = "Alterar";
+            this.btnAlterarCategoria.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlterarCategoria.UseVisualStyleBackColor = false;
+            this.btnAlterarCategoria.Click += new System.EventHandler(this.btnAlterarCategoria_Click);
+            // 
+            // dgCategorias
+            // 
+            this.dgCategorias.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgCategorias.BackgroundColor = System.Drawing.Color.White;
+            this.dgCategorias.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgCategorias.Location = new System.Drawing.Point(378, 142);
+            this.dgCategorias.Name = "dgCategorias";
+            this.dgCategorias.RowTemplate.Height = 25;
+            this.dgCategorias.Size = new System.Drawing.Size(571, 338);
+            this.dgCategorias.TabIndex = 209;
+            // 
+            // lblHeaderAddCategoria
+            // 
+            this.lblHeaderAddCategoria.AutoSize = true;
+            this.lblHeaderAddCategoria.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderAddCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderAddCategoria.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderAddCategoria.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderAddCategoria.Location = new System.Drawing.Point(50, 46);
+            this.lblHeaderAddCategoria.Name = "lblHeaderAddCategoria";
+            this.lblHeaderAddCategoria.Size = new System.Drawing.Size(188, 25);
+            this.lblHeaderAddCategoria.TabIndex = 207;
+            this.lblHeaderAddCategoria.Text = "Cadastrar Categoria";
+            // 
+            // btnConcluirCategoria
+            // 
+            this.btnConcluirCategoria.AutoSize = true;
+            this.btnConcluirCategoria.BackColor = System.Drawing.Color.Black;
+            this.btnConcluirCategoria.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConcluirCategoria.FlatAppearance.BorderSize = 0;
+            this.btnConcluirCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcluirCategoria.ForeColor = System.Drawing.Color.White;
+            this.btnConcluirCategoria.Location = new System.Drawing.Point(195, 423);
+            this.btnConcluirCategoria.Name = "btnConcluirCategoria";
+            this.btnConcluirCategoria.Size = new System.Drawing.Size(95, 40);
+            this.btnConcluirCategoria.TabIndex = 221;
+            this.btnConcluirCategoria.Text = "Concluir";
+            this.btnConcluirCategoria.UseVisualStyleBackColor = false;
+            this.btnConcluirCategoria.Visible = false;
+            this.btnConcluirCategoria.Click += new System.EventHandler(this.btnConcluirCategoria_Click);
             // 
             // pnlProdutos
             // 
@@ -2594,7 +2584,7 @@
             this.lblMsgErrorPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblMsgErrorPet.AutoSize = true;
             this.lblMsgErrorPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgErrorPet.Location = new System.Drawing.Point(10, 557);
+            this.lblMsgErrorPet.Location = new System.Drawing.Point(14, 548);
             this.lblMsgErrorPet.Name = "lblMsgErrorPet";
             this.lblMsgErrorPet.Size = new System.Drawing.Size(12, 15);
             this.lblMsgErrorPet.TabIndex = 170;
@@ -2995,6 +2985,263 @@
             this.label13.TabIndex = 0;
             this.label13.Text = "contatos";
             // 
+            // pnlMarca
+            // 
+            this.pnlMarca.Controls.Add(this.lblMsgErrorMarca);
+            this.pnlMarca.Controls.Add(this.btnConfirmarMarca);
+            this.pnlMarca.Controls.Add(this.btnRemoverMarca);
+            this.pnlMarca.Controls.Add(this.btnVoltar);
+            this.pnlMarca.Controls.Add(this.txtBuscaMarca);
+            this.pnlMarca.Controls.Add(this.lblMarcaRegistradas);
+            this.pnlMarca.Controls.Add(this.panel42);
+            this.pnlMarca.Controls.Add(this.imgCadMarca);
+            this.pnlMarca.Controls.Add(this.panel43);
+            this.pnlMarca.Controls.Add(this.panel44);
+            this.pnlMarca.Controls.Add(this.panel45);
+            this.pnlMarca.Controls.Add(this.panel46);
+            this.pnlMarca.Controls.Add(this.txtNomeMarca);
+            this.pnlMarca.Controls.Add(this.panel47);
+            this.pnlMarca.Controls.Add(this.panel48);
+            this.pnlMarca.Controls.Add(this.btnAlterarMarca);
+            this.pnlMarca.Controls.Add(this.dgMarcas);
+            this.pnlMarca.Controls.Add(this.lblHeaderAddMarca);
+            this.pnlMarca.Controls.Add(this.btnConcluirMarca);
+            this.pnlMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMarca.Location = new System.Drawing.Point(0, 0);
+            this.pnlMarca.Name = "pnlMarca";
+            this.pnlMarca.Size = new System.Drawing.Size(990, 581);
+            this.pnlMarca.TabIndex = 7;
+            // 
+            // lblMsgErrorMarca
+            // 
+            this.lblMsgErrorMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorMarca.AutoSize = true;
+            this.lblMsgErrorMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorMarca.Location = new System.Drawing.Point(7, 559);
+            this.lblMsgErrorMarca.Name = "lblMsgErrorMarca";
+            this.lblMsgErrorMarca.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorMarca.TabIndex = 186;
+            this.lblMsgErrorMarca.Text = "*";
+            // 
+            // btnConfirmarMarca
+            // 
+            this.btnConfirmarMarca.AutoSize = true;
+            this.btnConfirmarMarca.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarMarca.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarMarca.Location = new System.Drawing.Point(195, 423);
+            this.btnConfirmarMarca.Name = "btnConfirmarMarca";
+            this.btnConfirmarMarca.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarMarca.TabIndex = 182;
+            this.btnConfirmarMarca.Text = "Confirmar";
+            this.btnConfirmarMarca.UseVisualStyleBackColor = false;
+            this.btnConfirmarMarca.Click += new System.EventHandler(this.btnConfirmarMarca_Click);
+            // 
+            // btnRemoverMarca
+            // 
+            this.btnRemoverMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoverMarca.AutoSize = true;
+            this.btnRemoverMarca.BackColor = System.Drawing.Color.Black;
+            this.btnRemoverMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoverMarca.FlatAppearance.BorderSize = 0;
+            this.btnRemoverMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverMarca.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverMarca.Location = new System.Drawing.Point(747, 486);
+            this.btnRemoverMarca.Name = "btnRemoverMarca";
+            this.btnRemoverMarca.Size = new System.Drawing.Size(98, 40);
+            this.btnRemoverMarca.TabIndex = 205;
+            this.btnRemoverMarca.Text = "Remover";
+            this.btnRemoverMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemoverMarca.UseVisualStyleBackColor = false;
+            this.btnRemoverMarca.Click += new System.EventHandler(this.btnRemoverMarca_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.AutoSize = true;
+            this.btnVoltar.BackColor = System.Drawing.Color.Black;
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(51, 423);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(77, 40);
+            this.btnVoltar.TabIndex = 204;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // txtBuscaMarca
+            // 
+            this.txtBuscaMarca.BackColor = System.Drawing.Color.White;
+            this.txtBuscaMarca.Location = new System.Drawing.Point(378, 112);
+            this.txtBuscaMarca.Name = "txtBuscaMarca";
+            this.txtBuscaMarca.PlaceholderText = "Digite aqui para buscar";
+            this.txtBuscaMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscaMarca.Size = new System.Drawing.Size(218, 23);
+            this.txtBuscaMarca.TabIndex = 181;
+            this.txtBuscaMarca.TextChanged += new System.EventHandler(this.txtBuscaMarca_TextChanged);
+            // 
+            // lblMarcaRegistradas
+            // 
+            this.lblMarcaRegistradas.AutoSize = true;
+            this.lblMarcaRegistradas.BackColor = System.Drawing.Color.Transparent;
+            this.lblMarcaRegistradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMarcaRegistradas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMarcaRegistradas.ForeColor = System.Drawing.Color.Black;
+            this.lblMarcaRegistradas.Location = new System.Drawing.Point(378, 46);
+            this.lblMarcaRegistradas.Name = "lblMarcaRegistradas";
+            this.lblMarcaRegistradas.Size = new System.Drawing.Size(182, 25);
+            this.lblMarcaRegistradas.TabIndex = 185;
+            this.lblMarcaRegistradas.Text = "Marcas Registradas";
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.Black;
+            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel42.ForeColor = System.Drawing.Color.Black;
+            this.panel42.Location = new System.Drawing.Point(90, 246);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(200, 1);
+            this.panel42.TabIndex = 200;
+            // 
+            // imgCadMarca
+            // 
+            this.imgCadMarca.BackColor = System.Drawing.Color.Transparent;
+            this.imgCadMarca.Image = ((System.Drawing.Image)(resources.GetObject("imgCadMarca.Image")));
+            this.imgCadMarca.Location = new System.Drawing.Point(50, 215);
+            this.imgCadMarca.Name = "imgCadMarca";
+            this.imgCadMarca.Size = new System.Drawing.Size(32, 32);
+            this.imgCadMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCadMarca.TabIndex = 193;
+            this.imgCadMarca.TabStop = false;
+            // 
+            // panel43
+            // 
+            this.panel43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel43.BackColor = System.Drawing.Color.Black;
+            this.panel43.Location = new System.Drawing.Point(851, 532);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(98, 3);
+            this.panel43.TabIndex = 192;
+            // 
+            // panel44
+            // 
+            this.panel44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel44.BackColor = System.Drawing.Color.Black;
+            this.panel44.Location = new System.Drawing.Point(747, 532);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(98, 3);
+            this.panel44.TabIndex = 191;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.Black;
+            this.panel45.Location = new System.Drawing.Point(51, 469);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(77, 3);
+            this.panel45.TabIndex = 190;
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.Color.Black;
+            this.panel46.Location = new System.Drawing.Point(195, 469);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(95, 3);
+            this.panel46.TabIndex = 189;
+            // 
+            // txtNomeMarca
+            // 
+            this.txtNomeMarca.BackColor = System.Drawing.Color.White;
+            this.txtNomeMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeMarca.Location = new System.Drawing.Point(90, 228);
+            this.txtNomeMarca.Name = "txtNomeMarca";
+            this.txtNomeMarca.PlaceholderText = "Nome da Marca";
+            this.txtNomeMarca.Size = new System.Drawing.Size(200, 16);
+            this.txtNomeMarca.TabIndex = 175;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.Black;
+            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel47.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.panel47.Location = new System.Drawing.Point(378, 72);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(434, 3);
+            this.panel47.TabIndex = 184;
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.Black;
+            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel48.Location = new System.Drawing.Point(50, 72);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(238, 3);
+            this.panel48.TabIndex = 178;
+            // 
+            // btnAlterarMarca
+            // 
+            this.btnAlterarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarMarca.AutoSize = true;
+            this.btnAlterarMarca.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarMarca.FlatAppearance.BorderSize = 0;
+            this.btnAlterarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarMarca.Location = new System.Drawing.Point(851, 486);
+            this.btnAlterarMarca.Name = "btnAlterarMarca";
+            this.btnAlterarMarca.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterarMarca.TabIndex = 180;
+            this.btnAlterarMarca.Text = "Alterar";
+            this.btnAlterarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlterarMarca.UseVisualStyleBackColor = false;
+            this.btnAlterarMarca.Click += new System.EventHandler(this.btnAlterarMarca_Click);
+            // 
+            // dgMarcas
+            // 
+            this.dgMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgMarcas.BackgroundColor = System.Drawing.Color.White;
+            this.dgMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMarcas.Location = new System.Drawing.Point(378, 142);
+            this.dgMarcas.Name = "dgMarcas";
+            this.dgMarcas.RowTemplate.Height = 25;
+            this.dgMarcas.Size = new System.Drawing.Size(571, 338);
+            this.dgMarcas.TabIndex = 179;
+            // 
+            // lblHeaderAddMarca
+            // 
+            this.lblHeaderAddMarca.AutoSize = true;
+            this.lblHeaderAddMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderAddMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderAddMarca.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderAddMarca.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderAddMarca.Location = new System.Drawing.Point(50, 46);
+            this.lblHeaderAddMarca.Name = "lblHeaderAddMarca";
+            this.lblHeaderAddMarca.Size = new System.Drawing.Size(157, 25);
+            this.lblHeaderAddMarca.TabIndex = 176;
+            this.lblHeaderAddMarca.Text = "Cadastrar Marca";
+            // 
+            // btnConcluirMarca
+            // 
+            this.btnConcluirMarca.AutoSize = true;
+            this.btnConcluirMarca.BackColor = System.Drawing.Color.Black;
+            this.btnConcluirMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConcluirMarca.FlatAppearance.BorderSize = 0;
+            this.btnConcluirMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcluirMarca.ForeColor = System.Drawing.Color.White;
+            this.btnConcluirMarca.Location = new System.Drawing.Point(195, 423);
+            this.btnConcluirMarca.Name = "btnConcluirMarca";
+            this.btnConcluirMarca.Size = new System.Drawing.Size(95, 40);
+            this.btnConcluirMarca.TabIndex = 199;
+            this.btnConcluirMarca.Text = "Concluir";
+            this.btnConcluirMarca.UseVisualStyleBackColor = false;
+            this.btnConcluirMarca.Visible = false;
+            this.btnConcluirMarca.Click += new System.EventHandler(this.btnConcluirMarca_Click);
+            // 
             // btnLogo
             // 
             this.btnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -3307,12 +3554,10 @@
             this.Text = "PetSupSoftware";
             this.Load += new System.EventHandler(this.PetShop_Load);
             this.pnlConteudo.ResumeLayout(false);
-            this.pnlMarca.ResumeLayout(false);
-            this.pnlMarca.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).EndInit();
             this.pnlCategoria.ResumeLayout(false);
             this.pnlCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgCategorias)).EndInit();
             this.pnlProdutos.ResumeLayout(false);
             this.pnlProdutos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).EndInit();
@@ -3366,6 +3611,10 @@
             this.pnlSobreNos.PerformLayout();
             this.pnlContatos.ResumeLayout(false);
             this.pnlContatos.PerformLayout();
+            this.pnlMarca.ResumeLayout(false);
+            this.pnlMarca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).EndInit();
             this.pnlCima.ResumeLayout(false);
             this.pnlCima.PerformLayout();
             this.pnlAba.ResumeLayout(false);
@@ -3592,7 +3841,6 @@
         private Button btnAddCargo;
         private Panel pnlMarca;
         private Panel pnlCategoria;
-        private Label label3;
         private Panel pnlContatos;
         private Label label13;
         private Panel pnlSobreNos;
@@ -3611,11 +3859,29 @@
         private Panel panel46;
         private TextBox txtNomeMarca;
         private Panel panel47;
-        private Label label18;
         private Panel panel48;
         private Button btnAlterarMarca;
         private DataGridView dgMarcas;
         private Label lblHeaderAddMarca;
         private Button btnConcluirMarca;
+        private Label lblMsgErrorCategoria;
+        private Button btnConfirmarCategoria;
+        private Button btnRemoverCategoria;
+        private Button btnVoltarCateg;
+        private TextBox txtBuscaCategoria;
+        private Label lblHeaderCatRegistradas;
+        private Panel panel39;
+        private PictureBox pictureBox1;
+        private Panel panel40;
+        private Panel panel41;
+        private Panel panel49;
+        private Panel panel50;
+        private TextBox txtNomeCategoria;
+        private Panel panel51;
+        private Panel panel52;
+        private Button btnAlterarCategoria;
+        private DataGridView dgCategorias;
+        private Label lblHeaderAddCategoria;
+        private Button btnConcluirCategoria;
     }
 }

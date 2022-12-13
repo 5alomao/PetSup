@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Servidor:                     127.0.0.1
--- Versão do servidor:           10.4.10-MariaDB - mariadb.org binary distribution
--- OS do Servidor:               Win64
--- HeidiSQL Versão:              10.3.0.5771
+-- Versão do servidor:           10.1.35-MariaDB - mariadb.org binary distribution
+-- OS do Servidor:               Win32
+-- HeidiSQL Versão:              11.0.0.5919
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `categoria` (
   `codCategoria` int(11) NOT NULL AUTO_INCREMENT,
   `nomeCategoria` varchar(150) NOT NULL,
   PRIMARY KEY (`codCategoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- Copiando dados para a tabela pet_shop.categoria: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `categoria` DISABLE KEYS */;
@@ -64,12 +64,16 @@ CREATE TABLE IF NOT EXISTS `marca` (
   `codMarca` int(11) NOT NULL AUTO_INCREMENT,
   `nomeMarca` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`codMarca`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.marca: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.marca: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
 INSERT INTO `marca` (`codMarca`, `nomeMarca`) VALUES
-	(1, 'SpecialDog');
+	(1, 'SpecialDog'),
+	(4, 'SpecialCat'),
+	(5, 'Pedigree'),
+	(7, 'Magnus'),
+	(8, 'Quatree');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.pet
@@ -91,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `pet` (
 /*!40000 ALTER TABLE `pet` DISABLE KEYS */;
 INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIENTE_codCliente`, `corPet`) VALUES
 	(4, 'Jade', 'Shi-tsu', 'Cachorro', 'Pequeno', 7, 'Branco'),
-	(5, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Rajado'),
+	(5, 'Estrela', 'Fila Brasileiro', 'Cachorro', 'Grande', 7, 'Rajado'),
 	(6, 'Kiara', 'Labrado', 'Cachorro', 'Grande', 9, 'Preto'),
 	(7, 'Thor', 'Labrador', 'Cachorro', 'Grande', 8, 'Preto'),
 	(8, 'Rex', 'Fila Brasileiro', 'Cachorro', 'Grande', 6, 'Mel');
@@ -100,9 +104,9 @@ INSERT INTO `pet` (`codPet`, `nomePet`, `racaPet`, `tipoPet`, `portePet`, `CLIEN
 -- Copiando estrutura para procedure pet_shop.proc_alteraCategoria
 DROP PROCEDURE IF EXISTS `proc_alteraCategoria`;
 DELIMITER //
-CREATE PROCEDURE `proc_alteraCategoria`(in nome varchar(100), in codCat int)
+CREATE PROCEDURE `proc_alteraCategoria`(in nome varchar(150), in codCat int)
 BEGIN
-	update categoria set nomeCategoria = nome where codCat = codCategoria;
+	update categoria set nomeCategoria = nome where codCategoria = codCat;
 END//
 DELIMITER ;
 
@@ -163,7 +167,7 @@ DROP PROCEDURE IF EXISTS `proc_deletaCategoria`;
 DELIMITER //
 CREATE PROCEDURE `proc_deletaCategoria`(in codCat int)
 BEGIN
-	delete from categoria where codCat = codCategoria;
+	delete from categoria where codCategoria = codCat;
 END//
 DELIMITER ;
 
@@ -343,12 +347,8 @@ CREATE TABLE IF NOT EXISTS `produto` (
   CONSTRAINT `fk_produto_marca1` FOREIGN KEY (`marca_codMarca`) REFERENCES `marca` (`codMarca`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Copiando dados para a tabela pet_shop.produto: ~3 rows (aproximadamente)
+-- Copiando dados para a tabela pet_shop.produto: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` (`codProduto`, `nomeProduto`, `precoCusto`, `precoVenda`, `qntEstoque`, `marca_codMarca`, `categoria_codCategoria`) VALUES
-	(1, 'Ração p/ Filhotes', 40.00, 69.00, 5, 1, 2),
-	(9, 'Ração p/ Adultos', 34.00, 55.00, 42, 1, 2),
-	(10, 'Bolinha de Borracha', 1.00, 6.00, 15, 1, 2);
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 
 -- Copiando estrutura para tabela pet_shop.usuario
