@@ -30,11 +30,36 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetShop));
             this.pnlConteudo = new System.Windows.Forms.Panel();
+            this.pnlMarca = new System.Windows.Forms.Panel();
+            this.lblMsgErrorMarca = new System.Windows.Forms.Label();
+            this.btnConfirmarMarca = new System.Windows.Forms.Button();
+            this.btnRemoverMarca = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.txtBuscaMarca = new System.Windows.Forms.TextBox();
+            this.lblMarcaRegistradas = new System.Windows.Forms.Label();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.imgCadMarca = new System.Windows.Forms.PictureBox();
+            this.panel43 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.panel45 = new System.Windows.Forms.Panel();
+            this.panel46 = new System.Windows.Forms.Panel();
+            this.txtNomeMarca = new System.Windows.Forms.TextBox();
+            this.panel47 = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.panel48 = new System.Windows.Forms.Panel();
+            this.btnAlterarMarca = new System.Windows.Forms.Button();
+            this.dgMarcas = new System.Windows.Forms.DataGridView();
+            this.lblHeaderAddMarca = new System.Windows.Forms.Label();
+            this.btnConcluirMarca = new System.Windows.Forms.Button();
+            this.pnlCategoria = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlProdutos = new System.Windows.Forms.Panel();
+            this.lblMsgErrorProd = new System.Windows.Forms.Label();
+            this.btnAddMarca = new System.Windows.Forms.Button();
+            this.btnAddCategoria = new System.Windows.Forms.Button();
             this.btnConfirmarProd = new System.Windows.Forms.Button();
             this.cbMarcaProd = new System.Windows.Forms.ComboBox();
             this.cbCategoriaProd = new System.Windows.Forms.ComboBox();
-            this.lblMsgErrorProd = new System.Windows.Forms.Label();
             this.btnRemoverProd = new System.Windows.Forms.Button();
             this.btnLimparProd = new System.Windows.Forms.Button();
             this.txtBuscaProd = new System.Windows.Forms.TextBox();
@@ -65,6 +90,7 @@
             this.lblCadProd = new System.Windows.Forms.Label();
             this.btnConcluirProd = new System.Windows.Forms.Button();
             this.pnlFuncionarios = new System.Windows.Forms.Panel();
+            this.btnAddCargo = new System.Windows.Forms.Button();
             this.panel38 = new System.Windows.Forms.Panel();
             this.imgTelefoneFunc = new System.Windows.Forms.PictureBox();
             this.txtTelefoneFunc = new System.Windows.Forms.TextBox();
@@ -188,9 +214,9 @@
             this.dgClientes = new System.Windows.Forms.DataGridView();
             this.lblHeaderCli = new System.Windows.Forms.Label();
             this.pnlCadPet = new System.Windows.Forms.Panel();
+            this.lblMsgErrorPet = new System.Windows.Forms.Label();
             this.btnAddCli = new System.Windows.Forms.Button();
             this.cbClientes = new System.Windows.Forms.ComboBox();
-            this.lblMsgErrorPet = new System.Windows.Forms.Label();
             this.btnConcluirPet = new System.Windows.Forms.Button();
             this.imgCorPet = new System.Windows.Forms.PictureBox();
             this.imgPet = new System.Windows.Forms.PictureBox();
@@ -222,6 +248,10 @@
             this.pnlSAlterar = new System.Windows.Forms.Panel();
             this.pnlSRemover = new System.Windows.Forms.Panel();
             this.dgPets = new System.Windows.Forms.DataGridView();
+            this.pnlSobreNos = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.pnlContatos = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
             this.btnLogo = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
             this.pnlCima = new System.Windows.Forms.Panel();
@@ -241,6 +271,10 @@
             this.lblTarefas = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.pnlConteudo.SuspendLayout();
+            this.pnlMarca.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).BeginInit();
+            this.pnlCategoria.SuspendLayout();
             this.pnlProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEstoque)).BeginInit();
@@ -284,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPets)).BeginInit();
+            this.pnlSobreNos.SuspendLayout();
+            this.pnlContatos.SuspendLayout();
             this.pnlCima.SuspendLayout();
             this.pnlAba.SuspendLayout();
             this.pnlEsquerda.SuspendLayout();
@@ -291,24 +327,316 @@
             // 
             // pnlConteudo
             // 
-            this.pnlConteudo.Controls.Add(this.pnlCadCli);
-            this.pnlConteudo.Controls.Add(this.pnlCadPet);
+            this.pnlConteudo.Controls.Add(this.pnlMarca);
+            this.pnlConteudo.Controls.Add(this.pnlCategoria);
             this.pnlConteudo.Controls.Add(this.pnlProdutos);
             this.pnlConteudo.Controls.Add(this.pnlFuncionarios);
             this.pnlConteudo.Controls.Add(this.pnlVendas);
             this.pnlConteudo.Controls.Add(this.pnlHome);
+            this.pnlConteudo.Controls.Add(this.pnlCadCli);
+            this.pnlConteudo.Controls.Add(this.pnlCadPet);
+            this.pnlConteudo.Controls.Add(this.pnlSobreNos);
+            this.pnlConteudo.Controls.Add(this.pnlContatos);
             this.pnlConteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlConteudo.Location = new System.Drawing.Point(194, 100);
             this.pnlConteudo.Name = "pnlConteudo";
             this.pnlConteudo.Size = new System.Drawing.Size(990, 581);
             this.pnlConteudo.TabIndex = 2;
             // 
+            // pnlMarca
+            // 
+            this.pnlMarca.Controls.Add(this.lblMsgErrorMarca);
+            this.pnlMarca.Controls.Add(this.btnConfirmarMarca);
+            this.pnlMarca.Controls.Add(this.btnRemoverMarca);
+            this.pnlMarca.Controls.Add(this.btnVoltar);
+            this.pnlMarca.Controls.Add(this.txtBuscaMarca);
+            this.pnlMarca.Controls.Add(this.lblMarcaRegistradas);
+            this.pnlMarca.Controls.Add(this.panel42);
+            this.pnlMarca.Controls.Add(this.imgCadMarca);
+            this.pnlMarca.Controls.Add(this.panel43);
+            this.pnlMarca.Controls.Add(this.panel44);
+            this.pnlMarca.Controls.Add(this.panel45);
+            this.pnlMarca.Controls.Add(this.panel46);
+            this.pnlMarca.Controls.Add(this.txtNomeMarca);
+            this.pnlMarca.Controls.Add(this.panel47);
+            this.pnlMarca.Controls.Add(this.label18);
+            this.pnlMarca.Controls.Add(this.panel48);
+            this.pnlMarca.Controls.Add(this.btnAlterarMarca);
+            this.pnlMarca.Controls.Add(this.dgMarcas);
+            this.pnlMarca.Controls.Add(this.lblHeaderAddMarca);
+            this.pnlMarca.Controls.Add(this.btnConcluirMarca);
+            this.pnlMarca.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMarca.Location = new System.Drawing.Point(0, 0);
+            this.pnlMarca.Name = "pnlMarca";
+            this.pnlMarca.Size = new System.Drawing.Size(990, 581);
+            this.pnlMarca.TabIndex = 7;
+            // 
+            // lblMsgErrorMarca
+            // 
+            this.lblMsgErrorMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorMarca.AutoSize = true;
+            this.lblMsgErrorMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorMarca.Location = new System.Drawing.Point(7, 559);
+            this.lblMsgErrorMarca.Name = "lblMsgErrorMarca";
+            this.lblMsgErrorMarca.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorMarca.TabIndex = 186;
+            this.lblMsgErrorMarca.Text = "*";
+            // 
+            // btnConfirmarMarca
+            // 
+            this.btnConfirmarMarca.AutoSize = true;
+            this.btnConfirmarMarca.BackColor = System.Drawing.Color.Black;
+            this.btnConfirmarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConfirmarMarca.FlatAppearance.BorderSize = 0;
+            this.btnConfirmarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfirmarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarMarca.Location = new System.Drawing.Point(195, 423);
+            this.btnConfirmarMarca.Name = "btnConfirmarMarca";
+            this.btnConfirmarMarca.Size = new System.Drawing.Size(95, 40);
+            this.btnConfirmarMarca.TabIndex = 182;
+            this.btnConfirmarMarca.Text = "Confirmar";
+            this.btnConfirmarMarca.UseVisualStyleBackColor = false;
+            this.btnConfirmarMarca.Click += new System.EventHandler(this.btnConfirmarMarca_Click);
+            // 
+            // btnRemoverMarca
+            // 
+            this.btnRemoverMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRemoverMarca.AutoSize = true;
+            this.btnRemoverMarca.BackColor = System.Drawing.Color.Black;
+            this.btnRemoverMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRemoverMarca.FlatAppearance.BorderSize = 0;
+            this.btnRemoverMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemoverMarca.ForeColor = System.Drawing.Color.White;
+            this.btnRemoverMarca.Location = new System.Drawing.Point(748, 488);
+            this.btnRemoverMarca.Name = "btnRemoverMarca";
+            this.btnRemoverMarca.Size = new System.Drawing.Size(98, 40);
+            this.btnRemoverMarca.TabIndex = 205;
+            this.btnRemoverMarca.Text = "Remover";
+            this.btnRemoverMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnRemoverMarca.UseVisualStyleBackColor = false;
+            this.btnRemoverMarca.Click += new System.EventHandler(this.btnRemoverMarca_Click);
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.AutoSize = true;
+            this.btnVoltar.BackColor = System.Drawing.Color.Black;
+            this.btnVoltar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnVoltar.FlatAppearance.BorderSize = 0;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.ForeColor = System.Drawing.Color.White;
+            this.btnVoltar.Location = new System.Drawing.Point(51, 423);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(77, 40);
+            this.btnVoltar.TabIndex = 204;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // txtBuscaMarca
+            // 
+            this.txtBuscaMarca.BackColor = System.Drawing.Color.White;
+            this.txtBuscaMarca.Location = new System.Drawing.Point(379, 114);
+            this.txtBuscaMarca.Name = "txtBuscaMarca";
+            this.txtBuscaMarca.PlaceholderText = "Digite aqui para buscar";
+            this.txtBuscaMarca.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtBuscaMarca.Size = new System.Drawing.Size(218, 23);
+            this.txtBuscaMarca.TabIndex = 181;
+            this.txtBuscaMarca.TextChanged += new System.EventHandler(this.txtBuscaMarca_TextChanged);
+            // 
+            // lblMarcaRegistradas
+            // 
+            this.lblMarcaRegistradas.AutoSize = true;
+            this.lblMarcaRegistradas.BackColor = System.Drawing.Color.Transparent;
+            this.lblMarcaRegistradas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMarcaRegistradas.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblMarcaRegistradas.ForeColor = System.Drawing.Color.Black;
+            this.lblMarcaRegistradas.Location = new System.Drawing.Point(379, 48);
+            this.lblMarcaRegistradas.Name = "lblMarcaRegistradas";
+            this.lblMarcaRegistradas.Size = new System.Drawing.Size(182, 25);
+            this.lblMarcaRegistradas.TabIndex = 185;
+            this.lblMarcaRegistradas.Text = "Marcas Registradas";
+            // 
+            // panel42
+            // 
+            this.panel42.BackColor = System.Drawing.Color.Black;
+            this.panel42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel42.ForeColor = System.Drawing.Color.Black;
+            this.panel42.Location = new System.Drawing.Point(89, 246);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(200, 1);
+            this.panel42.TabIndex = 200;
+            // 
+            // imgCadMarca
+            // 
+            this.imgCadMarca.BackColor = System.Drawing.Color.Transparent;
+            this.imgCadMarca.Image = ((System.Drawing.Image)(resources.GetObject("imgCadMarca.Image")));
+            this.imgCadMarca.Location = new System.Drawing.Point(51, 216);
+            this.imgCadMarca.Name = "imgCadMarca";
+            this.imgCadMarca.Size = new System.Drawing.Size(32, 32);
+            this.imgCadMarca.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.imgCadMarca.TabIndex = 193;
+            this.imgCadMarca.TabStop = false;
+            // 
+            // panel43
+            // 
+            this.panel43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel43.BackColor = System.Drawing.Color.Black;
+            this.panel43.Location = new System.Drawing.Point(852, 534);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(98, 3);
+            this.panel43.TabIndex = 192;
+            // 
+            // panel44
+            // 
+            this.panel44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel44.BackColor = System.Drawing.Color.Black;
+            this.panel44.Location = new System.Drawing.Point(748, 534);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(98, 3);
+            this.panel44.TabIndex = 191;
+            // 
+            // panel45
+            // 
+            this.panel45.BackColor = System.Drawing.Color.Black;
+            this.panel45.Location = new System.Drawing.Point(51, 469);
+            this.panel45.Name = "panel45";
+            this.panel45.Size = new System.Drawing.Size(77, 3);
+            this.panel45.TabIndex = 190;
+            // 
+            // panel46
+            // 
+            this.panel46.BackColor = System.Drawing.Color.Black;
+            this.panel46.Location = new System.Drawing.Point(195, 469);
+            this.panel46.Name = "panel46";
+            this.panel46.Size = new System.Drawing.Size(95, 3);
+            this.panel46.TabIndex = 189;
+            // 
+            // txtNomeMarca
+            // 
+            this.txtNomeMarca.BackColor = System.Drawing.Color.White;
+            this.txtNomeMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNomeMarca.Location = new System.Drawing.Point(89, 228);
+            this.txtNomeMarca.Name = "txtNomeMarca";
+            this.txtNomeMarca.PlaceholderText = "Nome da Marca";
+            this.txtNomeMarca.Size = new System.Drawing.Size(200, 16);
+            this.txtNomeMarca.TabIndex = 175;
+            // 
+            // panel47
+            // 
+            this.panel47.BackColor = System.Drawing.Color.Black;
+            this.panel47.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel47.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.panel47.Location = new System.Drawing.Point(379, 74);
+            this.panel47.Name = "panel47";
+            this.panel47.Size = new System.Drawing.Size(434, 3);
+            this.panel47.TabIndex = 184;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label18.Location = new System.Drawing.Point(39, 266);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 21);
+            this.label18.TabIndex = 187;
+            // 
+            // panel48
+            // 
+            this.panel48.BackColor = System.Drawing.Color.Black;
+            this.panel48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel48.Location = new System.Drawing.Point(51, 74);
+            this.panel48.Name = "panel48";
+            this.panel48.Size = new System.Drawing.Size(238, 3);
+            this.panel48.TabIndex = 178;
+            // 
+            // btnAlterarMarca
+            // 
+            this.btnAlterarMarca.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAlterarMarca.AutoSize = true;
+            this.btnAlterarMarca.BackColor = System.Drawing.Color.Black;
+            this.btnAlterarMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAlterarMarca.FlatAppearance.BorderSize = 0;
+            this.btnAlterarMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarMarca.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarMarca.Location = new System.Drawing.Point(852, 488);
+            this.btnAlterarMarca.Name = "btnAlterarMarca";
+            this.btnAlterarMarca.Size = new System.Drawing.Size(98, 40);
+            this.btnAlterarMarca.TabIndex = 180;
+            this.btnAlterarMarca.Text = "Alterar";
+            this.btnAlterarMarca.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnAlterarMarca.UseVisualStyleBackColor = false;
+            this.btnAlterarMarca.Click += new System.EventHandler(this.btnAlterarMarca_Click);
+            // 
+            // dgMarcas
+            // 
+            this.dgMarcas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgMarcas.BackgroundColor = System.Drawing.Color.White;
+            this.dgMarcas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMarcas.Location = new System.Drawing.Point(379, 144);
+            this.dgMarcas.Name = "dgMarcas";
+            this.dgMarcas.RowTemplate.Height = 25;
+            this.dgMarcas.Size = new System.Drawing.Size(571, 338);
+            this.dgMarcas.TabIndex = 179;
+            // 
+            // lblHeaderAddMarca
+            // 
+            this.lblHeaderAddMarca.AutoSize = true;
+            this.lblHeaderAddMarca.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderAddMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblHeaderAddMarca.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblHeaderAddMarca.ForeColor = System.Drawing.Color.Black;
+            this.lblHeaderAddMarca.Location = new System.Drawing.Point(51, 48);
+            this.lblHeaderAddMarca.Name = "lblHeaderAddMarca";
+            this.lblHeaderAddMarca.Size = new System.Drawing.Size(157, 25);
+            this.lblHeaderAddMarca.TabIndex = 176;
+            this.lblHeaderAddMarca.Text = "Cadastrar Marca";
+            // 
+            // btnConcluirMarca
+            // 
+            this.btnConcluirMarca.AutoSize = true;
+            this.btnConcluirMarca.BackColor = System.Drawing.Color.Black;
+            this.btnConcluirMarca.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnConcluirMarca.FlatAppearance.BorderSize = 0;
+            this.btnConcluirMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConcluirMarca.ForeColor = System.Drawing.Color.White;
+            this.btnConcluirMarca.Location = new System.Drawing.Point(195, 423);
+            this.btnConcluirMarca.Name = "btnConcluirMarca";
+            this.btnConcluirMarca.Size = new System.Drawing.Size(95, 40);
+            this.btnConcluirMarca.TabIndex = 199;
+            this.btnConcluirMarca.Text = "Concluir";
+            this.btnConcluirMarca.UseVisualStyleBackColor = false;
+            this.btnConcluirMarca.Visible = false;
+            this.btnConcluirMarca.Click += new System.EventHandler(this.btnConcluirMarca_Click);
+            // 
+            // pnlCategoria
+            // 
+            this.pnlCategoria.Controls.Add(this.label3);
+            this.pnlCategoria.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCategoria.Location = new System.Drawing.Point(0, 0);
+            this.pnlCategoria.Name = "pnlCategoria";
+            this.pnlCategoria.Size = new System.Drawing.Size(990, 581);
+            this.pnlCategoria.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(39, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 15);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "categoria";
+            // 
             // pnlProdutos
             // 
+            this.pnlProdutos.Controls.Add(this.lblMsgErrorProd);
+            this.pnlProdutos.Controls.Add(this.btnAddMarca);
+            this.pnlProdutos.Controls.Add(this.btnAddCategoria);
             this.pnlProdutos.Controls.Add(this.btnConfirmarProd);
             this.pnlProdutos.Controls.Add(this.cbMarcaProd);
             this.pnlProdutos.Controls.Add(this.cbCategoriaProd);
-            this.pnlProdutos.Controls.Add(this.lblMsgErrorProd);
             this.pnlProdutos.Controls.Add(this.btnRemoverProd);
             this.pnlProdutos.Controls.Add(this.btnLimparProd);
             this.pnlProdutos.Controls.Add(this.txtBuscaProd);
@@ -344,6 +672,41 @@
             this.pnlProdutos.Size = new System.Drawing.Size(990, 581);
             this.pnlProdutos.TabIndex = 4;
             this.pnlProdutos.Visible = false;
+            // 
+            // lblMsgErrorProd
+            // 
+            this.lblMsgErrorProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorProd.AutoSize = true;
+            this.lblMsgErrorProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorProd.Location = new System.Drawing.Point(6, 557);
+            this.lblMsgErrorProd.Name = "lblMsgErrorProd";
+            this.lblMsgErrorProd.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorProd.TabIndex = 96;
+            this.lblMsgErrorProd.Text = "*";
+            // 
+            // btnAddMarca
+            // 
+            this.btnAddMarca.FlatAppearance.BorderSize = 0;
+            this.btnAddMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMarca.Image = ((System.Drawing.Image)(resources.GetObject("btnAddMarca.Image")));
+            this.btnAddMarca.Location = new System.Drawing.Point(294, 214);
+            this.btnAddMarca.Name = "btnAddMarca";
+            this.btnAddMarca.Size = new System.Drawing.Size(24, 19);
+            this.btnAddMarca.TabIndex = 174;
+            this.btnAddMarca.UseVisualStyleBackColor = true;
+            this.btnAddMarca.Click += new System.EventHandler(this.btnAddMarca_Click);
+            // 
+            // btnAddCategoria
+            // 
+            this.btnAddCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAddCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategoria.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCategoria.Image")));
+            this.btnAddCategoria.Location = new System.Drawing.Point(294, 165);
+            this.btnAddCategoria.Name = "btnAddCategoria";
+            this.btnAddCategoria.Size = new System.Drawing.Size(24, 19);
+            this.btnAddCategoria.TabIndex = 173;
+            this.btnAddCategoria.UseVisualStyleBackColor = true;
+            this.btnAddCategoria.Click += new System.EventHandler(this.btnAddCategoria_Click);
             // 
             // btnConfirmarProd
             // 
@@ -382,17 +745,6 @@
             this.cbCategoriaProd.Size = new System.Drawing.Size(200, 23);
             this.cbCategoriaProd.TabIndex = 118;
             this.cbCategoriaProd.Text = "Escolha uma Categoria";
-            // 
-            // lblMsgErrorProd
-            // 
-            this.lblMsgErrorProd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMsgErrorProd.AutoSize = true;
-            this.lblMsgErrorProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgErrorProd.Location = new System.Drawing.Point(6, 557);
-            this.lblMsgErrorProd.Name = "lblMsgErrorProd";
-            this.lblMsgErrorProd.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgErrorProd.TabIndex = 96;
-            this.lblMsgErrorProd.Text = "*";
             // 
             // btnRemoverProd
             // 
@@ -437,6 +789,7 @@
             this.txtBuscaProd.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtBuscaProd.Size = new System.Drawing.Size(218, 23);
             this.txtBuscaProd.TabIndex = 91;
+            this.txtBuscaProd.TextChanged += new System.EventHandler(this.txtBuscaProd_TextChanged);
             // 
             // lblRegisterProd
             // 
@@ -720,6 +1073,7 @@
             // 
             // pnlFuncionarios
             // 
+            this.pnlFuncionarios.Controls.Add(this.btnAddCargo);
             this.pnlFuncionarios.Controls.Add(this.panel38);
             this.pnlFuncionarios.Controls.Add(this.imgTelefoneFunc);
             this.pnlFuncionarios.Controls.Add(this.txtTelefoneFunc);
@@ -763,6 +1117,17 @@
             this.pnlFuncionarios.Size = new System.Drawing.Size(990, 581);
             this.pnlFuncionarios.TabIndex = 5;
             this.pnlFuncionarios.Visible = false;
+            // 
+            // btnAddCargo
+            // 
+            this.btnAddCargo.FlatAppearance.BorderSize = 0;
+            this.btnAddCargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCargo.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCargo.Image")));
+            this.btnAddCargo.Location = new System.Drawing.Point(295, 165);
+            this.btnAddCargo.Name = "btnAddCargo";
+            this.btnAddCargo.Size = new System.Drawing.Size(24, 19);
+            this.btnAddCargo.TabIndex = 173;
+            this.btnAddCargo.UseVisualStyleBackColor = true;
             // 
             // panel38
             // 
@@ -934,9 +1299,11 @@
             // imgNascimento
             // 
             this.imgNascimento.BackColor = System.Drawing.Color.Transparent;
+            this.imgNascimento.Image = ((System.Drawing.Image)(resources.GetObject("imgNascimento.Image")));
             this.imgNascimento.Location = new System.Drawing.Point(50, 253);
             this.imgNascimento.Name = "imgNascimento";
             this.imgNascimento.Size = new System.Drawing.Size(32, 32);
+            this.imgNascimento.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.imgNascimento.TabIndex = 143;
             this.imgNascimento.TabStop = false;
             // 
@@ -953,6 +1320,7 @@
             // imgCTPS
             // 
             this.imgCTPS.BackColor = System.Drawing.Color.Transparent;
+            this.imgCTPS.Image = ((System.Drawing.Image)(resources.GetObject("imgCTPS.Image")));
             this.imgCTPS.Location = new System.Drawing.Point(50, 303);
             this.imgCTPS.Name = "imgCTPS";
             this.imgCTPS.Size = new System.Drawing.Size(32, 32);
@@ -972,6 +1340,7 @@
             // imgCargo
             // 
             this.imgCargo.BackColor = System.Drawing.Color.Transparent;
+            this.imgCargo.Image = ((System.Drawing.Image)(resources.GetObject("imgCargo.Image")));
             this.imgCargo.Location = new System.Drawing.Point(50, 153);
             this.imgCargo.Name = "imgCargo";
             this.imgCargo.Size = new System.Drawing.Size(32, 32);
@@ -1030,7 +1399,7 @@
             this.txtNomeFunc.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeFunc.Location = new System.Drawing.Point(88, 115);
             this.txtNomeFunc.Name = "txtNomeFunc";
-            this.txtNomeFunc.PlaceholderText = "Nome";
+            this.txtNomeFunc.PlaceholderText = "Nome do Funcionário";
             this.txtNomeFunc.Size = new System.Drawing.Size(200, 16);
             this.txtNomeFunc.TabIndex = 120;
             // 
@@ -2034,7 +2403,7 @@
             this.txtNomeCli.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomeCli.Location = new System.Drawing.Point(88, 115);
             this.txtNomeCli.Name = "txtNomeCli";
-            this.txtNomeCli.PlaceholderText = "Nome";
+            this.txtNomeCli.PlaceholderText = "Nome do Cliente";
             this.txtNomeCli.Size = new System.Drawing.Size(200, 16);
             this.txtNomeCli.TabIndex = 46;
             // 
@@ -2179,9 +2548,9 @@
             // 
             // pnlCadPet
             // 
+            this.pnlCadPet.Controls.Add(this.lblMsgErrorPet);
             this.pnlCadPet.Controls.Add(this.btnAddCli);
             this.pnlCadPet.Controls.Add(this.cbClientes);
-            this.pnlCadPet.Controls.Add(this.lblMsgErrorPet);
             this.pnlCadPet.Controls.Add(this.btnConcluirPet);
             this.pnlCadPet.Controls.Add(this.imgCorPet);
             this.pnlCadPet.Controls.Add(this.imgPet);
@@ -2220,6 +2589,17 @@
             this.pnlCadPet.TabIndex = 0;
             this.pnlCadPet.Visible = false;
             // 
+            // lblMsgErrorPet
+            // 
+            this.lblMsgErrorPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblMsgErrorPet.AutoSize = true;
+            this.lblMsgErrorPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMsgErrorPet.Location = new System.Drawing.Point(10, 557);
+            this.lblMsgErrorPet.Name = "lblMsgErrorPet";
+            this.lblMsgErrorPet.Size = new System.Drawing.Size(12, 15);
+            this.lblMsgErrorPet.TabIndex = 170;
+            this.lblMsgErrorPet.Text = "*";
+            // 
             // btnAddCli
             // 
             this.btnAddCli.FlatAppearance.BorderSize = 0;
@@ -2239,17 +2619,6 @@
             this.cbClientes.Name = "cbClientes";
             this.cbClientes.Size = new System.Drawing.Size(200, 23);
             this.cbClientes.TabIndex = 171;
-            // 
-            // lblMsgErrorPet
-            // 
-            this.lblMsgErrorPet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblMsgErrorPet.AutoSize = true;
-            this.lblMsgErrorPet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMsgErrorPet.Location = new System.Drawing.Point(6, 557);
-            this.lblMsgErrorPet.Name = "lblMsgErrorPet";
-            this.lblMsgErrorPet.Size = new System.Drawing.Size(12, 15);
-            this.lblMsgErrorPet.TabIndex = 170;
-            this.lblMsgErrorPet.Text = "*";
             // 
             // btnConcluirPet
             // 
@@ -2509,7 +2878,7 @@
             this.txtNomePet.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNomePet.Location = new System.Drawing.Point(85, 115);
             this.txtNomePet.Name = "txtNomePet";
-            this.txtNomePet.PlaceholderText = "Nome";
+            this.txtNomePet.PlaceholderText = "Nome do Pet";
             this.txtNomePet.Size = new System.Drawing.Size(200, 16);
             this.txtNomePet.TabIndex = 140;
             // 
@@ -2590,6 +2959,42 @@
             this.dgPets.Size = new System.Drawing.Size(571, 338);
             this.dgPets.TabIndex = 139;
             // 
+            // pnlSobreNos
+            // 
+            this.pnlSobreNos.Controls.Add(this.label15);
+            this.pnlSobreNos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSobreNos.Location = new System.Drawing.Point(0, 0);
+            this.pnlSobreNos.Name = "pnlSobreNos";
+            this.pnlSobreNos.Size = new System.Drawing.Size(990, 581);
+            this.pnlSobreNos.TabIndex = 9;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(14, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 15);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "sobre nós";
+            // 
+            // pnlContatos
+            // 
+            this.pnlContatos.Controls.Add(this.label13);
+            this.pnlContatos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContatos.Location = new System.Drawing.Point(0, 0);
+            this.pnlContatos.Name = "pnlContatos";
+            this.pnlContatos.Size = new System.Drawing.Size(990, 581);
+            this.pnlContatos.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(13, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 15);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "contatos";
+            // 
             // btnLogo
             // 
             this.btnLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
@@ -2668,6 +3073,7 @@
             this.btnSobre.TabIndex = 21;
             this.btnSobre.Text = "Sobre Nós";
             this.btnSobre.UseVisualStyleBackColor = true;
+            this.btnSobre.Click += new System.EventHandler(this.btnSobre_Click);
             // 
             // btnContatos
             // 
@@ -2683,6 +3089,7 @@
             this.btnContatos.TabIndex = 20;
             this.btnContatos.Text = "Contatos";
             this.btnContatos.UseVisualStyleBackColor = true;
+            this.btnContatos.Click += new System.EventHandler(this.btnContatos_Click);
             // 
             // pnlAba
             // 
@@ -2900,6 +3307,12 @@
             this.Text = "PetSupSoftware";
             this.Load += new System.EventHandler(this.PetShop_Load);
             this.pnlConteudo.ResumeLayout(false);
+            this.pnlMarca.ResumeLayout(false);
+            this.pnlMarca.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCadMarca)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMarcas)).EndInit();
+            this.pnlCategoria.ResumeLayout(false);
+            this.pnlCategoria.PerformLayout();
             this.pnlProdutos.ResumeLayout(false);
             this.pnlProdutos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgCustoProd)).EndInit();
@@ -2949,6 +3362,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgRacaPet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgTipoPet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPets)).EndInit();
+            this.pnlSobreNos.ResumeLayout(false);
+            this.pnlSobreNos.PerformLayout();
+            this.pnlContatos.ResumeLayout(false);
+            this.pnlContatos.PerformLayout();
             this.pnlCima.ResumeLayout(false);
             this.pnlCima.PerformLayout();
             this.pnlAba.ResumeLayout(false);
@@ -3170,5 +3587,35 @@
         private PictureBox imgTelefoneFunc;
         private TextBox txtTelefoneFunc;
         private Button btnAddCli;
+        private Button btnAddMarca;
+        private Button btnAddCategoria;
+        private Button btnAddCargo;
+        private Panel pnlMarca;
+        private Panel pnlCategoria;
+        private Label label3;
+        private Panel pnlContatos;
+        private Label label13;
+        private Panel pnlSobreNos;
+        private Label label15;
+        private Label lblMsgErrorMarca;
+        private Button btnConfirmarMarca;
+        private Button btnRemoverMarca;
+        private Button btnVoltar;
+        private TextBox txtBuscaMarca;
+        private Label lblMarcaRegistradas;
+        private Panel panel42;
+        private PictureBox imgCadMarca;
+        private Panel panel43;
+        private Panel panel44;
+        private Panel panel45;
+        private Panel panel46;
+        private TextBox txtNomeMarca;
+        private Panel panel47;
+        private Label label18;
+        private Panel panel48;
+        private Button btnAlterarMarca;
+        private DataGridView dgMarcas;
+        private Label lblHeaderAddMarca;
+        private Button btnConcluirMarca;
     }
 }

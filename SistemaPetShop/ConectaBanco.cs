@@ -59,6 +59,7 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }
+
         public bool insereCliente(Cliente c)
         {
             MySqlCommand cmd = new MySqlCommand("proc_insereCliente", conectaBD);
@@ -69,6 +70,28 @@ namespace SistemaPetShop
             cmd.Parameters.AddWithValue("telefone", c.TelefoneCliente);
             cmd.Parameters.AddWithValue("endereco", c.EnderecoCliente);
             cmd.Parameters.AddWithValue("bairro", c.BairroCliente);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+
+        public bool insereMarca(Marca m)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_insereMarca", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("nome", m.NomeMarca);
             try
             {
                 conectaBD.Open();
@@ -134,11 +157,58 @@ namespace SistemaPetShop
                 conectaBD.Close();
             }
         }// fim deleta Cliente
+
+        public bool deletaMarca(int codMarca)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_deletaMarca", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codMar", codMarca);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+
         public bool deletaProduto(int codProd)
         {
             MySqlCommand cmd = new MySqlCommand("proc_deletaProduto", conectaBD);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("codProd", codProd);
+            try
+            {
+                conectaBD.Open();
+                cmd.ExecuteNonQuery(); // executa o comando
+                return true;
+            }
+            catch (MySqlException e)
+            {
+                mensagem = "Erro:" + e.Message;
+                return false;
+            }
+            finally
+            {
+                conectaBD.Close();
+            }
+        }
+
+        public bool alteraMarca(Marca m, int codMarca)
+        {
+            MySqlCommand cmd = new MySqlCommand("proc_alteraMarca", conectaBD);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("codMar", codMarca);
+            cmd.Parameters.AddWithValue("nome", m.NomeMarca);
+            
             try
             {
                 conectaBD.Open();

@@ -66,6 +66,11 @@ namespace SistemaPetShop
             pnlVendas.Visible = false;
             pnlProdutos.Visible = false;
             pnlFuncionarios.Visible = false;
+            pnlMarca.Visible = false;
+            pnlCategoria.Visible = false;
+            pnlContatos.Visible = false;
+            pnlSobreNos.Visible = false;
+            
         }
 
         void limpaCampoCli()
@@ -77,6 +82,11 @@ namespace SistemaPetShop
             txtNomeCli.Text = "";
             txtBairroCli.Text = "";
             txtNomeCli.Focus();
+        }
+
+        void limpaCampoMarca()
+        {
+            txtNomeMarca.Text = "";
         }
 
         void limpaCampoPet()
@@ -472,6 +482,7 @@ namespace SistemaPetShop
             cbMarcaProd.ValueMember = "codMarca";
             cbMarcaProd.Text = "Selecione uma marca";
             lblMsgErrorProd.Text = con.mensagem;
+            dgMarcas.DataSource = con.listaMarcas();
         }
         //lista Produtos
         void listaProduto()
@@ -586,6 +597,134 @@ namespace SistemaPetShop
         {
             btnClientes_Click(sender, e);
             txtNomeCli.Focus();
+        }
+
+        private void txtBuscaProd_TextChanged(object sender, EventArgs e)
+        {
+            ((DataTable)dgProdutos.DataSource).DefaultView.RowFilter = string.Format("Nome like '{0}%'", txtBuscaProd.Text);
+        }
+
+        private void btnAddCategoria_Click(object sender, EventArgs e)
+        {
+            DesativaPnl();
+            pnlCategoria.Visible = true;
+        }
+
+        private void btnContatos_Click(object sender, EventArgs e)
+        {
+            DesativaPnl();
+            DesativaButton();
+            DesativaCL();
+            pnlContatos.Visible = true;
+            btnLogo.BackColor = Color.FromArgb(10, 10, 10);
+        }
+
+        private void btnSobre_Click(object sender, EventArgs e)
+        {
+            DesativaButton();
+            DesativaCL();
+            DesativaPnl();
+            pnlSobreNos.Visible = true;
+            btnLogo.BackColor = Color.FromArgb(10, 10, 10);
+        }
+
+        private void btnAddMarca_Click(object sender, EventArgs e)
+        {
+            DesativaPnl();
+            pnlMarca.Visible = true;
+        }
+
+        private void btnConfirmarMarca_Click(object sender, EventArgs e)
+        {
+            Marca m = new Marca();
+            m.NomeMarca = txtNomeMarca.Text;
+            
+
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.insereMarca(m);
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados Inseridos com Sucesso :)");
+            }
+            else
+                lblMsgErrorMarca.Text = conecta.mensagem;
+            limpaCampoMarca();
+            listaMarca();
+        }
+
+        private void btnRemoverMarca_Click(object sender, EventArgs e)
+        {
+            int linha = dgMarcas.CurrentRow.Index; //pegar linha selecionada
+            int codRemover = Convert.ToInt32(dgMarcas.Rows[linha].Cells["codMarca"].Value.ToString());
+
+            DialogResult resposta = MessageBox.Show("Confirmar Exclusão?", "Deletar Marca", MessageBoxButtons.YesNo);
+
+            if (resposta == DialogResult.Yes)
+            {
+                ConectaBanco conecta = new ConectaBanco();
+                bool retorno = conecta.deletaMarca(codRemover);
+                if (retorno == true)
+                {
+                    MessageBox.Show("Marca Removida !");
+                }
+                else
+                    lblMsgErrorPet.Text = conecta.mensagem;
+            } // final if YES
+            else
+                MessageBox.Show("Operação Cancelada");
+
+            limpaCampoMarca();
+            listaMarca();
+        }
+        int codAlterarMarca;
+        private void btnAlterarMarca_Click(object sender, EventArgs e)
+        {
+            lblHeaderAddMarca.Text = "Alterar Marca";
+
+            btnConfirmarMarca.Visible = false;
+            btnConcluirMarca.Visible = true;
+
+            int linha = dgMarcas.CurrentRow.Index; //pegar linha selecionada
+            codAlterarMarca = Convert.ToInt32(dgMarcas.Rows[linha].Cells["codMarca"].Value.ToString());
+            txtNomeMarca.Text = dgMarcas.Rows[linha].Cells["nomeMarca"].Value.ToString();
+            
+        }
+
+        private void btnConcluirMarca_Click(object sender, EventArgs e)
+        {
+            Marca m = new Marca();
+            m.NomeMarca = txtNomeMarca.Text;
+           
+
+
+            //Enviar dados para alterar
+            ConectaBanco conecta = new ConectaBanco();
+            bool retorno = conecta.alteraMarca(m, codAlterarMarca);
+
+            if (retorno == true)
+            {
+                MessageBox.Show("Dados alterados com sucesso !");
+                limpaCampoMarca();
+            }
+            else
+            {
+                lblMsgErrorMarca.Text = conecta.mensagem;
+            }
+            listaMarca();
+            btnConfirmarMarca.Visible = true;
+            btnConcluirMarca.Visible = false;
+            lblHeaderAddMarca.Text = "Cadastrar Marca";
+        }
+
+        private void txtBuscaMarca_TextChanged(object sender, EventArgs e)
+        {
+            ((DataTable)dgMarcas.DataSource).DefaultView.RowFilter = string.Format("nomeMarca like '{0}%'", txtBuscaMarca.Text);
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            DesativaPnl();
+            pnlProdutos.Visible = true;
         }
     }
 }
