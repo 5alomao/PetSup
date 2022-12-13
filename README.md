@@ -56,7 +56,7 @@
 ### Tela de Funcionários:
 
 <figure>
-  <img src="" alt="Funcionario">
+  <img src="https://raw.githubusercontent.com/5alomao/PetSup/main/SistemaPetShop/images/imgSoftware/TelaFuncionario.PNG" alt="Funcionario">
 </figure>
 
 ### Tela de Vendas:
