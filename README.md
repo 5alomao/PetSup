@@ -50,7 +50,7 @@
 ### Tela de Produtos:
 
 <figure>
-  <img src="https://github.com/5alomao/PetSup/blob/main/SistemaPetShop/images/imgSoftware/TelaProduto.PNG?raw=true" alt="Produto">
+  <img src="https://raw.githubusercontent.com/5alomao/PetSup/main/SistemaPetShop/images/imgSoftware/TelaProdutos.PNG" alt="Produto">
 </figure>
 
 ### Tela de Funcionários:
