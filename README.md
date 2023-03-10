@@ -59,10 +59,5 @@
   <img src="https://raw.githubusercontent.com/5alomao/PetSup/main/SistemaPetShop/images/imgSoftware/TelaFuncionario.PNG" alt="Funcionario">
 </figure>
 
-### Tela de Vendas:
-
-<figure>
-  <img src="" alt="Vendas">
-</figure>
 
 
